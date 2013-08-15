@@ -411,7 +411,9 @@ class LoginHooks {
 
     public function _process($str,array $placeholders = array()) {
         foreach ($placeholders as $k => $v) {
-            $str = str_replace('[[+'.$k.']]',$v,$str);
+            if (!is_object($v)) {
+                $str = str_replace('[[+'.$k.']]',$v,$str);
+            }
         }
         return $str;
     }
