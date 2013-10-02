@@ -42,6 +42,7 @@ class LoginConfirmRegisterController extends LoginController {
             'redirectParams' => '',
             'redirectBack' => false,
             'redirectBackParams' => '',
+            'redirectUnsetDefaultParams' => false,
         ));
     }
 
@@ -191,12 +192,15 @@ class LoginConfirmRegisterController extends LoginController {
             if (empty($redirectParams) || !is_array($redirectParams)) $redirectParams = array();
 
             /* handle persist params from Register snippet */
-            $persistParams = $_GET;
-            unset($persistParams['lp'],$persistParams['lu'],$persistParams['id']);
-            $persistParams['username'] = $this->user->get('username');
-            $persistParams['userid'] = $this->user->get('id');
-            $redirectParams = array_merge($redirectParams,$persistParams);
-            unset($redirectParams[$this->modx->getOption('request_param_alias',null,'q')],$redirectParams['redirectBack']);
+            $redirectUnsetDefaultParams = (boolean) $this->getProperty('redirectUnsetDefaultParams', 0, 'isset');
+			if(!$redirectUnsetDefaultParams) {
+                $persistParams = $_GET;
+                unset($persistParams['lp'],$persistParams['lu'],$persistParams['id']);
+                $persistParams['username'] = $this->user->get('username');
+                $persistParams['userid'] = $this->user->get('id');
+                $redirectParams = array_merge($redirectParams,$persistParams);
+                unset($redirectParams[$this->modx->getOption('request_param_alias',null,'q')],$redirectParams['redirectBack']);
+			}
 
             /* redirect user */
             $url = $this->modx->makeUrl($redirectTo,'',$redirectParams,'full');
