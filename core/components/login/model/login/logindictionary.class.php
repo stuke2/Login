@@ -52,7 +52,7 @@ class LoginDictionary {
      */
     function __construct(Login &$login,array $config = array()) {
         $this->modx =& $login->modx;
-        $this->formit =& $login;
+        $this->login =& $login;
         $this->config = array_merge($this->config,$config);
     }
 
