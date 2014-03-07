@@ -71,7 +71,7 @@ class LoginUpdateProfileController extends LoginController {
         if (!$this->getUser()) return '';
         if (!$this->getProfile()) return '';
         
-        $this->setFieldPlaceholders();
+        
         $this->checkForSuccessMessage();
         if ($this->hasPost()) {
             $this->loadDictionary();
@@ -92,6 +92,7 @@ class LoginUpdateProfileController extends LoginController {
                 }
             }
         }
+        $this->setFieldPlaceholders();
         return '';
     }
 
