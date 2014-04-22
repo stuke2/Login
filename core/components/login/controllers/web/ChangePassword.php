@@ -163,11 +163,12 @@ class LoginChangePasswordController extends LoginController {
         $placeholderPrefix = $this->getProperty('placeholderPrefix');
         $fieldNewPassword = $this->getProperty('fieldNewPassword');
         $fieldOldPassword = $this->getProperty('fieldOldPassword');
+        $validateOldPassword = $this->getProperty('validateOldPassword',true,'isset');
         $newPassword = $this->dictionary->get($fieldNewPassword);
         $oldPassword = $this->dictionary->get($fieldOldPassword);
 
         /* attempt to change the password */
-        $success = $this->modx->user->changePassword($newPassword,$oldPassword);
+        $success = $this->modx->user->changePassword($newPassword,$oldPassword,$validateOldPassword);
         if (!$success) {
             /* for some reason it failed (possibly a plugin) so send error message */
             $this->errors[$fieldNewPassword] = $this->modx->lexicon('login.password_err_change');
