@@ -170,7 +170,7 @@ class LoginChangePasswordController extends LoginController {
         $success = $this->modx->user->changePassword($newPassword,$oldPassword);
         if (!$success) {
             /* for some reason it failed (possibly a plugin) so send error message */
-            $this->modx->setPlaceholder($placeholderPrefix.$fieldNewPassword,$this->modx->lexicon('login.password_err_change'));
+            $this->errors[$fieldNewPassword] = $this->modx->lexicon('login.password_err_change');
         } else {
             $this->loadPostHooks();
 
