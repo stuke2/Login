@@ -60,7 +60,9 @@ class LoginResetPasswordController extends LoginController {
         /* get user from query params */
         $this->username = base64_decode(urldecode($_REQUEST['lu']));
         $this->password = base64_decode(urldecode($_REQUEST['lp']));
-
+        if (empty($this->username) || empty($this->password)) {
+            return null;
+				}
         /* validate we have correct user */
         $this->user = $this->modx->getObject('modUser',array('username' => $this->username));
         return $this->user;
@@ -71,7 +73,7 @@ class LoginResetPasswordController extends LoginController {
      * @return boolean
      */
     public function verifyIdentity() {
-        $cacheKey = 'login/resetpassword/'.$this->user->get('username');
+        $cacheKey = 'login/resetpassword/'.md5($this->user->get('id').':'.$this->user->get('username'));
         $cachePass = $this->modx->cacheManager->get($cacheKey);
         $verified = $cachePass == $this->password;
         if ($verified) {
@@ -85,7 +87,7 @@ class LoginResetPasswordController extends LoginController {
      * @return void
      */
     public function eraseCache() {
-        $cacheKey = 'login/resetpassword/'.$this->user->get('username');
+        $cacheKey = 'login/resetpassword/'.md5($this->user->get('id').':'.$this->user->get('username'));
         $this->modx->cacheManager->delete($cacheKey);
     }
 
