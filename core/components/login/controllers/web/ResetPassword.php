@@ -62,7 +62,7 @@ class LoginResetPasswordController extends LoginController {
         $this->password = base64_decode(urldecode($_REQUEST['lp']));
         if (empty($this->username) || empty($this->password)) {
             return null;
-				}
+        }
         /* validate we have correct user */
         $this->user = $this->modx->getObject('modUser',array('username' => $this->username));
         return $this->user;
