@@ -71,7 +71,6 @@ class LoginUpdateProfileController extends LoginController {
         if (!$this->getUser()) return '';
         if (!$this->getProfile()) return '';
         
-        $this->setFieldPlaceholders();
         $this->checkForSuccessMessage();
         if ($this->hasPost()) {
             $this->loadDictionary();
@@ -92,6 +91,9 @@ class LoginUpdateProfileController extends LoginController {
                 }
             }
         }
+
+        $this->setFieldPlaceholders();
+
         return '';
     }
 
@@ -107,6 +109,7 @@ class LoginUpdateProfileController extends LoginController {
                 $this->modx->sendUnauthorizedPage();
             }
         }
+
         return $authenticated;
     }
 
@@ -125,6 +128,7 @@ class LoginUpdateProfileController extends LoginController {
         if (empty($this->user)) {
             $this->modx->log(modX::LOG_LEVEL_ERROR,'Could not find user: '.$user);
         }
+
         return $this->user;
     }
 
@@ -137,6 +141,7 @@ class LoginUpdateProfileController extends LoginController {
         if (empty($this->profile)) {
             $this->modx->log(modX::LOG_LEVEL_ERROR,'Could not find profile for user: '.$this->user->get('username'));
         }
+
         return $this->profile;
     }
 
@@ -172,6 +177,7 @@ class LoginUpdateProfileController extends LoginController {
      */
     public function hasPost() {
         $submitVar = $this->getProperty('submitVar');
+
         return (!empty($_POST) && (empty($submitVar) || !empty($_POST[$submitVar])));
     }
 
@@ -199,6 +205,7 @@ class LoginUpdateProfileController extends LoginController {
         } else {
             $validated = true;
         }
+
         return $validated;
     }
 
@@ -264,7 +271,9 @@ class LoginUpdateProfileController extends LoginController {
                 $validated = false;
             }
         }
+
         return $validated;
     }
 }
+
 return 'LoginUpdateProfileController';

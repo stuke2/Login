@@ -1,5 +1,6 @@
 Changelog file for Login component.
 
+- Update form fields with new values when reloadOnSuccess=0
 - Replace parseChunk with getChunk
 - Added Arabic lexicons
 - Fixed invalid properties in logindictionary and updateprofile
