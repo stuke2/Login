@@ -80,6 +80,10 @@ class LoginRegisterProcessor extends LoginProcessor {
 
         $this->runPostHooks();
 
+        if ($this->controller->getProperty('autoLogin') == true && $this->controller->getProperty('activation') == false) {
+            $this->autoLogin();
+        }
+
         $this->checkForModerationRedirect();
 
         $this->checkForRegisteredRedirect();
@@ -407,6 +411,19 @@ class LoginRegisterProcessor extends LoginProcessor {
             return true;
         }
         return false;
+    }
+
+    public function autoLogin() {
+        if ($this->user == null) { return false; }
+
+        // set session context(s) to log into
+        $contexts = $this->controller->getProperty('authenticateContexts', $this->modx->context->get('key'));
+        $contexts = explode(',',$contexts);
+        foreach ($contexts as $ctx) {
+            $this->user->addSessionContext($ctx);
+        }
+
+        return true;
     }
 }
 return 'LoginRegisterProcessor';

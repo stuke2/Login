@@ -63,6 +63,7 @@ class LoginRegisterController extends LoginController {
             'usernameField' => 'username',
             'validate' => '',
             'validatePassword' => true,
+            'autoLogin' => false,
         ));
     }
 
