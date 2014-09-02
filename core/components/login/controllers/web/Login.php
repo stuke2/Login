@@ -224,7 +224,7 @@ class LoginLoginController extends LoginController {
             $this->modx->toPlaceholders($this->preHooks->getErrors(),$this->getProperty('errorPrefix','error'));
 
             $errorMsg = $this->preHooks->getErrorMessage();
-            $errorOutput = $this->modx->parseChunk($this->getProperty('errTpl'), array('msg' => $errorMsg));
+            $errorOutput = $this->modx->getChunk($this->getProperty('errTpl'), array('msg' => $errorMsg));
             $this->modx->setPlaceholder('errors',$errorOutput);
             $success = false;
         }
@@ -260,12 +260,12 @@ class LoginLoginController extends LoginController {
         $message = $response->getMessage();
         if (!empty($errors)) {
             foreach ($errors as $error) {
-                $errorOutput .= $this->modx->parseChunk($errTpl, $error);
+                $errorOutput .= $this->modx->getChunk($errTpl, $error);
             }
         } elseif (!empty($message)) {
-            $errorOutput = $this->modx->parseChunk($errTpl, array('msg' => $message));
+            $errorOutput = $this->modx->getChunk($errTpl, array('msg' => $message));
         } else {
-            $errorOutput = $this->modx->parseChunk($errTpl, array('msg' => $defaultErrorMessage));
+            $errorOutput = $this->modx->getChunk($errTpl, array('msg' => $defaultErrorMessage));
         }
         return $errorOutput;
     }
@@ -382,7 +382,7 @@ class LoginLoginController extends LoginController {
             $this->modx->toPlaceholders($this->preHooks->getErrors(),$this->getProperty('errorPrefix','error'));
 
             $errorMsg = $this->preHooks->getErrorMessage();
-            $errorOutput = $this->modx->parseChunk($this->getProperty('errTpl'), array('msg' => $errorMsg));
+            $errorOutput = $this->modx->getChunk($this->getProperty('errTpl'), array('msg' => $errorMsg));
             $this->modx->setPlaceholder('errors',$errorOutput);
             $success = false;
         }

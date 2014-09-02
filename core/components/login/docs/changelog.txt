@@ -1,5 +1,6 @@
 Changelog file for Login component.
 
+- Replace parseChunk with getChunk
 - Added Arabic lexicons
 - Fixed invalid properties in logindictionary and updateprofile
 - Added czech lexicons

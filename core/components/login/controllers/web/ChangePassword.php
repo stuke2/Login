@@ -355,10 +355,10 @@ class LoginChangePasswordController extends LoginController {
         $errors = $this->errors;
         if (!empty($errors)) {
             foreach ($errors as $error) {
-                $errorOutput .= $this->modx->parseChunk($errTpl,  array('msg' => $error));
+                $errorOutput .= $this->modx->getChunk($errTpl,  array('msg' => $error));
             }
         } else {
-            $errorOutput = $this->modx->parseChunk($errTpl, array('msg' => $defaultErrorMessage));
+            $errorOutput = $this->modx->getChunk($errTpl, array('msg' => $defaultErrorMessage));
         }
         return $errorOutput;
     }
