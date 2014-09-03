@@ -1,0 +1,76 @@
+{
+    "name": "Login",
+    "lowCaseName": "login",
+    "description": "Login and Registrations",
+    "author": "Jason Coward & Shaun McCormick",
+    "version": "1.9.0",
+    "package":{
+        "elements": {
+            "snippets": [{
+                "name": "ActiveUsers"
+            },{
+                "name": "ChangePassword"
+            },{
+                "name": "ConfirmRegister"
+            },{
+                "name": "ForgotPassword"
+            },{
+                "name": "isLoggedIn"
+            },{
+                "name": "Login"
+            },{
+                "name": "Profile"
+            },{
+                "name": "Register"
+            },{
+                "name": "ResetPassword"
+            },{
+                "name": "UpdateProfile"
+            }],
+            "chunks": [{
+                "name": "lgnLoginTpl"
+            },{
+                "name": "lgnLogoutTpl"
+            },{
+                "name": "lgnErrTpl"
+            },{
+                "name": "lgnForgotPassEmail"
+            },{
+                "name": "lgnForgotPassSentTpl"
+            },{
+                "name": "lgnForgotPassTpl"
+            },{
+                "name": "lgnResetPassTpl"
+            },{
+                "name": "lgnRegisterFormTpl"
+            },{
+                "name": "lgnActivateEmailTpl"
+            },{
+                "name": "lgnActiveUser"
+            },{
+                "name": "lgnResetPassChangePassTpl"
+            }]
+        }
+        ,"systemSettings": [{
+            "key": "forgot_password_email_subject"
+            ,"value": "Password Retrieval Email"
+            ,"area": "security"
+        },{
+            "key": "public_key"
+            ,"value": ""
+            ,"namespace": "recaptcha"
+            ,"area": "reCaptcha"
+        },{
+            "key": "private_key"
+            ,"value": ""
+            ,"namespace": "recaptcha"
+            ,"area": "reCaptcha"
+        },{
+            "key": "use_ssl"
+            ,"value": "false"
+            ,"namespace": "recaptcha"
+            ,"area": "reCaptcha"
+            ,"type": "combo-boolean"
+        }]
+    }
+}

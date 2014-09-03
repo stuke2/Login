@@ -1,5 +1,6 @@
 Changelog file for Login component.
 
+- Added autoLogin and forceChangePassword to ResetPassword snippet
 - Added autoLogin param to Register snippet
 - Improved password reset functionality
 - Update form fields with new values when reloadOnSuccess=0
