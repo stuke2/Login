@@ -416,12 +416,17 @@ class LoginRegisterProcessor extends LoginProcessor {
     public function autoLogin() {
         if ($this->user == null) { return false; }
 
-        // set session context(s) to log into
         $contexts = $this->controller->getProperty('authenticateContexts', $this->modx->context->get('key'));
-        $contexts = explode(',',$contexts);
-        foreach ($contexts as $ctx) {
-            $this->user->addSessionContext($ctx);
-        }
+        $fields = $this->dictionary->toArray();
+
+        $c = array(
+            'login_context' => $this->modx->context->key,
+            'add_contexts' => $contexts,
+            'username' => $this->user->username,
+            'password' => $fields[$this->controller->getProperty('passwordField','password')],
+            'returnUrl' => '',
+        );
+        $a = $this->modx->runProcessor('security/login',$c);
 
         return true;
     }

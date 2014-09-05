@@ -289,12 +289,16 @@ class LoginResetPasswordController extends LoginController {
     public function autoLogin() {
         if ($this->user == null) { return false; }
 
-        // set session context(s) to log into
         $contexts = $this->getProperty('authenticateContexts', $this->modx->context->get('key'));
-        $contexts = explode(',',$contexts);
-        foreach ($contexts as $ctx) {
-            $this->user->addSessionContext($ctx);
-        }
+
+        $c = array(
+            'login_context' => $this->modx->context->key,
+            'add_contexts' => $contexts,
+            'username' => $this->user->username,
+            'password' => $this->password,
+            'returnUrl' => '',
+        );
+        $this->modx->runProcessor('security/login',$c);
 
         return true;
     }
