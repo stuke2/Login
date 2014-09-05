@@ -65,7 +65,7 @@ class LoginResetPasswordController extends LoginController {
         if (empty($this->user)) return '';
         if (!$this->verifyIdentity()) return '';
 
-        if ($this->getProperty('forceChangePassword')) {
+        if ($this->getProperty('forceChangePassword') == true) {
             if (!empty($_POST) && isset($_POST[$this->getProperty('submitVar','logcp-submit')])) {
                 $changed = $this->handleChangePasswordForm();
                 if ($changed !== true) {
@@ -80,7 +80,7 @@ class LoginResetPasswordController extends LoginController {
 
         $this->eraseCache();
 
-        if ($this->getProperty('autoLogin')) {
+        if ($this->getProperty('autoLogin') == true) {
             $this->autoLogin();
         }
 
