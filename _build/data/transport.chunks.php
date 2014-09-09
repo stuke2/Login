@@ -126,4 +126,13 @@ $chunks[11]->fromArray(array(
     'properties' => '',
 ),'',true,true);
 
+$chunks[12]= $modx->newObject('modChunk');
+$chunks[12]->fromArray(array(
+    'id' => 12,
+    'name' => 'lgnExpiredTpl',
+    'description' => '',
+    'snippet' => file_get_contents($sources['source_core'].'/elements/chunks/lgnexpiredtpl.chunk.tpl'),
+    'properties' => '',
+),'',true,true);
+
 return $chunks;

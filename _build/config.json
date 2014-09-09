@@ -49,6 +49,8 @@
                 "name": "lgnActiveUser"
             },{
                 "name": "lgnResetPassChangePassTpl"
+            },{
+                "name": "lgnExpiredTpl"
             }]
         }
         ,"systemSettings": [{

@@ -50,6 +50,7 @@ class LoginResetPasswordController extends LoginController {
             'debug' => false,
             'autoLogin' => false,
             'forceChangePassword' => false,
+            'expiredTpl' => 'lgnExpiredTpl',
         ));
         $this->modx->lexicon->load('login:profile');
         $this->modx->lexicon->load('login:register');
@@ -62,8 +63,8 @@ class LoginResetPasswordController extends LoginController {
      */
     public function process() {
         $this->getUser();
-        if (empty($this->user)) return '';
-        if (!$this->verifyIdentity()) return '';
+        if (empty($this->user)) return $this->modx->getChunk($this->getProperty('expiredTpl'));
+        if (!$this->verifyIdentity()) return $this->modx->getChunk($this->getProperty('expiredTpl'));
 
         if ($this->getProperty('forceChangePassword') == true) {
             if (!empty($_POST) && isset($_POST[$this->getProperty('submitVar','logcp-submit')])) {
