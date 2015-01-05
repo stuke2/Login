@@ -1,5 +1,7 @@
 Changelog file for Login component.
 
+- Fixed namespace paths
+
 Login 1.9.0
 ====================================
 - Expired/used password reset link notification
