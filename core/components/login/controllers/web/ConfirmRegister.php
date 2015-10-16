@@ -55,12 +55,13 @@ class LoginConfirmRegisterController extends LoginController {
 
         /* activate user */
         $this->user->set('active',1);
-        $this->user->set('cachepwd','');
+        $this->user->_setRaw('cachepwd','')
+        
         if (!$this->user->save()) {
             $this->modx->log(modX::LOG_LEVEL_ERROR,'[Register] Could not save activated user: '.$this->user->get('username'));
             return '';
         }
-        
+
         /* invoke OnUserActivate event */
         $this->modx->invokeEvent('OnUserActivate',array(
             'user' => &$this->user,
