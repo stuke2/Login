@@ -269,8 +269,8 @@ class LoginRegisterProcessor extends LoginProcessor {
     public function gatherActivationEmailProperties() {
         /* generate a password and encode it and the username into the url */
         $pword = $this->login->generatePassword();
-        $confirmParams['lp'] = urlencode(base64_encode($pword));
-        $confirmParams['lu'] = urlencode(base64_encode($this->user->get('username')));
+        $confirmParams['lp'] = $this->login->base64url_encode($pword);
+        $confirmParams['lu'] = $this->login->base64url_encode($this->user->get('username'));
         $confirmParams = array_merge($this->persistParams,$confirmParams);
 
         /* if using redirectBack param, set here to allow dynamic redirection

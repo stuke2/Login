@@ -73,7 +73,9 @@ class LoginConfirmRegisterController extends LoginController {
     }
 
     /**
-     * Verify that the username/password hashes were correctly sent to prevent middle-man attacks
+     * Verify that the username/password hashes were correctly sent (base64 encoded in URL) to prevent middle-man attacks.
+     *
+     * @access public
      * @return boolean
      */
     public function verifyManifest() {
@@ -81,9 +83,9 @@ class LoginConfirmRegisterController extends LoginController {
         if (empty($_REQUEST['lp']) || empty($_REQUEST['lu'])) {
             $this->redirectAfterFailure();
         } else {
-            /* get user from query params */
-            $this->username = base64_decode(urldecode(rawurldecode($_REQUEST['lu'])));
-            $this->password = base64_decode(urldecode(rawurldecode($_REQUEST['lp'])));
+            // get username and password from query params
+            $this->username = $this->login->base64url_decode($_REQUEST['lu']);
+            $this->password = $this->login->base64url_decode($_REQUEST['lp']);
             $verified = true;
         }
         return $verified;
