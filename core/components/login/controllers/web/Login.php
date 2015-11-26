@@ -83,9 +83,7 @@ class LoginLoginController extends LoginController {
 
         $this->modx->setPlaceholder('actionMsg', $actionMsg);
         $phs = $this->isAuthenticated ? $this->getProperties() : array_merge($this->getProperties(), $_POST);
-        foreach ($phs as $k => $v) {
-            $phs[$k] = str_replace(array('[',']'),array('&#91;','&#93;'),$v);
-        }
+        
         /* make sure to strip out logout GET parameter to prevent ghost logout */
         $logoutKey = $this->getProperty('logoutKey','logout');
         if (!$redirectToPrior) {
@@ -93,7 +91,12 @@ class LoginLoginController extends LoginController {
         } else {
             $phs['request_uri'] = str_replace(array('?service='.$logoutKey,'&service='.$logoutKey,'&amp;service='.$logoutKey),'',$_SERVER['HTTP_REFERER']);
         }
-
+        
+        /* Escape placeholder values */
+        foreach ($phs as $k => $v) {
+            $phs[$k] = htmlspecialchars(str_replace(array('[',']'),array('&#91;','&#93;'),$v));
+        }
+        
         /* properly build logout url */
         if ($this->isAuthenticated) {
             $phs['logoutUrl'] = $phs['request_uri'];
