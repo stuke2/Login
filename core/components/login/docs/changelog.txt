@@ -1,5 +1,7 @@
 Changelog file for Login component.
 
+Login 1.9.1
+====================================
 - [[!+error.message]] returns detailed error
 - [#42] Fixed URL encoding/decoding
 - Sanitise Login placeholders
