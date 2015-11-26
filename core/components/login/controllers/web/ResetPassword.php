@@ -91,8 +91,8 @@ class LoginResetPasswordController extends LoginController {
 
     public function getUser() {
         /* get user from query params */
-        $this->username = base64_decode(urldecode($_REQUEST['lu']));
-        $this->password = base64_decode(urldecode($_REQUEST['lp']));
+        $this->username = $this->login->base64url_decode($_REQUEST['lu']);
+        $this->password = $this->login->base64url_decode($_REQUEST['lp']);
         if (empty($this->username) || empty($this->password)) {
             return null;
         }

@@ -287,7 +287,29 @@ class Login {
     public function decodeParams($params) {
         return unserialize(base64_decode(strtr($params, '-_,', '+/=')));
     }
+
+    /**
+     * Encodes a string for URL safe transmission
+     *
+     * @access public
+     * @param string $str
+     * @return string
+     */
+    public function base64url_encode($str) { 
+        return rtrim(strtr(base64_encode($str), '+/', '-_'), '='); 
+    } 
     
+    /**
+     * Decodes an URL safe encoded string
+     *
+     * @access public
+     * @param string $str
+     * @return string
+     */
+    public function base64url_decode($str) { 
+        return base64_decode(str_pad(strtr($str, '-_', '+/'), strlen($str) % 4, '=', STR_PAD_RIGHT)); 
+    }
+
     /**
      * Process MODx event results
      * @param array $rs
