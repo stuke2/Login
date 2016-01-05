@@ -257,7 +257,7 @@ class LoginRegisterProcessor extends LoginProcessor {
         $emailProperties = $this->gatherActivationEmailProperties();
 
         /* send either to user's email or a specified activation email */
-        $activationEmail = $this->controller->getProperty('activationEmail',$this->user->get('email'));
+        $activationEmail = $this->controller->getProperty('activationEmail',$this->profile->get('email'));
         $subject = $this->controller->getProperty('activationEmailSubject',$this->modx->lexicon('register.activation_email_subject'));
         return $this->login->sendEmail($activationEmail,$this->user->get('username'),$subject,$emailProperties);
     }
