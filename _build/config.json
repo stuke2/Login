@@ -1,78 +1,982 @@
 {
-    "name": "Login",
-    "lowCaseName": "login",
-    "description": "Login and Registrations",
-    "author": "Jason Coward & Shaun McCormick",
-    "version": "1.9.1",
-    "package":{
-        "elements": {
-            "snippets": [{
-                "name": "ActiveUsers"
-            },{
-                "name": "ChangePassword"
-            },{
-                "name": "ConfirmRegister"
-            },{
-                "name": "ForgotPassword"
-            },{
-                "name": "isLoggedIn"
-            },{
-                "name": "Login"
-            },{
-                "name": "Profile"
-            },{
-                "name": "Register"
-            },{
-                "name": "ResetPassword"
-            },{
-                "name": "UpdateProfile"
-            }],
-            "chunks": [{
-                "name": "lgnLoginTpl"
-            },{
-                "name": "lgnLogoutTpl"
-            },{
-                "name": "lgnErrTpl"
-            },{
-                "name": "lgnForgotPassEmail"
-            },{
-                "name": "lgnForgotPassSentTpl"
-            },{
-                "name": "lgnForgotPassTpl"
-            },{
-                "name": "lgnResetPassTpl"
-            },{
-                "name": "lgnRegisterFormTpl"
-            },{
-                "name": "lgnActivateEmailTpl"
-            },{
-                "name": "lgnActiveUser"
-            },{
-                "name": "lgnResetPassChangePassTpl"
-            },{
-                "name": "lgnExpiredTpl"
-            }]
+  "name": "Login",
+  "lowCaseName": "login",
+  "description": "Login and Registrations",
+  "author": "Jason Coward & Shaun McCormick",
+  "version": "1.9.2",
+  "package": {
+    "elements": {
+      "snippets": [
+        {
+          "name": "ActiveUsers",
+          "description": "Shows a list of active, logged-in users.",
+          "properties": [
+            {
+              "name": "tpl",
+              "description": "prop_activeusers.tpl",
+              "value": "lgnActiveUser"
+            },
+            {
+              "name": "tplType",
+              "description": "prop_activeusers.tplType",
+              "type": "list",
+              "options": [
+                {
+                  "name": "opt_register.chunk",
+                  "value": "modChunk"
+                },
+                {
+                  "name": "opt_register.file",
+                  "value": "file"
+                },
+                {
+                  "name": "opt_register.inline",
+                  "value": "inline"
+                },
+                {
+                  "name": "opt_register.embedded",
+                  "value": "embedded"
+                }
+              ],
+              "value": "modChunk"
+            },
+            {
+              "name": "sortBy",
+              "description": "prop_activeusers.sortBy",
+              "value": "username"
+            },
+            {
+              "name": "sortDir",
+              "description": "prop_activeusers.sortDir",
+              "type": "list",
+              "options": [
+                {
+                  "name": "opt_register.asc",
+                  "value": "ASC"
+                },
+                {
+                  "name": "opt_register.desc",
+                  "value": "DESC"
+                }
+              ],
+              "value": "DESC"
+            },
+            {
+              "name": "limit",
+              "description": "prop_activeusers.limit",
+              "value": "10"
+            },
+            {
+              "name": "offset",
+              "description": "prop_activeusers.offset",
+              "value": "0"
+            },
+            {
+              "name": "classKey",
+              "description": "prop_activeusers.classKey",
+              "value": "modUser"
+            },
+            {
+              "name": "placeholderPrefix",
+              "description": "prop_activeusers.placeholderprefix_desc",
+              "value": "au."
+            },
+            {
+              "name": "toPlaceholder",
+              "description": "prop_activeusers.toplaceholder_desc",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "name": "ChangePassword",
+          "description": "Processes a form for changing the password for a User.",
+          "properties": [
+            {
+              "name": "submitVar",
+              "description": "prop_changepassword.submitvar_desc",
+              "value": "logcp-submit"
+            },
+            {
+              "name": "fieldOldPassword",
+              "description": "prop_changepassword.fieldoldpassword_desc",
+              "value": "password_old"
+            },
+            {
+              "name": "fieldNewPassword",
+              "description": "prop_changepassword.fieldnewpassword_desc",
+              "value": "password_new"
+            },
+            {
+              "name": "fieldConfirmNewPassword",
+              "description": "prop_changepassword.fieldconfirmnewpassword_desc",
+              "value": "password_new_confirm"
+            },
+            {
+              "name": "preHooks",
+              "description": "prop_changepassword.prehooks_desc",
+              "value": ""
+            },
+            {
+              "name": "postHooks",
+              "description": "prop_changepassword.posthooks_desc",
+              "value": ""
+            },
+            {
+              "name": "redirectToLogin",
+              "description": "prop_changepassword.redirecttologin_desc",
+              "type": "combo-boolean",
+              "value": true
+            },
+            {
+              "name": "reloadOnSuccess",
+              "description": "prop_changepassword.reloadonsuccess_desc",
+              "type": "combo-boolean",
+              "value": true
+            },
+            {
+              "name": "successMessage",
+              "description": "prop_changepassword.successmessage_desc",
+              "value": ""
+            },
+            {
+              "name": "placeholderPrefix",
+              "description": "prop_changepassword.placeholderprefix_desc",
+              "value": "logcp."
+            }
+          ]
+        },
+        {
+          "name": "ConfirmRegister",
+          "description": "Handles activation of registered user.",
+          "properties": [
+            {
+              "name": "redirectTo",
+              "description": "prop_confirmregister.redirectto_desc",
+              "value": ""
+            },
+            {
+              "name": "redirectParams",
+              "description": "prop_confirmregister.redirectparams_desc",
+              "value": ""
+            },
+            {
+              "name": "authenticate",
+              "description": "prop_confirmregister.authenticate_desc",
+              "type": "combo-boolean",
+              "value": true
+            },
+            {
+              "name": "authenticateContexts",
+              "description": "prop_confirmregister.authenticatecontexts_desc",
+              "value": ""
+            },
+            {
+              "name": "errorPage",
+              "description": "prop_confirmregister.errorpage_desc",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "name": "ForgotPassword",
+          "description": "Displays a forgot password form.",
+          "properties": [
+            {
+              "name": "emailTpl",
+              "description": "prop_forgotpassword.emailtpl_desc",
+              "value": "lgnForgotPassEmail"
+            },
+            {
+              "name": "emailTplAlt",
+              "description": "prop_forgotpassword.emailtplalt_desc",
+              "value": ""
+            },
+            {
+              "name": "emailTplType",
+              "description": "prop_forgotpassword.emailtpltype_desc",
+              "type": "list",
+              "options": [
+                {
+                  "name": "opt_register.chunk",
+                  "value": "modChunk"
+                },
+                {
+                  "name": "opt_register.file",
+                  "value": "file"
+                },
+                {
+                  "name": "opt_register.inline",
+                  "value": "inline"
+                },
+                {
+                  "name": "opt_register.embedded",
+                  "value": "embedded"
+                }
+              ],
+              "value": "modChunk"
+            },
+            {
+              "name": "sentTpl",
+              "description": "prop_forgotpassword.senttpl_desc",
+              "value": "lgnForgotPassSentTpl"
+            },
+            {
+              "name": "sentTplType",
+              "description": "prop_forgotpassword.senttpltype_desc",
+              "type": "list",
+              "options": [
+                {
+                  "name": "opt_register.chunk",
+                  "value": "modChunk"
+                },
+                {
+                  "name": "opt_register.file",
+                  "value": "file"
+                },
+                {
+                  "name": "opt_register.inline",
+                  "value": "inline"
+                },
+                {
+                  "name": "opt_register.embedded",
+                  "value": "embedded"
+                }
+              ],
+              "value": "modChunk"
+            },
+            {
+              "name": "tpl",
+              "description": "prop_forgotpassword.tpl_desc",
+              "value": "lgnForgotPassTpl"
+            },
+            {
+              "name": "tplType",
+              "description": "prop_forgotpassword.tpltype_desc",
+              "type": "list",
+              "options": [
+                {
+                  "name": "opt_register.chunk",
+                  "value": "modChunk"
+                },
+                {
+                  "name": "opt_register.file",
+                  "value": "file"
+                },
+                {
+                  "name": "opt_register.inline",
+                  "value": "inline"
+                },
+                {
+                  "name": "opt_register.embedded",
+                  "value": "embedded"
+                }
+              ],
+              "value": "modChunk"
+            },
+            {
+              "name": "errTpl",
+              "description": "prop_forgotpassword.errtpl_desc",
+              "value": "lgnErrTpl"
+            },
+            {
+              "name": "errTplType",
+              "description": "prop_forgotpassword.errtpltype_desc",
+              "type": "list",
+              "options": [
+                {
+                  "name": "opt_register.chunk",
+                  "value": "modChunk"
+                },
+                {
+                  "name": "opt_register.file",
+                  "value": "file"
+                },
+                {
+                  "name": "opt_register.inline",
+                  "value": "inline"
+                },
+                {
+                  "name": "opt_register.embedded",
+                  "value": "embedded"
+                }
+              ],
+              "value": "modChunk"
+            },
+            {
+              "name": "emailSubject",
+              "description": "prop_forgotpassword.emailsubject_desc",
+              "value": ""
+            },
+            {
+              "name": "resetResourceId",
+              "description": "prop_forgotpassword.resetresourceid_desc",
+              "value": "1"
+            },
+            {
+              "name": "redirectTo",
+              "description": "prop_forgotpassword.redirectto_desc",
+              "value": ""
+            },
+            {
+              "name": "redirectParams",
+              "description": "prop_forgotpassword.redirectparams_desc",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "name": "isLoggedIn",
+          "description": "Checks to see if the user is logged in. If not, redirects to Unauthorized Page.",
+          "properties": [
+            {
+              "name": "contexts",
+              "description": "prop_isloggedin.contexts_desc",
+              "value": ""
+            },
+            {
+              "name": "redirectto",
+              "description": "prop_isloggedin.redirectto_desc",
+              "value": ""
+            },
+            {
+              "name": "redirectparams",
+              "description": "prop_isloggedin.redirectparams_desc",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "name": "Login",
+          "description": "Displays a login and logout form.",
+          "properties": [
+            {
+              "name": "actionKey",
+              "description": "prop_login.actionkey_desc",
+              "value": "service"
+            },
+            {
+              "name": "loginKey",
+              "description": "prop_login.loginkey_desc",
+              "value": "login"
+            },
+            {
+              "name": "logoutKey",
+              "description": "prop_login.logoutkey_desc",
+              "value": "logout"
+            },
+            {
+              "name": "tplType",
+              "description": "prop_login.tpltype_desc",
+              "type": "list",
+              "options": [
+                {
+                  "name": "opt_register.chunk",
+                  "value": "modChunk"
+                },
+                {
+                  "name": "opt_register.file",
+                  "value": "file"
+                },
+                {
+                  "name": "opt_register.inline",
+                  "value": "inline"
+                },
+                {
+                  "name": "opt_register.embedded",
+                  "value": "embedded"
+                }
+              ],
+              "value": "modChunk"
+            },
+            {
+              "name": "loginTpl",
+              "description": "prop_login.logintpl_desc",
+              "value": "lgnLoginTpl"
+            },
+            {
+              "name": "logoutTpl",
+              "description": "prop_login.logouttpl_desc",
+              "value": "lgnLogoutTpl"
+            },
+            {
+              "name": "preHooks",
+              "description": "prop_login.prehooks_desc",
+              "value": ""
+            },
+            {
+              "name": "postHooks",
+              "description": "prop_login.posthooks_desc",
+              "value": ""
+            },
+            {
+              "name": "errTpl",
+              "description": "prop_login.errtpl_desc",
+              "value": "lgnErrTpl"
+            },
+            {
+              "name": "errTplType",
+              "description": "prop_login.errtpltype_desc",
+              "type": "list",
+              "options": [
+                {
+                  "name": "opt_register.chunk",
+                  "value": "modChunk"
+                },
+                {
+                  "name": "opt_register.file",
+                  "value": "file"
+                },
+                {
+                  "name": "opt_register.inline",
+                  "value": "inline"
+                },
+                {
+                  "name": "opt_register.embedded",
+                  "value": "embedded"
+                }
+              ],
+              "value": "modChunk"
+            },
+            {
+              "name": "loginResourceId",
+              "description": "prop_login.loginresourceid_desc",
+              "value": "0"
+            },
+            {
+              "name": "loginResourceParams",
+              "description": "prop_login.loginresourceparams_desc",
+              "value": ""
+            },
+            {
+              "name": "logoutResourceId",
+              "description": "prop_login.logoutresourceid_desc",
+              "value": "0"
+            },
+            {
+              "name": "logoutResourceParams",
+              "description": "prop_login.logoutresourceparams_desc",
+              "value": ""
+            },
+            {
+              "name": "loginMsg",
+              "description": "prop_login.loginmsg_desc",
+              "value": ""
+            },
+            {
+              "name": "logoutMsg",
+              "description": "prop_login.logoutmsg_desc",
+              "value": ""
+            },
+            {
+              "name": "redirectToPrior",
+              "description": "prop_login.redirecttoprior_desc",
+              "type": "combo-boolean",
+              "value": false
+            },
+            {
+              "name": "redirectToOnFailedAuth",
+              "description": "prop_login.redirecttoonfailedauth_desc",
+              "value": ""
+            },
+            {
+              "name": "rememberMeKey",
+              "description": "prop_login.remembermekey_desc",
+              "value": "rememberme"
+            },
+            {
+              "name": "contexts",
+              "description": "prop_login.contexts_desc",
+              "value": ""
+            },
+            {
+              "name": "toPlaceholder",
+              "description": "prop_login.toplaceholder_desc",
+              "value": ""
+            },
+            {
+              "name": "recaptchaTheme",
+              "description": "prop_register.recaptchatheme_desc",
+              "type": "list",
+              "options": [
+                {
+                  "name": "opt_register.red",
+                  "value": "red"
+                },
+                {
+                  "name": "opt_register.white",
+                  "value": "white"
+                },
+                {
+                  "name": "opt_register.clean",
+                  "value": "clean"
+                },
+                {
+                  "name": "opt_register.blackglass",
+                  "value": "blackglass"
+                }
+              ],
+              "value": "clean"
+            }
+          ]
+        },
+        {
+          "name": "Profile",
+          "description": "Displays Profile data for a User.",
+          "properties": [
+            {
+              "name": "prefix",
+              "description": "prop_profile.prefix_desc",
+              "value": ""
+            },
+            {
+              "name": "user",
+              "description": "prop_profile.user_desc",
+              "value": ""
+            },
+            {
+              "name": "useExtended",
+              "description": "prop_profile.useextended_desc",
+              "type": "combo-boolean",
+              "value": true
+            }
+          ]
+        },
+        {
+          "name": "Register",
+          "description": "Handles forms for registering users on the front-end.",
+          "properties": [
+            {
+              "name": "submitVar",
+              "description": "prop_register.submitvar_desc",
+              "value": ""
+            },
+            {
+              "name": "usergroups",
+              "description": "prop_register.usergroups_desc",
+              "value": ""
+            },
+            {
+              "name": "usergroupsField",
+              "description": "prop_register.usergroupsfield_desc",
+              "value": ""
+            },
+            {
+              "name": "submittedResourceId",
+              "description": "prop_register.submittedresourceid_desc",
+              "value": ""
+            },
+            {
+              "name": "usernameField",
+              "description": "prop_register.usernamefield_desc",
+              "value": "username"
+            },
+            {
+              "name": "passwordField",
+              "description": "prop_register.passwordfield_desc",
+              "value": "password"
+            },
+            {
+              "name": "validatePassword",
+              "description": "prop_register.validatepassword_desc",
+              "type": "combo-boolean",
+              "value": true
+            },
+            {
+              "name": "generatePassword",
+              "description": "prop_register.generatepassword_desc",
+              "type": "combo-boolean",
+              "value": false
+            },
+            {
+              "name": "trimPassword",
+              "description": "prop_register.trimpassword_desc",
+              "type": "combo-boolean",
+              "value": true
+            },
+            {
+              "name": "ensurePasswordStrength",
+              "description": "prop_register.ensurePasswordStrength_desc",
+              "type": "combo-boolean",
+              "value": false
+            },
+            {
+              "name": "passwordWordSeparator",
+              "description": "prop_register.passwordWordSeparator_desc",
+              "value": " "
+            },
+            {
+              "name": "minimumStrongPasswordWordCount",
+              "description": "prop_register.minimumStrongPasswordWordCount_desc",
+              "value": "3"
+            },
+            {
+              "name": "maximumPossibleStrongerPasswords",
+              "description": "prop_register.maximumPossibleStrongerPasswords_desc",
+              "value": "25"
+            },
+            {
+              "name": "ensurePasswordStrengthSuggestions",
+              "description": "prop_register.ensurePasswordStrengthSuggestions_desc",
+              "value": "5"
+            },
+            {
+              "name": "allowedFields",
+              "description": "prop_register.allowedfields_desc",
+              "value": ""
+            },
+            {
+              "name": "emailField",
+              "description": "prop_register.emailfield_desc",
+              "value": "email"
+            },
+            {
+              "name": "successMsg",
+              "description": "prop_register.successmsg_desc",
+              "value": ""
+            },
+            {
+              "name": "persistParams",
+              "description": "prop_register.persistparams_desc",
+              "value": ""
+            },
+            {
+              "name": "preHooks",
+              "description": "prop_register.prehooks_desc",
+              "value": ""
+            },
+            {
+              "name": "postHooks",
+              "description": "prop_register.posthooks_desc",
+              "value": ""
+            },
+            {
+              "name": "useExtended",
+              "description": "prop_register.useextended_desc",
+              "type": "combo-boolean",
+              "value": true
+            },
+            {
+              "name": "excludeExtended",
+              "description": "prop_register.excludeextended_desc",
+              "value": ""
+            },
+            {
+              "name": "activation",
+              "description": "prop_register.activation_desc",
+              "type": "combo-boolean",
+              "value": true
+            },
+            {
+              "name": "activationttl",
+              "description": "prop_register.activationttl_desc",
+              "value": "180"
+            },
+            {
+              "name": "activationResourceId",
+              "description": "prop_register.activationresourceid_desc",
+              "value": "1"
+            },
+            {
+              "name": "activationEmail",
+              "description": "prop_register.activationemail_desc",
+              "value": ""
+            },
+            {
+              "name": "activationEmailSubject",
+              "description": "prop_register.activationemailsubject_desc",
+              "value": ""
+            },
+            {
+              "name": "activationEmailTplType",
+              "description": "prop_register.activationemailtpltype_desc",
+              "type": "list",
+              "options": [
+                {
+                  "name": "opt_register.chunk",
+                  "value": "modChunk"
+                },
+                {
+                  "name": "opt_register.file",
+                  "value": "file"
+                },
+                {
+                  "name": "opt_register.inline",
+                  "value": "inline"
+                },
+                {
+                  "name": "opt_register.embedded",
+                  "value": "embedded"
+                }
+              ],
+              "value": "modChunk"
+            },
+            {
+              "name": "activationEmailTpl",
+              "description": "prop_register.activationemailtpl_desc",
+              "value": "lgnActivateEmailTpl"
+            },
+            {
+              "name": "activationEmailTplAlt",
+              "description": "prop_register.activationemailtplalt_desc",
+              "value": ""
+            },
+            {
+              "name": "moderatedResourceId",
+              "description": "prop_register.moderatedresourceid_desc",
+              "value": ""
+            },
+            {
+              "name": "removeExpiredRegistrations",
+              "description": "prop_register.removeexpiredregistrations_desc",
+              "type": "combo-boolean",
+              "value": true
+            },
+            {
+              "name": "placeholderPrefix",
+              "description": "prop_register.placeholderprefix_desc",
+              "value": ""
+            },
+            {
+              "name": "recaptchaTheme",
+              "description": "prop_register.recaptchatheme_desc",
+              "type": "list",
+              "options": [
+                {
+                  "name": "opt_register.red",
+                  "value": "red"
+                },
+                {
+                  "name": "opt_register.white",
+                  "value": "white"
+                },
+                {
+                  "name": "opt_register.clean",
+                  "value": "clean"
+                },
+                {
+                  "name": "opt_register.blackglass",
+                  "value": "blackglass"
+                }
+              ],
+              "value": "clean"
+            },
+            {
+              "name": "mathMinRange",
+              "description": "prop_register.mathminrange_desc",
+              "value": "10"
+            },
+            {
+              "name": "mathMaxRange",
+              "description": "prop_register.mathmaxrange_desc",
+              "value": "100"
+            },
+            {
+              "name": "mathField",
+              "description": "prop_register.mathfield_desc",
+              "value": "math"
+            },
+            {
+              "name": "mathOp1Field",
+              "description": "prop_register.mathop1field_desc",
+              "value": "op1"
+            },
+            {
+              "name": "mathOp2Field",
+              "description": "prop_register.mathop2field_desc",
+              "value": "op2"
+            },
+            {
+              "name": "mathOperatorField",
+              "description": "prop_register.mathoperatorfield_desc",
+              "value": "operator"
+            }
+          ]
+        },
+        {
+          "name": "ResetPassword",
+          "description": "Resets a password from a confirmation email.",
+          "properties": [
+            {
+              "name": "tpl",
+              "description": "prop_resetpassword.tpl_desc",
+              "value": "lgnResetPassTpl"
+            },
+            {
+              "name": "tplType",
+              "description": "prop_resetpassword.tpltype_desc",
+              "type": "list",
+              "options": [
+                {
+                  "name": "opt_register.chunk",
+                  "value": "modChunk"
+                },
+                {
+                  "name": "opt_register.file",
+                  "value": "file"
+                },
+                {
+                  "name": "opt_register.inline",
+                  "value": "inline"
+                },
+                {
+                  "name": "opt_register.embedded",
+                  "value": "embedded"
+                }
+              ],
+              "value": "modChunk"
+            },
+            {
+              "name": "loginResourceId",
+              "description": "prop_resetpassword.loginresourceid_desc",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "name": "UpdateProfile",
+          "description": "Allows front-end updating of a users own profile.",
+          "properties": [
+            {
+              "name": "submitVar",
+              "description": "prop_updateprofile.submitvar_desc",
+              "value": ""
+            },
+            {
+              "name": "user",
+              "description": "prop_updateprofile.user_desc",
+              "value": ""
+            },
+            {
+              "name": "redirectToLogin",
+              "description": "prop_updateprofile.redirecttologin_desc",
+              "type": "combo-boolean",
+              "value": true
+            },
+            {
+              "name": "reloadOnSuccess",
+              "description": "prop_updateprofile.reloadonsuccess_desc",
+              "type": "combo-boolean",
+              "value": true
+            },
+            {
+              "name": "syncUsername",
+              "description": "prop_updateprofile.syncusername_desc",
+              "value": ""
+            },
+            {
+              "name": "emailField",
+              "description": "prop_updateprofile.emailfield_desc",
+              "value": "email"
+            },
+            {
+              "name": "useExtended",
+              "description": "prop_updateprofile.useextended_desc",
+              "type": "combo-boolean",
+              "value": true
+            },
+            {
+              "name": "excludeExtended",
+              "description": "prop_updateprofile.excludeextended_desc",
+              "value": ""
+            },
+            {
+              "name": "allowedFields",
+              "description": "prop_updateprofile.allowedfields_desc",
+              "value": ""
+            },
+            {
+              "name": "allowedExtendedFields",
+              "description": "prop_updateprofile.allowedextendedfields_desc",
+              "value": ""
+            },
+            {
+              "name": "preHooks",
+              "description": "prop_updateprofile.prehooks_desc",
+              "value": ""
+            },
+            {
+              "name": "postHooks",
+              "description": "prop_updateprofile.posthooks_desc",
+              "value": ""
+            },
+            {
+              "name": "placeholderPrefix",
+              "description": "prop_updateprofile.placeholderprefix_desc",
+              "value": ""
+            }
+          ]
         }
-        ,"systemSettings": [{
-            "key": "forgot_password_email_subject"
-            ,"value": "Password Retrieval Email"
-            ,"area": "security"
-        },{
-            "key": "public_key"
-            ,"value": ""
-            ,"namespace": "recaptcha"
-            ,"area": "reCaptcha"
-        },{
-            "key": "private_key"
-            ,"value": ""
-            ,"namespace": "recaptcha"
-            ,"area": "reCaptcha"
-        },{
-            "key": "use_ssl"
-            ,"value": "false"
-            ,"namespace": "recaptcha"
-            ,"area": "reCaptcha"
-            ,"type": "combo-boolean"
-        }]
+      ],
+      "chunks": [
+        {
+          "name": "lgnLoginTpl"
+        },
+        {
+          "name": "lgnLogoutTpl"
+        },
+        {
+          "name": "lgnErrTpl"
+        },
+        {
+          "name": "lgnForgotPassEmail"
+        },
+        {
+          "name": "lgnForgotPassSentTpl"
+        },
+        {
+          "name": "lgnForgotPassTpl"
+        },
+        {
+          "name": "lgnResetPassTpl"
+        },
+        {
+          "name": "lgnRegisterFormTpl"
+        },
+        {
+          "name": "lgnActivateEmailTpl"
+        },
+        {
+          "name": "lgnActiveUser"
+        },
+        {
+          "name": "lgnResetPassChangePassTpl"
+        },
+        {
+          "name": "lgnExpiredTpl"
+        }
+      ]
+    },
+    "systemSettings": [
+      {
+        "key": "forgot_password_email_subject",
+        "value": "Password Retrieval Email",
+        "area": "security"
+      },
+      {
+        "key": "public_key",
+        "value": "",
+        "namespace": "recaptcha",
+        "area": "reCaptcha"
+      },
+      {
+        "key": "private_key",
+        "value": "",
+        "namespace": "recaptcha",
+        "area": "reCaptcha"
+      },
+      {
+        "key": "use_ssl",
+        "value": "false",
+        "namespace": "recaptcha",
+        "area": "reCaptcha",
+        "type": "combo-boolean"
+      }
+    ]
+  },
+  "build": {
+    "resolver": {
+      "after": ["fix.namespace.php"]
     }
+  }
 }
