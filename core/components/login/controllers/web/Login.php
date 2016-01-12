@@ -34,6 +34,8 @@ class LoginLoginController extends LoginController {
         $this->setDefaultProperties(array(
             'loginTpl' => 'lgnLoginTpl',
             'logoutTpl' => 'lgnLogoutTpl',
+            'loggedinResourceId' => '',
+            'loggedoutResourceId' => '',
             'loginMsg' => '',
             'logoutMsg' => '',
             'preHooks' => '',
@@ -106,6 +108,15 @@ class LoginLoginController extends LoginController {
         }
 
         $this->loadReCaptcha();
+
+        if ($this->isAuthenticated && $this->getProperty('loggedinResourceId') && $this->modx->resource->get('id') != $this->getProperty('loggedinResourceId')) {
+            $url = $this->modx->makeUrl($this->getProperty('loggedinResourceId'), '', '', 'full');
+            $this->modx->sendRedirect($url);
+        }
+        if (!$this->isAuthenticated && $this->getProperty('loggedoutResourceId') && $this->modx->resource->get('id') != $this->getProperty('loggedoutResourceId')) {
+            $url = $this->modx->makeUrl($this->getProperty('loggedoutResourceId'), '', '', 'full');
+            $this->modx->sendRedirect($url);
+        }
 
         return $this->login->getChunk($tpl,$phs,$this->getProperty('tplType','modChunk'));
     }
