@@ -165,7 +165,7 @@ class LoginConfirmRegisterController extends LoginController {
      * @return void
      */
     public function addSessionContexts() {
-        if ($this->getProperty('authenticate',true)) {
+        if ($this->getProperty('authenticate',true,'isset')) {
             $this->modx->user =& $this->user;
             $this->modx->getUser();
             $contexts = $this->getProperty('authenticateContexts',$this->modx->context->get('key'));
@@ -183,7 +183,7 @@ class LoginConfirmRegisterController extends LoginController {
      * to a form requiring registration
      */
     public function redirectBack() {
-        $redirectBack = $this->modx->getOption('redirectBack',$_REQUEST,$this->getProperty('redirectBack',false));
+        $redirectBack = $this->modx->getOption('redirectBack',$_REQUEST,$this->getProperty('redirectBack',false,'isset'));
         $redirectBackParams = $this->modx->getOption('redirectBackParams',$_REQUEST,$this->getProperty('redirectBackParams',''));
         if (!empty($redirectBackParams)) {
             $redirectBackParams = $this->login->decodeParams($redirectBackParams);
@@ -196,7 +196,7 @@ class LoginConfirmRegisterController extends LoginController {
             if (empty($redirectParams) || !is_array($redirectParams)) $redirectParams = array();
 
             /* handle persist params from Register snippet */
-            $redirectUnsetDefaultParams = (boolean) $this->getProperty('redirectUnsetDefaultParams', 0);
+            $redirectUnsetDefaultParams = (boolean) $this->getProperty('redirectUnsetDefaultParams', 0, 'isset');
 			if(!$redirectUnsetDefaultParams) {
                 $persistParams = $_GET;
                 unset($persistParams['lp'],$persistParams['lu'],$persistParams['id']);

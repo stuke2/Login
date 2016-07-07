@@ -87,13 +87,13 @@ class LoginRegisterController extends LoginController {
         $this->dictionary->fromArray($fields);
 
         $this->validateUsername();
-        if ($this->getProperty('validatePassword', true)) {
+        if ($this->getProperty('validatePassword',true,'isset')) {
             $this->validatePassword();
         }
-        if ($this->getProperty('ensurePasswordStrength', false)) {
+        if ($this->getProperty('ensurePasswordStrength',false,'isset')) {
             $this->ensurePasswordStrength();
         }
-        if ($this->getProperty('generatePassword', false)) {
+        if ($this->getProperty('generatePassword',false,'isset')) {
             $this->generatePassword();
         }
         $this->validateEmail();
@@ -188,7 +188,7 @@ class LoginRegisterController extends LoginController {
             $alreadyExists = $this->modx->getObject('modUser',array('username' => $username));
             if ($alreadyExists) {
                 $cachePwd = $alreadyExists->get('cachepwd');
-                if ($this->getProperty('removeExpiredRegistrations',true) && $alreadyExists->get('active') == 0 && !empty($cachePwd)) {
+                if ($this->getProperty('removeExpiredRegistrations',true,'isset') && $alreadyExists->get('active') == 0 && !empty($cachePwd)) {
                     /* if inactive and has a cachepwd, probably an expired
                      * activation account, so let's remove it
                      * and let user re-register
@@ -209,7 +209,7 @@ class LoginRegisterController extends LoginController {
     public function getPassword() {
         $passwordField = $this->getProperty('passwordField','password');
         $password = $this->dictionary->get($passwordField);
-        if ($this->getProperty('trimPassword',true)) {
+        if ($this->getProperty('trimPassword',true,'isset')) {
             $password = trim($password);
         }
         return $password;
@@ -344,7 +344,7 @@ class LoginRegisterController extends LoginController {
         $password = $this->getPassword();
         $passwordField = $this->getProperty('passwordField','password');
 
-        $passwordWordSeparator = $this->getProperty('passwordWordSeparator',' ');
+        $passwordWordSeparator = $this->getProperty('passwordWordSeparator',' ','isset');
         if (strlen($passwordWordSeparator) == 0) $passwordWordSeparator = ' ';
         $wordCount = $this->getWordsInString($password,$passwordWordSeparator);
         $minimumStrongPasswordWordCount = $this->getProperty('minimumStrongPasswordWordCount',4,'!empty');
