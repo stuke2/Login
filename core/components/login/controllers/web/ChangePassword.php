@@ -81,7 +81,8 @@ class LoginChangePasswordController extends LoginController {
                 'username' => $this->modx->user->get('username'),
                 'id' => $this->modx->user->get('id'),
             ));
-            $this->modx->toPlaceholders($placeholders, rtrim($this->getProperty('placeholderPrefix', 'logcp.'), '.'));
+            $placeholderPrefix = rtrim($this->getProperty('placeholderPrefix', 'logcp.'), '.');
+            $this->modx->toPlaceholders($placeholders, $placeholderPrefix);
         }
         return $this->profile;
     }
@@ -146,7 +147,8 @@ class LoginChangePasswordController extends LoginController {
                     $this->changePassword();
                 } else {
                     $errorMsg = $this->prepareFailureMessage();
-                    $this->modx->setPlaceholder($this->getProperty('placeholderPrefix').'error_message',$errorMsg);
+                    $placeholderPrefix = rtrim($this->getProperty('placeholderPrefix', 'logcp.'), '.');
+                    $this->modx->setPlaceholder($placeholderPrefix . '.error_message', $errorMsg);
                 }
             }
         }
@@ -160,7 +162,6 @@ class LoginChangePasswordController extends LoginController {
      * @return boolean
      */
     public function changePassword() {
-        $placeholderPrefix = $this->getProperty('placeholderPrefix');
         $fieldNewPassword = $this->getProperty('fieldNewPassword');
         $fieldOldPassword = $this->getProperty('fieldOldPassword');
         $validateOldPassword = $this->getProperty('validateOldPassword',true,'isset');
@@ -297,7 +298,7 @@ class LoginChangePasswordController extends LoginController {
     public function loadPostHooks() {
         $postHooks = $this->getProperty('postHooks','');
         if (!empty($postHooks)) {
-            $placeholderPrefix = rtrim($this->getProperty('placeholderPrefix'), '.');
+            $placeholderPrefix = rtrim($this->getProperty('placeholderPrefix', 'logcp.'), '.');
             $this->loadHooks('postHooks');
             $fields['changepassword.user'] = &$this->modx->user;
             $fields['changepassword.profile'] =& $this->profile;
@@ -337,11 +338,11 @@ class LoginChangePasswordController extends LoginController {
      * @return void
      */
     public function setSuccessMessagePlaceholder() {
-        $placeholderPrefix = $this->getProperty('placeholderPrefix');
-        $this->modx->setPlaceholder($placeholderPrefix.'passwordChanged',true);
+        $placeholderPrefix = rtrim($this->getProperty('placeholderPrefix', 'logcp.'), '.');
+        $this->modx->setPlaceholder($placeholderPrefix . '.passwordChanged', true);
         $successMessage = $this->getProperty('successMessage');
         if (!empty($successMessage)) {
-            $this->modx->setPlaceholder($placeholderPrefix.'successMessage',$successMessage);
+            $this->modx->setPlaceholder($placeholderPrefix . '.successMessage', $successMessage);
         }
     }
 

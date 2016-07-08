@@ -207,8 +207,8 @@ class LoginResetPasswordController extends LoginController {
     public function handleChangePasswordForm() {
         $this->loadDictionary();
         $this->errors = $this->validate();
+        $placeholderPrefix = rtrim($this->getProperty('placeholderPrefix', 'logcp.'), '.');
         if (!empty($this->errors)) {
-            $placeholderPrefix = rtrim($this->getProperty('placeholderPrefix', 'logcp.'), '.');
             $this->modx->toPlaceholders($this->errors, $placeholderPrefix . '.error');
             $this->modx->toPlaceholders($this->dictionary->toArray(), $placeholderPrefix);
 
@@ -220,7 +220,7 @@ class LoginResetPasswordController extends LoginController {
 
         if (!empty($this->errors)) {
             $errorMsg = $this->prepareFailureMessage();
-            $this->modx->setPlaceholder($this->getProperty('placeholderPrefix').'error_message',$errorMsg);
+            $this->modx->setPlaceholder($placeholderPrefix . '.error_message', $errorMsg);
 
             return $this->showChangePasswordForm();
         }

@@ -61,7 +61,7 @@ class LoginActiveUsersController extends LoginController {
      * @return array
      */
     public function getUsers() {
-        $placeholderPrefix = $this->getProperty('placeholderPrefix','au.');
+        $placeholderPrefix = rtrim($this->getProperty('placeholderPrefix', 'au.'), '.');
         $classKey = $this->getProperty('classKey','modUser');
         
         $sortBy = $this->modx->getOption('sortBy',$_REQUEST,$this->getProperty('sortBy','username'));
@@ -84,9 +84,9 @@ class LoginActiveUsersController extends LoginController {
         }
         $c->sortby($sortBy,$sortDir);
         $users = $this->modx->getCollection($classKey,$c);
-        $this->modx->setPlaceholder($placeholderPrefix.'total',$total);
-        $this->modx->setPlaceholder($placeholderPrefix.'offset',$offset);
-        $this->modx->setPlaceholder($placeholderPrefix.'limit',$limit);
+        $this->modx->setPlaceholder($placeholderPrefix . '.total', $total);
+        $this->modx->setPlaceholder($placeholderPrefix . '.offset', $offset);
+        $this->modx->setPlaceholder($placeholderPrefix . '.limit', $limit);
 
         return $users;
 
