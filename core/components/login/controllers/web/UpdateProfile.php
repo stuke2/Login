@@ -73,6 +73,7 @@ class LoginUpdateProfileController extends LoginController {
         if (!$this->getProfile()) return '';
         
         $this->checkForSuccessMessage();
+        $validate = true;
         if ($this->hasPost()) {
             $this->loadDictionary();
             if ($this->validate()) {
@@ -89,11 +90,20 @@ class LoginUpdateProfileController extends LoginController {
                     } else {
                         $this->modx->setPlaceholder('login.update_success',true);
                     }
+                } else {
+                    $validate = false;
                 }
+            } else {
+                $validate = false;
             }
         }
 
         $this->setFieldPlaceholders();
+
+        if ($validate === false) {
+            $placeholderPrefix = rtrim($this->getProperty('placeholderPrefix'), '.');
+            $this->modx->toPlaceholders($this->dictionary->toArray(), $placeholderPrefix);
+        }
 
         return '';
     }
