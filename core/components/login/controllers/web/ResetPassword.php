@@ -175,7 +175,12 @@ class LoginResetPasswordController extends LoginController {
     }
 
     public function showChangePasswordForm() {
-        return $this->login->getChunk($this->getProperty('changePasswordTpl'),null,$this->getProperty('changePasswordTplType','modChunk'));
+        $placeholderPrefix = rtrim($this->getProperty('placeholderPrefix', 'logcp.'), '.');
+        $this->modx->toPlaceholders(array(
+            'lp' => $this->login->base64url_encode($this->password),
+            'lu' => $this->login->base64url_encode($this->username)
+        ), $placeholderPrefix);
+        return $this->login->getChunk($this->getProperty('changePasswordTpl'), null, $this->getProperty('changePasswordTplType', 'modChunk'));
     }
 
     /**
