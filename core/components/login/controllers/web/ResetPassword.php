@@ -175,7 +175,12 @@ class LoginResetPasswordController extends LoginController {
     }
 
     public function showChangePasswordForm() {
-        return $this->login->getChunk($this->getProperty('changePasswordTpl'),null,$this->getProperty('changePasswordTplType','modChunk'));
+        $placeholderPrefix = rtrim($this->getProperty('placeholderPrefix', 'logcp.'), '.');
+        $this->modx->toPlaceholders(array(
+            'lp' => $this->login->base64url_encode($this->password),
+            'lu' => $this->login->base64url_encode($this->username)
+        ), $placeholderPrefix);
+        return $this->login->getChunk($this->getProperty('changePasswordTpl'), null, $this->getProperty('changePasswordTplType', 'modChunk'));
     }
 
     /**
@@ -207,10 +212,10 @@ class LoginResetPasswordController extends LoginController {
     public function handleChangePasswordForm() {
         $this->loadDictionary();
         $this->errors = $this->validate();
+        $placeholderPrefix = rtrim($this->getProperty('placeholderPrefix', 'logcp.'), '.');
         if (!empty($this->errors)) {
-            $placeholderPrefix = $this->getProperty('placeholderPrefix','logcp.');
-            $this->modx->setPlaceholders($this->errors,$placeholderPrefix.'error.');
-            $this->modx->setPlaceholders($this->dictionary->toArray(),$placeholderPrefix);
+            $this->modx->toPlaceholders($this->errors, $placeholderPrefix . '.error');
+            $this->modx->toPlaceholders($this->dictionary->toArray(), $placeholderPrefix);
 
             return $this->showChangePasswordForm();
         }
@@ -220,7 +225,8 @@ class LoginResetPasswordController extends LoginController {
 
         if (!empty($this->errors)) {
             $errorMsg = $this->prepareFailureMessage();
-            $this->modx->setPlaceholder($this->getProperty('placeholderPrefix').'error_message',$errorMsg);
+            $this->modx->setPlaceholder($placeholderPrefix . '.error_message', $errorMsg);
+            $this->modx->toPlaceholders($this->errors, $placeholderPrefix . '.error');
 
             return $this->showChangePasswordForm();
         }
