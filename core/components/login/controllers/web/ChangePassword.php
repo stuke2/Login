@@ -121,9 +121,19 @@ class LoginChangePasswordController extends LoginController {
     public function validate() {
         $this->loadValidator();
         $fields = $this->validator->validateFields($this->dictionary,$this->getProperty('validate',''));
+        
+        $passwordFields = array(
+            'fieldConfirmNewPassword' => $this->getProperty('fieldConfirmNewPassword','password_new_confirm'),
+            'fieldNewPassword' => $this->getProperty('fieldNewPassword','password_new'),
+            'fieldOldPassword' => $this->getProperty('fieldOldPassword','password_old'),
+        );
+
         foreach ($fields as $k => $v) {
-            $fields[$k] = str_replace(array('[',']'),array('&#91;','&#93;'),$v);
+            if(!in_array($k,$passwordFields)) {
+                $fields[$k] = str_replace(array('[', ']'), array('&#91;', '&#93;'), $v);
+            }
         }
+        
         $this->dictionary->fromArray($fields);
 
         return $this->validator->getErrors();
