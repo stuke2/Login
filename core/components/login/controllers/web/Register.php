@@ -101,7 +101,7 @@ class LoginRegisterController extends LoginController {
         $placeholderPrefix = rtrim($this->getProperty('placeholderPrefix', ''), '.');
         if ($this->validator->hasErrors()) {
             $this->modx->toPlaceholders($this->validator->getErrors(), $placeholderPrefix . '.error');
-            $this->modx->setPlaceholder($placeholderPrefix . '.validation_error', true);
+            $this->modx->toPlaceholder('validation_error', true, $placeholderPrefix);
         } else {
 
             $this->loadPreHooks();
@@ -110,12 +110,12 @@ class LoginRegisterController extends LoginController {
             if ($this->preHooks->hasErrors()) {
                 $this->modx->toPlaceholders($this->preHooks->getErrors(), $placeholderPrefix . '.error');
                 $errorMsg = $this->preHooks->getErrorMessage();
-                $this->modx->setPlaceholder($placeholderPrefix . '.error.message', $errorMsg);
+                $this->modx->toPlaceholder('error.message', $errorMsg, $placeholderPrefix);
             } else {
                 /* everything good, go ahead and register */
                 $result = $this->runProcessor('register');
                 if ($result !== true) {
-                    $this->modx->setPlaceholder($placeholderPrefix . '.error.message', $result);
+                    $this->modx->toPlaceholder('error.message', $result, $placeholderPrefix);
                 } else {
                     $this->success = true;
                 }
@@ -126,7 +126,7 @@ class LoginRegisterController extends LoginController {
         $this->modx->toPlaceholders($placeholders, $placeholderPrefix);
         foreach ($placeholders as $k => $v) {
             if (is_array($v)) {
-                $this->modx->setPlaceholder($placeholderPrefix . '.' . $k, json_encode($v));
+                $this->modx->toPlaceholder($k, json_encode($v), $placeholderPrefix);
             }
         }
         return '';
@@ -329,7 +329,7 @@ class LoginRegisterController extends LoginController {
             $recaptchaWidth = $this->getProperty('recaptchaWidth',500);
             $recaptchaHeight = $this->getProperty('recaptchaHeight',300);
             $html = $recaptcha->getHtml($recaptchaTheme,$recaptchaWidth,$recaptchaHeight);
-            $this->modx->setPlaceholder($placeholderPrefix . '.recaptcha_html', $html);
+            $this->modx->toPlaceholder('recaptcha_html', $html, $placeholderPrefix);
         } else {
             $this->modx->log(modX::LOG_LEVEL_ERROR,'[Register] '.$this->modx->lexicon('register.recaptcha_err_load'));
         }

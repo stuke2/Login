@@ -707,7 +707,8 @@ class LoginValidator {
      * @return void
      */
     public function processErrors() {
-        $this->modx->toPlaceholders($this->getErrors(),$this->config['placeholderPrefix'].'error');
+        $placeholderPrefix = rtrim($this->config['placeholderPrefix'], '.');
+        $this->modx->toPlaceholders($this->getErrors(), $placeholderPrefix . '.error');
         $errs = array();
         foreach ($this->getRawErrors() as $field => $err) {
             $err = $field.': '.$err;
@@ -715,8 +716,8 @@ class LoginValidator {
         }
         $errs = implode($this->config['validationErrorBulkSeparator'],$errs);
         $validationErrorMessage = str_replace('[[+errors]]',$errs,$this->config['validationErrorMessage']);
-        $this->modx->setPlaceholder($this->config['placeholderPrefix'].'validation_error',true);
-        $this->modx->setPlaceholder($this->config['placeholderPrefix'].'validation_error_message',$validationErrorMessage);
+        $this->modx->toPlaceholder('validation_error', true, $placeholderPrefix);
+        $this->modx->toPlaceholder('validation_error_message', $validationErrorMessage, $placeholderPrefix);
     }
 
     /**
