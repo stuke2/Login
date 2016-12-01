@@ -225,7 +225,7 @@ class LoginResetPasswordController extends LoginController {
 
         if (!empty($this->errors)) {
             $errorMsg = $this->prepareFailureMessage();
-            $this->modx->setPlaceholder($placeholderPrefix . '.error_message', $errorMsg);
+            $this->modx->toPlaceholder('error_message', $errorMsg, $placeholderPrefix);
             $this->modx->toPlaceholders($this->errors, $placeholderPrefix . '.error');
 
             return $this->showChangePasswordForm();

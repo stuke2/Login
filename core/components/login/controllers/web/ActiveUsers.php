@@ -84,9 +84,11 @@ class LoginActiveUsersController extends LoginController {
         }
         $c->sortby($sortBy,$sortDir);
         $users = $this->modx->getCollection($classKey,$c);
-        $this->modx->setPlaceholder($placeholderPrefix . '.total', $total);
-        $this->modx->setPlaceholder($placeholderPrefix . '.offset', $offset);
-        $this->modx->setPlaceholder($placeholderPrefix . '.limit', $limit);
+        $this->modx->toPlaceholders(array(
+            'total' => $total,
+            'offset' => $offset,
+            'limit' => $limit
+        ), $placeholderPrefix);
 
         return $users;
 

@@ -158,7 +158,7 @@ class LoginChangePasswordController extends LoginController {
                 } else {
                     $errorMsg = $this->prepareFailureMessage();
                     $placeholderPrefix = rtrim($this->getProperty('placeholderPrefix', 'logcp.'), '.');
-                    $this->modx->setPlaceholder($placeholderPrefix . '.error_message', $errorMsg);
+                    $this->modx->toPlaceholder('error_message', $errorMsg, $placeholderPrefix);
                 }
             }
         }
@@ -230,7 +230,7 @@ class LoginChangePasswordController extends LoginController {
         if ($this->preHooks->hasErrors()) {
             $placeholderPrefix = rtrim($this->getProperty('placeholderPrefix', 'logcp.'), '.');
             $this->modx->toPlaceholders($this->preHooks->getErrors(), $placeholderPrefix . '.error');
-            $this->modx->setPlaceholder($placeholderPrefix . '.error_message', $this->preHooks->getErrorMessage());
+            $this->modx->toPlaceholder('error_message', $this->preHooks->getErrorMessage(), $placeholderPrefix);
             $passed = false;
         }
         return $passed;
@@ -322,7 +322,7 @@ class LoginChangePasswordController extends LoginController {
                 $this->modx->toPlaceholders($this->postHooks->getErrors(), $placeholderPrefix . '.error');
 
                 $errorMsg = $this->postHooks->getErrorMessage();
-                $this->modx->setPlaceholder($placeholderPrefix . '.error_message', $errorMsg);
+                $this->modx->toPlaceholder('error_message', $errorMsg, $placeholderPrefix);
             }
         }
     }
@@ -349,10 +349,10 @@ class LoginChangePasswordController extends LoginController {
      */
     public function setSuccessMessagePlaceholder() {
         $placeholderPrefix = rtrim($this->getProperty('placeholderPrefix', 'logcp.'), '.');
-        $this->modx->setPlaceholder($placeholderPrefix . '.passwordChanged', true);
+        $this->modx->toPlaceholder('passwordChanged', true, $placeholderPrefix);
         $successMessage = $this->getProperty('successMessage');
         if (!empty($successMessage)) {
-            $this->modx->setPlaceholder($placeholderPrefix . '.successMessage', $successMessage);
+            $this->modx->toPlaceholder('successMessage', $successMessage, $placeholderPrefix);
         }
     }
 
