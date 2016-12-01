@@ -110,7 +110,7 @@ class LoginConfirmRegisterController extends LoginController {
 
     /**
      * Handle the redirection after a failed verification
-     * @param mixed $id Resource ID to redirect to - defa
+     * @param mixed $id Resource ID to redirect to
      */
     public function redirectAfterFailure($id = null) {
         $errorPage = (is_null($id)) ? $this->getProperty('errorPage', false, 'isset') : $id;
