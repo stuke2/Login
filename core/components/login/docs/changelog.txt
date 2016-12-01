@@ -1,7 +1,7 @@
 Changelog file for Login component.
 
 ====================================
-- Added activePage propetty to ConfirmRegister processor
+- Added activePage property to ConfirmRegister processor
 
 Login 1.9.2
 ====================================
