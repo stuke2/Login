@@ -175,6 +175,11 @@
               "name": "errorPage",
               "description": "prop_confirmregister.errorpage_desc",
               "value": ""
+            },
+            {
+              "name": "activePage",
+              "description": "prop_confirmregister.activepage_desc",
+              "value": ""
             }
           ]
         },
