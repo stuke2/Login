@@ -2,6 +2,8 @@
 
 <form class="form inline" action="" method="post">
     <input type="hidden" name="nospam:blank" value="" />
+    <input type="hidden" name="lp" value="[[!+logcp.lp]]"/>
+    <input type="hidden" name="lu" value="[[!+logcp.lu]]"/>
 
     <div class="ff">
         <label for="password_new">[[!%login.password_new]]
