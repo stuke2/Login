@@ -416,7 +416,7 @@ class LoginLoginController extends LoginController {
         $postHooks = $this->getProperty('postHooks','');
         $this->loadHooks('postHooks');
         $fields = $this->dictionary->toArray();
-        $fields['response'] =& $response->getObject();
+        $fields['response'] = $response->getObject();
         $fields['contexts'] =& $contexts;
         $fields['loginContext'] =& $loginContext;
         $fields['logoutResourceId'] =& $logoutResourceId;
