@@ -1,7 +1,17 @@
 Changelog file for Login component.
 
+1.9.3
 ====================================
-- Added activePage property to ConfirmRegister processor
+- Added activePage property to ConfirmRegister controller
+- Added danish language files
+- Normalize placeholder prefix usage
+- Improved PHP7 compatibility
+- Added loggedinResourceId and loggedoutResourceId to the Login controller
+- Fix errors with square brackets in changed password
+- Add confirm password and password length validation messages to the field error placeholders too
+- Fill lu/lp placeholders in the change password form
+- Added hidden lu/lp fields to the lgnResetPassChangePassTpl chunk
+- Fix for array fields in Register/Profile/UpdateProfile snippet
 
 Login 1.9.2
 ====================================
