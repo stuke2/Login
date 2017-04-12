@@ -371,6 +371,12 @@
               "value": "logout"
             },
             {
+              "name": "loginViaEmail",
+              "description": "prop_login.loginviaemail_desc",
+              "type": "combo-boolean",
+              "value": false
+            },
+            {
               "name": "tplType",
               "description": "prop_login.tpltype_desc",
               "type": "list",
