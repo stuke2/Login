@@ -17,6 +17,7 @@ $_lang['prop_forgotpassword.resetresourceid_desc'] = 'Die Ressource-ID zu der Be
 $_lang['prop_login.actionkey_desc'] = 'Die REQUEST Variable die indiziert, welche Aktion ausgeführt werden soll.';
 $_lang['prop_login.loginkey_desc'] = 'Der login-Aktionsschlüssel.';
 $_lang['prop_login.logoutkey_desc'] = 'Der logout-Aktionsschlüssel.';
+$_lang['prop_login.loginviaemail_desc'] = 'Anmeldung mittels Benutzername oder Email Adresse ermöglichen.';
 $_lang['prop_login.tpltype_desc'] = 'Templatetyp für die login und logout Formulare.';
 $_lang['prop_login.logintpl_desc'] = 'Das login Formulartemplate.';
 $_lang['prop_login.logouttpl_desc'] = 'Das logout Formulartemplate.';
