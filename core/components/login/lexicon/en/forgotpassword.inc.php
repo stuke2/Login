@@ -32,5 +32,5 @@ $_lang['login.forgot_password_email_subject'] = 'Password Retrieval Email';
 $_lang['login.or_forgot_username'] = 'Or, forgot your username?';
 $_lang['login.reset_password'] = 'Reset Password';
 $_lang['login.username'] = 'Username';
-$_lang['login.user_err_nf_email'] = 'A user was not found with that email.';
-$_lang['login.user_err_nf_username'] = 'A user was not found with that username.';
+$_lang['login.user_err_nf_email'] = 'If the user or email exists, you\'ll receive an email shortly.';
+$_lang['login.user_err_nf_username'] = 'If the user or email exists, you\'ll receive an email shortly.';
