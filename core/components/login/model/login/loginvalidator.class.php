@@ -70,6 +70,7 @@ class LoginValidator {
             'encoding' => $this->modx->getOption('modx_charset',null,'UTF-8'),
             'customValidators' => !empty($this->login->config['customValidators']) ? explode(',',$this->login->config['customValidators']) : array(),
         ),$config);
+        return $this;
     }
 
     /**
@@ -215,9 +216,6 @@ class LoginValidator {
      * error messages to $this->errors.
      */
     public function validate($key,$value,$type = '') {
-        /** @var boolean|array $validated */
-        $validated = false;
-
         /** @var boolean $hasParams */
         $hasParams = $this->config['use_multibyte'] ? mb_strpos($type,'=',0,$this->config['encoding']) : strpos($type,'=');
         /** @var string|null $param The parameter value, if one is set */
@@ -339,7 +337,6 @@ class LoginValidator {
      * @return boolean
      */
     public function required($key,$value) {
-        $success = false;
         if (is_array($value) && isset($_FILES[$key])) { /* handling file uploads */
             $success = !empty($value['tmp_name']) && isset($value['error']) && $value['error'] == UPLOAD_ERR_OK ? true : false;
         } else {
@@ -542,6 +539,7 @@ class LoginValidator {
      */
     public function strip($key,$value,$param = '') {
         $this->fields[$key] = str_replace($param,'',$value);
+        return true;
     }
 
     /**
