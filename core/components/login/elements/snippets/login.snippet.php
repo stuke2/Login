@@ -31,6 +31,7 @@
  * @property textfield actionKey The REQUEST variable containing the action to take.
  * @property textfield loginKey The actionKey for login.
  * @property textfield logoutKey The actionKey for logout.
+ * @property boolean loginViaEmail Enable login via username or email address (either one!) [default: false]
  * @property list tplType The type of template to expect for the views:
  *  modChunk - name of chunk to use
  *  file - full path to file to use as tpl

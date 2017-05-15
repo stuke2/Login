@@ -20,6 +20,7 @@ $_lang['prop_forgotpassword.resetresourceid_desc'] = 'The resource to direct use
 $_lang['prop_login.actionkey_desc'] = 'The REQUEST variable that indicates what action to take.';
 $_lang['prop_login.loginkey_desc'] = 'The login action key.';
 $_lang['prop_login.logoutkey_desc'] = 'The logout action key.';
+$_lang['prop_login.loginviaemail_desc'] = 'Enable login via username or email address.';
 $_lang['prop_login.tpltype_desc'] = 'The type of tpls being provided for the login and logout forms.';
 $_lang['prop_login.logintpl_desc'] = 'The login form tpl.';
 $_lang['prop_login.logouttpl_desc'] = 'The logout tpl.';

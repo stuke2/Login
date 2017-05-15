@@ -32,6 +32,7 @@ class LoginLoginController extends LoginController {
 
     public function initialize() {
         $this->setDefaultProperties(array(
+            'loginViaEmail' => false,
             'loginTpl' => 'lgnLoginTpl',
             'logoutTpl' => 'lgnLogoutTpl',
             'loggedinResourceId' => '',
@@ -249,17 +250,24 @@ class LoginLoginController extends LoginController {
      * @return modProcessorResponse
      */
     public function runLoginProcessor() {
+        $loginViaEmail = $this->getProperty('loginViaEmail', false);
+        
         $fields = $this->dictionary->toArray();
         /* send to login processor and handle response */
-        $c = array(
+        $properties = array(
             'login_context' => $this->getProperty('loginContext'),
-            'add_contexts' => $this->getProperty('contexts',''),
-            'username' => $fields['username'],
-            'password' => $fields['password'],
-            'returnUrl' => $fields['returnUrl'],
-            'rememberme' => !empty($fields[$this->getProperty('rememberMeKey','rememberme')]) ? true : false,
+            'add_contexts'  => $this->getProperty('contexts',''),
+            'username'      => $fields['username'],
+            'password'      => $fields['password'],
+            'returnUrl'     => $fields['returnUrl'],
+            'rememberme'    => !empty($fields[$this->getProperty('rememberMeKey','rememberme')]) ? true : false,
         );
-        return $this->modx->runProcessor('security/login',$c);
+        if ($loginViaEmail) {
+            $processorsPath = $this->config['processorsPath'];
+            return $this->modx->runProcessor('customlogin', $properties, array('processors_path' => $processorsPath));
+        } else {
+            return $this->modx->runProcessor('security/login', $properties);
+        }
     }
 
     /**
