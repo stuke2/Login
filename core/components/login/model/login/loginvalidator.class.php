@@ -708,7 +708,8 @@ class LoginValidator {
      */
     public function processErrors() {
         $placeholderPrefix = rtrim($this->config['placeholderPrefix'], '.');
-        $this->modx->toPlaceholders($this->getErrors(), $placeholderPrefix . '.error');
+        $errorPrefix = ($placeholderPrefix) ? $placeholderPrefix . '.error' : 'error';
+        $this->modx->toPlaceholders($this->getErrors(), $errorPrefix);
         $errs = array();
         foreach ($this->getRawErrors() as $field => $err) {
             $err = $field.': '.$err;
