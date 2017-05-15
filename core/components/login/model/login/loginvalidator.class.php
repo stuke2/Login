@@ -396,7 +396,7 @@ class LoginValidator {
 
         /* validate length and @ */
         $pattern = "^[^@]{1,64}\@[^\@]{1,255}$";
-        $condition = $this->config['use_multibyte'] ? @mb_ereg($pattern,$value) : @ereg($pattern, $value);
+        $condition = $this->config['use_multibyte'] ? @mb_ereg($pattern, $value) : @preg_match('#' . preg_quote($pattern, '#') . '#', $value);
         if (!$condition) {
             return $this->_getErrorMessage($key,'vTextEmailInvalid','register.email_invalid',array(
                 'field' => $key,
@@ -408,7 +408,7 @@ class LoginValidator {
         $local_array = explode(".", $email_array[0]);
         for ($i = 0; $i < sizeof($local_array); $i++) {
             $pattern = "^(([A-Za-z0-9!#$%&'*+/=?^_`{|}~-][A-Za-z0-9!#$%&'*+/=?^_`{|}~\.-]{0,63})|(\"[^(\\|\")]{0,62}\"))$";
-            $condition = $this->config['use_multibyte'] ? @mb_ereg($pattern,$local_array[$i]) : @ereg($pattern,$local_array[$i]);
+            $condition = $this->config['use_multibyte'] ? @mb_ereg($pattern, $local_array[$i]) : @preg_match('#' . preg_quote($pattern, '#') . '#', $local_array[$i]);
             if (!$condition) {
                 return $this->_getErrorMessage($key,'vTextEmailInvalid','register.email_invalid',array(
                     'field' => $key,
@@ -418,7 +418,7 @@ class LoginValidator {
         }
         /* validate domain */
         $pattern = "^\[?[0-9\.]+\]?$";
-        $condition = $this->config['use_multibyte'] ? @mb_ereg($pattern, $email_array[1]) : @ereg($pattern, $email_array[1]);
+        $condition = $this->config['use_multibyte'] ? @mb_ereg($pattern, $email_array[1]) : @preg_match('#' . preg_quote($pattern, '#') . '#', $email_array[1]);
         if (!$condition) {
             $domain_array = explode(".", $email_array[1]);
             if (sizeof($domain_array) < 2) {
@@ -429,7 +429,7 @@ class LoginValidator {
             }
             for ($i = 0; $i < sizeof($domain_array); $i++) {
                 $pattern = "^(([A-Za-z0-9][A-Za-z0-9-]{0,61}[A-Za-z0-9])|([A-Za-z0-9]+))$";
-                $condition = $this->config['use_multibyte'] ? @mb_ereg($pattern,$domain_array[$i]) : @ereg($pattern,$domain_array[$i]);
+                $condition = $this->config['use_multibyte'] ? @mb_ereg($pattern, $domain_array[$i]) : @preg_match('#' . preg_quote($pattern, '#') . '#', $domain_array[$i]);
                 if (!$condition) {
                     return $this->_getErrorMessage($key,'vTextEmailInvalidDomain','register.email_invalid_domain',array(
                         'field' => $key,
