@@ -200,7 +200,8 @@ class LoginChangePasswordController extends LoginController {
      */
     public function setToPlaceholders() {
         $placeholderPrefix = rtrim($this->getProperty('placeholderPrefix', 'logcp.'), '.');
-        $this->modx->toPlaceholders($this->errors, $placeholderPrefix . '.error');
+        $errorPrefix = ($placeholderPrefix) ? $placeholderPrefix . '.error' : 'error';
+        $this->modx->toPlaceholders($this->errors, $errorPrefix);
         $this->modx->toPlaceholders($this->dictionary->toArray(), $placeholderPrefix);
     }
 
@@ -229,7 +230,8 @@ class LoginChangePasswordController extends LoginController {
         /* process preHooks */
         if ($this->preHooks->hasErrors()) {
             $placeholderPrefix = rtrim($this->getProperty('placeholderPrefix', 'logcp.'), '.');
-            $this->modx->toPlaceholders($this->preHooks->getErrors(), $placeholderPrefix . '.error');
+            $errorPrefix = ($placeholderPrefix) ? $placeholderPrefix . '.error' : 'error';
+            $this->modx->toPlaceholders($this->preHooks->getErrors(), $errorPrefix);
             $this->modx->toPlaceholder('error_message', $this->preHooks->getErrorMessage(), $placeholderPrefix);
             $passed = false;
         }
@@ -309,6 +311,7 @@ class LoginChangePasswordController extends LoginController {
         $postHooks = $this->getProperty('postHooks','');
         if (!empty($postHooks)) {
             $placeholderPrefix = rtrim($this->getProperty('placeholderPrefix', 'logcp.'), '.');
+            $errorPrefix = ($placeholderPrefix) ? $placeholderPrefix . '.error' : 'error';
             $this->loadHooks('postHooks');
             $fields['changepassword.user'] = &$this->modx->user;
             $fields['changepassword.profile'] =& $this->profile;
@@ -319,7 +322,7 @@ class LoginChangePasswordController extends LoginController {
 
             /* process post hooks errors */
             if ($this->postHooks->hasErrors()) {
-                $this->modx->toPlaceholders($this->postHooks->getErrors(), $placeholderPrefix . '.error');
+                $this->modx->toPlaceholders($this->postHooks->getErrors(), $errorPrefix);
 
                 $errorMsg = $this->postHooks->getErrorMessage();
                 $this->modx->toPlaceholder('error_message', $errorMsg, $placeholderPrefix);

@@ -99,8 +99,9 @@ class LoginRegisterController extends LoginController {
         $this->validateEmail();
 
         $placeholderPrefix = rtrim($this->getProperty('placeholderPrefix', ''), '.');
+        $errorPrefix = ($placeholderPrefix) ? $placeholderPrefix . '.error' : 'error';
         if ($this->validator->hasErrors()) {
-            $this->modx->toPlaceholders($this->validator->getErrors(), $placeholderPrefix . '.error');
+            $this->modx->toPlaceholders($this->validator->getErrors(), $errorPrefix);
             $this->modx->toPlaceholder('validation_error', true, $placeholderPrefix);
         } else {
 
@@ -108,7 +109,7 @@ class LoginRegisterController extends LoginController {
 
             /* process hooks */
             if ($this->preHooks->hasErrors()) {
-                $this->modx->toPlaceholders($this->preHooks->getErrors(), $placeholderPrefix . '.error');
+                $this->modx->toPlaceholders($this->preHooks->getErrors(), $errorPrefix);
                 $errorMsg = $this->preHooks->getErrorMessage();
                 $this->modx->toPlaceholder('error.message', $errorMsg, $placeholderPrefix);
             } else {
