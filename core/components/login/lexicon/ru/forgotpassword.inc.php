@@ -32,5 +32,5 @@ $_lang['login.forgot_password_email_subject'] = 'Адрес электронно
 $_lang['login.or_forgot_username'] = 'Или забыли свое имя пользователя?';
 $_lang['login.reset_password'] = 'Сбросить пароль';
 $_lang['login.username'] = 'Имя пользователя';
-$_lang['login.user_err_nf_email'] = 'Пользователь с таким адресом электронной почты не был найден';
-$_lang['login.user_err_nf_username'] = 'Пользователь с таким именем пользователя не был найден.';
+$_lang['login.user_err_nf_email'] = 'Если пользователь или электронная почта существуют, вы вскоре получите электронное письмо.';
+$_lang['login.user_err_nf_username'] = 'Если пользователь или электронная почта существуют, вы вскоре получите электронное письмо.';
