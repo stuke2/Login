@@ -218,7 +218,8 @@ class LoginUpdateProfileController extends LoginController {
         if ($this->validator->hasErrors()) {
             $placeholders = $this->dictionary->toArray();
             $placeholderPrefix = rtrim($this->getProperty('placeholderPrefix'), '.');
-            $this->modx->toPlaceholders($this->validator->getErrors(), $placeholderPrefix . '.error');
+            $errorPrefix = ($placeholderPrefix) ? $placeholderPrefix . '.error' : 'error';
+            $this->modx->toPlaceholders($this->validator->getErrors(), $errorPrefix);
             $this->modx->toPlaceholders($placeholders, $placeholderPrefix);
             foreach ($placeholders as $k => $v) {
                 if (is_array($v)) {
@@ -230,7 +231,7 @@ class LoginUpdateProfileController extends LoginController {
 			foreach ($es as $key => $error) {
 				$errors['message'] .= $error . $this->getProperty('errorDelimited');
 			}
-            $this->modx->toPlaceholder('message', $errors['message'], $placeholderPrefix . '.error');
+            $this->modx->toPlaceholder('message', $errors['message'], $errorPrefix);
         } else {
             $validated = true;
         }
