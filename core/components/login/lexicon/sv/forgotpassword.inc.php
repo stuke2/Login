@@ -33,5 +33,5 @@ $_lang['login.forgot_password_email_subject'] = 'Förfrågan om nollställande a
 $_lang['login.or_forgot_username'] = 'Eller, glömt användarnamnet?';
 $_lang['login.reset_password'] = 'Nollställ lösenord';
 $_lang['login.username'] = 'Användarnamn';
-$_lang['login.user_err_nf_email'] = 'Ingen användare hittades med den angivna e-postadressen.';
-$_lang['login.user_err_nf_username'] = 'Ingen användare hittades med det angivna användarnamnet.';
+$_lang['login.user_err_nf_email'] = 'Om användaren eller e-posten finns, får du ett mail inom kort.';
+$_lang['login.user_err_nf_username'] = 'Om användaren eller e-posten finns, får du ett mail inom kort.';

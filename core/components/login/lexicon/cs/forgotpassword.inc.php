@@ -35,5 +35,5 @@ $_lang['login.forgot_password_email_subject'] = 'E-mail se zapomenutým heslem';
 $_lang['login.or_forgot_username'] = 'Nebo jste zapomněli uživatelské jméno?';
 $_lang['login.reset_password'] = 'Resetovat heslo';
 $_lang['login.username'] = 'Uživatelské jméno';
-$_lang['login.user_err_nf_email'] = 'Uživatel s tímto e-mailem nenalezen.';
-$_lang['login.user_err_nf_username'] = 'Uživatelské jméno nenalezeno.';
+$_lang['login.user_err_nf_email'] = 'Pokud uživatel nebo e-mail existuje, obdržíte krátce e-mail.';
+$_lang['login.user_err_nf_username'] = 'Pokud uživatel nebo e-mail existuje, obdržíte krátce e-mail.';

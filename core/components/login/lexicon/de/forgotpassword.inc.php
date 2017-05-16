@@ -32,5 +32,5 @@ $_lang['login.forgot_password_email_subject'] = 'Passwort-vergessen E-Mail';
 $_lang['login.or_forgot_username'] = 'Haben Sie Ihren Benutzernamen vergessen?';
 $_lang['login.reset_password'] = 'Passwort zurücksetzen';
 $_lang['login.username'] = 'Benutzername';
-$_lang['login.user_err_nf_email'] = 'Es wurde kein Benutzer mit dieser E-Mail Adresse gefunden.';
-$_lang['login.user_err_nf_username'] = 'Es wurde kein Benutzer mit diesem Benutzernamen gefunden.';
+$_lang['login.user_err_nf_email'] = 'Wenn der Benutzer oder die E-Mail existiert, erhalten Sie in Kürze eine E-Mail.';
+$_lang['login.user_err_nf_username'] = 'Wenn der Benutzer oder die E-Mail existiert, erhalten Sie in Kürze eine E-Mail.';
