@@ -32,5 +32,5 @@ $_lang['login.forgot_password_email_subject'] = 'Email de récupération de mot 
 $_lang['login.or_forgot_username'] = 'Oublié votre identifiant ?';
 $_lang['login.reset_password'] = 'Réinitialiser le mot de passe';
 $_lang['login.username'] = 'Identifiant';
-$_lang['login.user_err_nf_email'] = 'Aucun utilisateur n\'a été trouvé avec cette adresse email.';
-$_lang['login.user_err_nf_username'] = 'Aucun utilisateur n\'a été trouvé avec cet identifiant.';
+$_lang['login.user_err_nf_email'] = 'Si l\'utilisateur ou le courrier électronique existe, vous recevrez un courriel sous peu.';
+$_lang['login.user_err_nf_username'] = 'Si l\'utilisateur ou le courrier électronique existe, vous recevrez un courriel sous peu.';

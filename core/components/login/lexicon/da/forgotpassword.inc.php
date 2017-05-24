@@ -32,5 +32,5 @@ $_lang['login.forgot_password_email_subject'] = 'Glemt adganskode email';
 $_lang['login.or_forgot_username'] = 'Eller, glemt dit brugernavn?';
 $_lang['login.reset_password'] = 'Nulstil adgangskode';
 $_lang['login.username'] = 'Brugernavn';
-$_lang['login.user_err_nf_email'] = 'Der blev ikke fundet en bruger med den e-mail.';
-$_lang['login.user_err_nf_username'] = 'Der blev ikke fundet en bruger med det brugernavn.';
+$_lang['login.user_err_nf_email'] = 'Hvis brugeren eller e-mailen findes, modtager du en email inden for kort tid.';
+$_lang['login.user_err_nf_username'] = 'Hvis brugeren eller e-mailen findes, modtager du en email inden for kort tid.';

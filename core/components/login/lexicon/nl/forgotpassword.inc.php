@@ -33,5 +33,5 @@ $_lang['login.forgot_password_email_subject'] = 'Nieuw wachtwoord e-mail';
 $_lang['login.or_forgot_username'] = 'Of bent u uw gebruikersnaam vergeten?';
 $_lang['login.reset_password'] = 'Wachtwoord herstellen';
 $_lang['login.username'] = 'Gebruikersnaam';
-$_lang['login.user_err_nf_email'] = 'Er is geen gebruiker met dat e-mailadres bekend.';
-$_lang['login.user_err_nf_username'] = 'Er is geen gebruiker met deze gebruikersnaam bekend.';
+$_lang['login.user_err_nf_email'] = 'Als de gebruiker of e-mail bestaat, ontvangt u binnenkort een e-mail.';
+$_lang['login.user_err_nf_username'] = 'Als de gebruiker of e-mail bestaat, ontvangt u binnenkort een e-mail.';
