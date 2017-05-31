@@ -211,7 +211,7 @@ class Login {
      */
     public function getChunk($name,$properties,$type = 'modChunk') {
         $output = '';
-        if (!is_array($properties)) $properties = array();
+        if (!is_array($properties) || is_null($properties)) $properties = array();
         switch ($type) {
             case 'embedded':
                 if (!$this->modx->user->isAuthenticated($this->modx->context->get('key'))) {
@@ -219,7 +219,7 @@ class Login {
                 }
                 break;
             case 'modChunk':
-                $output .= $this->modx->getChunk($name, $properties);
+                $output = $this->modx->getChunk($name, $properties);
                 break;
             case 'file':
                 $name = str_replace(array(
@@ -231,7 +231,7 @@ class Login {
                     $this->modx->getOption('assets_path'),
                     $this->modx->getOption('core_path'),
                 ),$name);
-                $output .= file_get_contents($name);
+                $output = file_get_contents($name);
                 $this->modx->setPlaceholders($properties);
                 break;
             case 'inline':
@@ -240,7 +240,7 @@ class Login {
                 $chunk = $this->modx->newObject('modChunk');
                 $chunk->setContent($name);
                 $chunk->setCacheable(false);
-                $output .= $chunk->process($properties);
+                $output = $chunk->process($properties);
                 break;
         }
         return $output;
