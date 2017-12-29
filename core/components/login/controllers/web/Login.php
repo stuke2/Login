@@ -105,7 +105,7 @@ class LoginLoginController extends LoginController {
             $phs['logoutUrl'] = $phs['request_uri'];
             $phs['logoutUrl'] .= strpos($phs['logoutUrl'],'?') ? ($this->modx->getOption('xhtml_urls',null,false) ? '&amp;' : '&') : '?';
             $phs['logoutUrl'] .= $phs['actionKey'].'='.$phs['logoutKey'];
-            $phs['logoutUrl'] = str_replace(array('?=','&='),'',$phs['logoutUrl']);
+            $phs['logoutUrl'] = str_replace(array('?=', '&=', '&amp;='), '', $phs['logoutUrl']);
         }
 
         $this->loadReCaptcha();
