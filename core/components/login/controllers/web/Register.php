@@ -65,7 +65,8 @@ class LoginRegisterController extends LoginController {
             'validatePassword' => true,
             'autoLogin' => false,
             'jsonResponse' => false,
-            'validationErrorMessage' => $this->modx->lexicon('register.validation_error_message'),
+            'validationErrorMessage' => 'A form validation error occurred. Please check the values you have entered.',
+            'preserveFieldsAfterRegister' => true
         ));
     }
 
@@ -157,6 +158,10 @@ class LoginRegisterController extends LoginController {
             if (is_array($v)) {
                 $this->modx->toPlaceholder($k, json_encode($v), $placeholderPrefix);
             }
+        }
+
+        if (!$this->success || $this->getProperty('preserveFieldsAfterRegister')) {
+            $this->modx->setPlaceholders($this->dictionary->toArray(), $placeholderPrefix);
         }
         return '';
     }
