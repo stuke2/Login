@@ -1,7 +1,7 @@
 --------------------
 Snippet: Login
 --------------------
-Version: 1.9.2
+Version: 1.9.5
 Since: June 21, 2010
 Author: Jason Coward <jason@modx.com>
         Shaun McCormick <shaun+login@modx.com>
@@ -9,7 +9,7 @@ Author: Jason Coward <jason@modx.com>
 This component loads a simple login and logout form. It also comes packaged
 with ForgotPassword and ResetPassword snippets, which allow the user to put
 in their username or email to receive a confirmation email which will reset
-their password. 
+their password.
 
 Example for Login:
 [[!Login]]
@@ -29,7 +29,7 @@ user will log in to should they click on the confirmation email, and put
 the Reset Password snippet in. Tell it what Resource the Login snippet is
 in - or where you'd like it to provide a link back to:
 
-[[ResetPassword? &loginResourceId=`72`]]  
+[[ResetPassword? &loginResourceId=`72`]]
 
 Then create another resource with the Forgot Password snippet, and tell it
 what Resource the Reset snippet is in:

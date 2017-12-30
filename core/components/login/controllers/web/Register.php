@@ -65,7 +65,7 @@ class LoginRegisterController extends LoginController {
             'validatePassword' => true,
             'autoLogin' => false,
             'jsonResponse' => false,
-            'validationErrorMessage' => 'A form validation error occurred. Please check the values you have entered.',
+            'validationErrorMessage' => $this->modx->lexicon('register.validation_error_message'),
         ));
     }
 
@@ -168,7 +168,7 @@ class LoginRegisterController extends LoginController {
     public function loadPreHooks() {
         $preHooks = $this->getProperty('preHooks','');
         $this->loadHooks('preHooks');
-        
+
         if (!empty($preHooks)) {
             $fields = $this->dictionary->toArray();
             /* do pre-register hooks */
@@ -199,14 +199,14 @@ class LoginRegisterController extends LoginController {
 
     /**
      * Ensure the username field is being sent and the username is not taken
-     * 
+     *
      * @return boolean
      */
     public function validateUsername() {
         $usernameField = $this->getProperty('usernameField','username');
         $username = $this->dictionary->get($usernameField);
         $success = true;
-        
+
         /* ensure username field exists and isn't empty */
         if (empty($username) && !$this->validator->hasErrorsInField($usernameField)) {
             $this->validator->addError($usernameField,$this->modx->lexicon('register.field_required'));
@@ -316,7 +316,7 @@ class LoginRegisterController extends LoginController {
      */
     public function preLoad() {
         $preHooks = $this->getProperty('preHooks','');
-        
+
         /* if using recaptcha, load recaptcha html */
         if (strpos($preHooks,'recaptcha') !== false) {
             $this->loadReCaptcha();

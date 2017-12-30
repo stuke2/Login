@@ -1,9 +1,18 @@
 Changelog file for Login component.
 
+Login 1.9.5
+====================================
 - Fix ResetPassword passing null instead of an array to getChunk
 - Remove hash_class, salt and sessionid from placeholders
+- Prevent potential XSS in placeholders
+- Added two missing default template chunks
+- Fixing a charset issue in some language files
+- Fixing email validation [#110]
+- Disable User/E-mail Enumeration in ForgotPassword snippet by an empty sentTpl property (default)
+- New jsonResponse property for returning a JSON by the Register snippet (for an AJAX call response)
+- Possibility to reset the registration fields after successful registration
 
-1.9.4
+Login 1.9.4
 ====================================
 - Disable User/E-mail Enumeration
 - Enable login via email
@@ -11,7 +20,7 @@ Changelog file for Login component.
 - Fixing error placeholders with empty placeholderPrefix
 - Fixing recoverable error, Argument 2 to getChunk() must be of the type array, null given [#87]
 
-1.9.3
+Login 1.9.3
 ====================================
 - Added activePage property to ConfirmRegister controller
 - Added danish language files
