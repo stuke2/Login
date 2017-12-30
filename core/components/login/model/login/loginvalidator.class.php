@@ -285,7 +285,12 @@ class LoginValidator {
      * @return string The added error message with the error wrapper.
      */
     public function addError($key,$value) {
-        $errTpl = $this->modx->getOption('errTpl',$this->login->config,'<span class="error">[[+error]]</span>');
+        // If jsonResponse is requested, we don't want span tags in our errors by default.
+        if($this->login->config['jsonResponse']){
+            $errTpl = $this->modx->getOption('errTpl',$this->login->config,'[[+error]]');
+        } else {
+            $errTpl = $this->modx->getOption('errTpl',$this->login->config,'<span class="error">[[+error]]</span>');
+        }
         $this->errorsRaw[$key] = $value;
         if (!isset($this->errors[$key])) {
             $this->errors[$key] = '';

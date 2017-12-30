@@ -64,6 +64,8 @@ class LoginRegisterController extends LoginController {
             'validate' => '',
             'validatePassword' => true,
             'autoLogin' => false,
+            'jsonResponse' => false,
+            'validationErrorMessage' => 'A form validation error occurred. Please check the values you have entered.',
         ));
     }
 
@@ -101,8 +103,20 @@ class LoginRegisterController extends LoginController {
         $placeholderPrefix = rtrim($this->getProperty('placeholderPrefix', ''), '.');
         $errorPrefix = ($placeholderPrefix) ? $placeholderPrefix . '.error' : 'error';
         if ($this->validator->hasErrors()) {
-            $this->modx->toPlaceholders($this->validator->getErrors(), $errorPrefix);
+            $errors = $this->validator->getErrors();
+            // Return JSON error response if requested.
+            if ($this->getProperty('jsonResponse')) {
+                $jsonErrorOutput = array(
+                    'success'   => false,
+                    'message'   => $this->getProperty('validationErrorMessage'),
+                    'errors'    => $errors
+                );
+                header('Content-Type: application/json;charset=utf-8');
+                exit($this->modx->toJSON($jsonErrorOutput));
+            }
+            $this->modx->toPlaceholders($errors, $errorPrefix);
             $this->modx->toPlaceholder('validation_error', true, $placeholderPrefix);
+            $this->modx->toPlaceholder('validation_error_message', $this->getProperty('validationErrorMessage'), $placeholderPrefix);
         } else {
 
             $this->loadPreHooks();
@@ -118,6 +132,15 @@ class LoginRegisterController extends LoginController {
                 if ($result !== true) {
                     $this->modx->toPlaceholder('error.message', $result, $placeholderPrefix);
                 } else {
+                    // Return JSON success response if requested
+                    if ($this->getProperty('jsonResponse')) {
+                        $jsonSuccessOutput = array(
+                            'success'   => true,
+                            'message'   => $this->getProperty('successMsg','User registration successful.')
+                        );
+                        header('Content-Type: application/json;charset=utf-8');
+                        exit($this->modx->toJSON($jsonSuccessOutput));
+                    }
                     $this->success = true;
                 }
             }
