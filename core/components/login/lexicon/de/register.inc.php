@@ -57,3 +57,4 @@ $_lang['register.spam_marked'] = ' - als Spam markiert.';
 $_lang['register.user_err_save'] = 'Es trat ein Fehler beim Speichern des Benutzers auf.';
 $_lang['register.username'] = 'Benutzername';
 $_lang['register.username_taken'] = 'Dieser Benutzername ist bereits vergeben. Bitte verwenden Sie einen anderen.';
+$_lang['register.validation_error_message'] = 'Die Formularfelder wurden nicht richtig ausgefüllt. Bitte überprüfen Sie die eingegebenen Werte.';
