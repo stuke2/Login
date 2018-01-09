@@ -220,12 +220,12 @@ class LoginLoginController extends LoginController {
                 } else {
                     // Return JSON success response if requested.
                     if ($this->getProperty('jsonResponse')) {
-                        $jsonErrorOutput = array(
+                        $jsonSuccessOutput = array(
                             'success'   => true,
                             'message'   => $this->getProperty('loginMsg')
                         );
                         header('Content-Type: application/json;charset=utf-8');
-                        exit($this->modx->toJSON($jsonErrorOutput));
+                        exit($this->modx->toJSON($jsonSuccessOutput));
                     }
                     $this->redirectAfterLogin($response);
                 }
@@ -439,12 +439,12 @@ class LoginLoginController extends LoginController {
                 $this->runPostLogoutHooks($response);
                 // Return JSON logout success
                 if ($this->getProperty('jsonResponse')) {
-                    $jsonErrorOutput = array(
+                    $jsonSuccessOutput = array(
                         'success'   => true,
                         'message'   => $this->getProperty('logoutMsg')
                     );
                     header('Content-Type: application/json;charset=utf-8');
-                    exit($this->modx->toJSON($jsonErrorOutput));
+                    exit($this->modx->toJSON($jsonSuccessOutput));
                 }
                 $this->redirectAfterLogout($response);
 
