@@ -142,6 +142,7 @@ class LoginRegisterController extends LoginController {
                         header('Content-Type: application/json;charset=utf-8');
                         exit($this->modx->toJSON($jsonSuccessOutput));
                     }
+                    $this->modx->toPlaceholder('successMsg', $this->getProperty('successMsg','User registration successful.'), $placeholderPrefix);
                     $this->success = true;
                 }
             }
