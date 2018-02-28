@@ -139,6 +139,15 @@ abstract class LoginController {
         return $this->placeholders;
     }
 
+    public function escapePlaceholders($val) {
+        if (is_array($val)) {
+            $val = array_map(array($this, 'escapePlaceholders'), $val);
+        } else {
+            $val = str_replace(array('[', ']'), array('&#91;', '&#93;'), $val);
+            $val = htmlspecialchars($val, ENT_QUOTES, $this->modx->getOption('modx_charset', null, 'UTF-8'));
+        }
+        return $val;
+    }
 
     /**
      * Load the Dictionary class

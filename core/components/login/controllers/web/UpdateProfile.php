@@ -104,9 +104,7 @@ class LoginUpdateProfileController extends LoginController {
             $placeholderPrefix = rtrim($this->getProperty('placeholderPrefix'), '.');
 
             $fields = $this->dictionary->toArray();
-            foreach ($fields as $k => $v) {
-                $fields[$k] = htmlspecialchars($v);
-            }
+            $fields = $this->escapePlaceholders($fields);
 
             $this->modx->toPlaceholders($fields, $placeholderPrefix);
         }

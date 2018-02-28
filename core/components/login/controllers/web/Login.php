@@ -94,12 +94,9 @@ class LoginLoginController extends LoginController {
         } else {
             $phs['request_uri'] = str_replace(array('?service='.$logoutKey,'&service='.$logoutKey,'&amp;service='.$logoutKey),'',$_SERVER['HTTP_REFERER']);
         }
-        
-        /* Escape placeholder values */
-        foreach ($phs as $k => $v) {
-            $phs[$k] = htmlspecialchars(str_replace(array('[',']'),array('&#91;','&#93;'),$v));
-        }
-        
+
+        $phs = $this->escapePlaceholders($phs);
+
         /* properly build logout url */
         if ($this->isAuthenticated) {
             $phs['logoutUrl'] = $phs['request_uri'];

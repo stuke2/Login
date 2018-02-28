@@ -203,9 +203,7 @@ class LoginChangePasswordController extends LoginController {
         $errorPrefix = ($placeholderPrefix) ? $placeholderPrefix . '.error' : 'error';
 
         $fields = $this->dictionary->toArray();
-        foreach ($fields as $k => $v) {
-            $fields[$k] = htmlspecialchars($v);
-        }
+        $fields = $this->escapePlaceholders($fields);
 
         $this->modx->toPlaceholders($this->errors, $errorPrefix);
         $this->modx->toPlaceholders($fields, $placeholderPrefix);
