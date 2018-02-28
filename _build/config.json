@@ -135,11 +135,6 @@
               "value": true
             },
             {
-              "name": "successMessage",
-              "description": "prop_changepassword.successmessage_desc",
-              "value": ""
-            },
-            {
               "name": "placeholderPrefix",
               "description": "prop_changepassword.placeholderprefix_desc",
               "value": "logcp."
@@ -640,11 +635,6 @@
               "name": "emailField",
               "description": "prop_register.emailfield_desc",
               "value": "email"
-            },
-            {
-              "name": "successMsg",
-              "description": "prop_register.successmsg_desc",
-              "value": ""
             },
             {
               "name": "persistParams",
