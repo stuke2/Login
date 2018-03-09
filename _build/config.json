@@ -340,12 +340,12 @@
               "value": ""
             },
             {
-              "name": "redirectto",
+              "name": "redirectTo",
               "description": "prop_isloggedin.redirectto_desc",
               "value": ""
             },
             {
-              "name": "redirectparams",
+              "name": "redirectParams",
               "description": "prop_isloggedin.redirectparams_desc",
               "value": ""
             }
