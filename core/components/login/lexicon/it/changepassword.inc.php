@@ -20,7 +20,7 @@
  * @package login
  */
 /**
- * Change Password Italian lexicon for Login
+ * Change Password English lexicon for Login
  *
  * @package login
  * @subpackage lexicon
