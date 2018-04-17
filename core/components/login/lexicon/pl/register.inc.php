@@ -27,8 +27,8 @@
  * @subpackage lexicon
  */
 $_lang['register.activation_email_subject'] = 'Thanks for Registering. Please Activate!';
-$_lang['register.email'] = 'Email';
-$_lang['register.email_invalid'] = 'Please enter a valid email address.';
+$_lang['register.email'] = 'Adres e-mail';
+$_lang['register.email_invalid'] = 'Wpisz proszę prawidłowy adres e-mail.';
 $_lang['register.email_invalid_domain'] = 'Your email address does not have a valid domain name.';
 $_lang['register.email_no_recipient'] = 'No recipient specified for the email.';
 $_lang['register.email_not_sent'] = 'An error occurred while trying to send the email.';
@@ -45,7 +45,7 @@ $_lang['register.min_value'] = 'This field cannot be smaller than [[+value]].';
 $_lang['register.not_date'] = 'This field must be a valid date.';
 $_lang['register.not_number'] = 'This field must be a valid number.';
 $_lang['register.not_regexp'] = 'This field has an invalid value.';
-$_lang['register.password'] = 'Password';
+$_lang['register.password'] = 'Hasło';
 $_lang['register.password_confirm'] = 'Confirm Password';
 $_lang['register.password_dont_match'] = 'Your passwords do not match.';
 $_lang['register.password_not_confirmed'] = 'Please confirm your password.';
@@ -57,6 +57,6 @@ $_lang['register.spam_blocked'] = 'Your submission was blocked by a spam filter:
 $_lang['register.spam_marked'] = ' - marked as spam.';
 $_lang['register.use_stronger_password'] = 'Your password is not strong enough. Perhaps you should strengthen it, by replacing letters with numbers or adding more words to the password (try multiple word passwords). Suggestions: [[+suggestions]]';
 $_lang['register.user_err_save'] = 'An error occurred while trying to save the User.';
-$_lang['register.username'] = 'Username';
+$_lang['register.username'] = 'Nazwa użytkownika';
 $_lang['register.username_taken'] = 'Username already taken. Please choose another.';
 $_lang['register.validation_error_message'] = 'A form validation error occurred. Please check the values you have entered.';
