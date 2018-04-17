@@ -21,12 +21,9 @@
  * @package login
  */
 /**
- * Default Czech language strings for Login
+ * Default English language strings for Login
  * @package login
  * @subpackage lexicon
- *
- * @author modxcms.cz
- * @updated 2011-01-04
  */
 $_lang['login'] = 'Přihlásit';
 $_lang['login.invalid_post'] = 'WebLogin neplatná POST akce: [[+action]]';
