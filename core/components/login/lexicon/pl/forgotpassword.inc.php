@@ -26,7 +26,7 @@
  * @package login
  * @subpackage lexicon
  */
-$_lang['login.email'] = 'Email';
+$_lang['login.email'] = 'Adres e-mail';
 $_lang['login.forgot_password'] = 'Forgot Password';
 $_lang['login.forgot_password_email_subject'] = 'Password Retrieval Email';
 $_lang['login.forgot_password_email_text'] = '<p>Hello [[+username]],</p>
