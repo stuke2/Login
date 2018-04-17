@@ -5,11 +5,11 @@
  */
 /* ForgotPassword snippet */
 $_lang['prop_forgotpassword.emailtpl_desc'] = 'Das Template für die Bestätigungsemail.';
-$_lang['prop_forgotpassword.emailtpltype_desc'] = 'Templatetyp, der für die emailTpl-Eigenschaft zur Verfügung steht. Standard ist ein Chunk.';
-$_lang['prop_forgotpassword.senttpl_desc'] = 'Das Nachrichtentemplate für eine erfolgreich verschickte E-mail.';
-$_lang['prop_forgotpassword.senttpltype_desc'] = 'Templatetyp, der für die sendTpl-Eigenschaft zur Verfügung steht. Standard ist ein Chunk.';
-$_lang['prop_forgotpassword.tpl_desc'] = 'Das Passwort-vergessen-Template.';
-$_lang['prop_forgotpassword.tpltype_desc'] = 'Templatetyp, der für die tpl-Eigenschaft zur Verfügung steht. Standard ist ein Chunk';
+$_lang['prop_forgotpassword.emailtpltype_desc'] = 'Templatetyp, der für die emailTpl-Eigenschaft benutzt wird. Der Standardwert ist Chunk.';
+$_lang['prop_forgotpassword.senttpl_desc'] = 'Das Template für die Nachricht, dass eine E-Mail erfolgreich verschickt worden ist.';
+$_lang['prop_forgotpassword.senttpltype_desc'] = 'Templatetyp, der für die sendTpl-Eigenschaft benutzt wird. Der Standardwert ist Chunk.';
+$_lang['prop_forgotpassword.tpl_desc'] = 'Das Passwort-vergessen Template.';
+$_lang['prop_forgotpassword.tpltype_desc'] = 'Templatetyp, der für die tpl-Eigenschaft benutzt wird. Der Standardwert ist Chunk.';
 $_lang['prop_forgotpassword.errtpl_desc'] = 'The tpl to wrap error messages in.';
 $_lang['prop_forgotpassword.errtpltype_desc'] = 'The type of tpl to use for errTpl.';
 $_lang['prop_forgotpassword.emailsubject_desc'] = 'Der Betreff für die Passwort-vergessen E-Mail.';
@@ -17,13 +17,13 @@ $_lang['prop_forgotpassword.emailtplalt_desc'] = '(Optional) Plain-text alternat
 $_lang['prop_forgotpassword.resetresourceid_desc'] = 'Die Ressource-ID zu der Benutzer aus der Aktivierungsmail gleitet werden sollen, in der auch der ResetPassword Snippet Aufruf steht.';
 
 /* Login snippet */
-$_lang['prop_login.actionkey_desc'] = 'Die REQUEST Variable die indiziert, welche Aktion ausgeführt werden soll.';
-$_lang['prop_login.loginkey_desc'] = 'Der login-Aktionsschlüssel.';
-$_lang['prop_login.logoutkey_desc'] = 'Der logout-Aktionsschlüssel.';
+$_lang['prop_login.actionkey_desc'] = 'Die REQUEST Variable die angibt, welche Aktion ausgeführt werden soll.';
+$_lang['prop_login.loginkey_desc'] = 'Der Login-Aktion-Schlüssel.';
+$_lang['prop_login.logoutkey_desc'] = 'Der Logout-Aktion-Schlüssel.';
 $_lang['prop_login.loginviaemail_desc'] = 'Anmeldung mittels Benutzername oder Email Adresse ermöglichen.';
 $_lang['prop_login.tpltype_desc'] = 'Templatetyp für die login und logout Formulare.';
-$_lang['prop_login.logintpl_desc'] = 'Das login Formulartemplate.';
-$_lang['prop_login.logouttpl_desc'] = 'Das logout Formulartemplate.';
+$_lang['prop_login.logintpl_desc'] = 'Das Login Formulartemplate.';
+$_lang['prop_login.logouttpl_desc'] = 'Das Logout Formulartemplate.';
 $_lang['prop_login.prehooks_desc'] = 'Scripts, die vor einem Benutzerlogin/-logout ausgeführt werden sollen. Es kann eine kommaseparierte Liste von Hooks angegeben werden. Sollte eine nicht vailidieren, werden weitere nicht ausgeführt. Ein Hook kann auch ein Snippetname sein, welches dann ausgeführt wird.';
 $_lang['prop_login.posthooks_desc'] = 'Scripts, die nach einem Benutzerlogin/-logout ausgeführt werden sollen. Es kann eine kommaseparierte Liste von Hooks angegeben werden. Sollte eine nicht vailidieren, werden weitere nicht ausgeführt. Ein Hook kann auch ein Snippetname sein, welches dann ausgeführt wird.';
 $_lang['prop_login.errtpl_desc'] = 'Das Fehlertemplate.';
