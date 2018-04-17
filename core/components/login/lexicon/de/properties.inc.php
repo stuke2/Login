@@ -24,14 +24,14 @@ $_lang['prop_login.loginviaemail_desc'] = 'Anmeldung mittels Benutzername oder E
 $_lang['prop_login.tpltype_desc'] = 'Templatetyp, der für die Login und Logout Formulare benutzt wird. Der Standardwert ist Chunk.';
 $_lang['prop_login.logintpl_desc'] = 'Das Login Formulartemplate.';
 $_lang['prop_login.logouttpl_desc'] = 'Das Logout Formulartemplate.';
-$_lang['prop_login.prehooks_desc'] = 'Scripts, die vor einem Benutzerlogin/-logout ausgeführt werden sollen. Es kann eine kommaseparierte Liste von Hooks angegeben werden. Sollte eine nicht vailidieren, werden weitere nicht ausgeführt. Ein Hook kann auch ein Snippetname sein, welches dann ausgeführt wird.';
-$_lang['prop_login.posthooks_desc'] = 'Scripts, die nach einem Benutzerlogin/-logout ausgeführt werden sollen. Es kann eine kommaseparierte Liste von Hooks angegeben werden. Sollte eine nicht vailidieren, werden weitere nicht ausgeführt. Ein Hook kann auch ein Snippetname sein, welches dann ausgeführt wird.';
+$_lang['prop_login.prehooks_desc'] = 'Scripts, die vor einem Benutzerlogin/-logout ausgeführt werden sollen. Es kann eine kommaseparierte Liste von Hooks angegeben werden. Sollte ein Hook nicht validieren, werden keine weitere ausgeführt. Ein Hook kann auch ein Snippetname sein, welches dann ausgeführt wird.';
+$_lang['prop_login.posthooks_desc'] = 'Scripts, die nach einem Benutzerlogin/-logout ausgeführt werden sollen. Es kann eine kommaseparierte Liste von Hooks angegeben werden. Sollte ein Hook nicht validieren, werden keine weitere Hooks ausgeführt. Ein Hook kann auch ein Snippetname sein, welches dann ausgeführt wird.';
 $_lang['prop_login.errtpl_desc'] = 'Das Fehlertemplate.';
 $_lang['prop_login.errtpltype_desc'] = 'Der Templatetyp, der für die Fehlermeldungen benutzt wird. Standard ist Chunk.';
-$_lang['prop_login.loginresourceid_desc'] = 'Eine Ressource, zu der Benutzer nach einem erfolgreichen Login weitergeleitet werden. 0 leitet auf die gleiche Seite zurück.';
-$_lang['prop_login.loginresourceparams_desc'] = 'Ein JSON Objekt von Parametern, die zur login redirection URL angehängt werden. Bsp: {"test":123}';
-$_lang['prop_login.logoutresourceid_desc'] = 'Ressource-ID zu der nach einem erfolgreichen Logout geleitet wird. 0 leitet auf die gleiche Seite zurück.';
-$_lang['prop_login.logoutresourceparams_desc'] = 'Ein JSON Objekt von Parametern, die zur logout redirection URL angehängt werden. Ex: {"test":123}';
+$_lang['prop_login.loginresourceid_desc'] = 'Eine Ressourcen-Id, zu der Benutzer nach einem erfolgreichen Login weitergeleitet werden. 0 leitet auf die gleiche Seite zurück.';
+$_lang['prop_login.loginresourceparams_desc'] = 'Ein JSON Objekt von Parametern, die bei einem Login Redirekt an die URL angehängt werden, z.B.: {"test":123}';
+$_lang['prop_login.logoutresourceid_desc'] = 'Ressourcen-Id zu der nach einem erfolgreichen Logout geleitet wird. 0 leitet auf die gleiche Seite zurück.';
+$_lang['prop_login.logoutresourceparams_desc'] = 'Ein JSON Objekt von Parametern, die an die URL der Logout Weiterleitung angehängt werden, z.B.: {"test":123}';
 $_lang['prop_login.loginmsg_desc'] = 'Optionale label Nachricht für die login Aktion. Falls leer, wird der Standardstring des Lexicons verwendet.';
 $_lang['prop_login.logoutmsg_desc'] = 'Optionale label Nachricht für die logout Aktion. Falls leer, wird der Standardstring des Lexicons verwendet.';
 $_lang['prop_login.redirecttoprior_desc'] = 'Falls aktiv, wird der Nutzer nach erfolgreichem Login zur Referrer-Seite geleitet (HTTP_REFERER).';
@@ -93,7 +93,7 @@ $_lang['opt_register.chunk'] = 'Chunk';
 $_lang['opt_register.file'] = 'Datei';
 $_lang['opt_register.inline'] = 'Inline';
 $_lang['opt_register.embedded'] = 'Eingebettet';
-$_lang['opt_register.blackglass'] = 'Schwarzes Glass';
+$_lang['opt_register.blackglass'] = 'Schwarzes Glas';
 $_lang['opt_register.clean'] = 'Klar';
 $_lang['opt_register.red'] = 'Rot';
 $_lang['opt_register.white'] = 'Weiss';
@@ -142,7 +142,7 @@ $_lang['prop_changepassword.placeholderprefix_desc'] = 'Das Prefix, das für all
 
 /* isLoggedIn snippet */
 $_lang['prop_isloggedin.contexts_desc'] = 'Eine kommaseparierte Liste von Kontexten, für die der Autehntifizierungsstatus geprüft werden soll. Standard ist der aktuelle Kontext.';
-$_lang['prop_isloggedin.redirectto_desc'] = 'Die ID einer Ressource, auf die weitergeleitet wird, wenn der Nutzer nicht eingeloggt ist. Standard ist die unauthorized_page.';
+$_lang['prop_isloggedin.redirectto_desc'] = 'Die Id einer Ressource, auf die weitergeleitet wird, wenn der Nutzer nicht eingeloggt ist. Standard ist die unauthorized_page.';
 $_lang['prop_isloggedin.redirectparams_desc'] = 'Falls redirectTo genutzt wird, kann ein JSON Objekt eines REQUEST Parameters mit der Weiterleitung übergeben werden.';
 
 /* ActiveUsers snippet */
