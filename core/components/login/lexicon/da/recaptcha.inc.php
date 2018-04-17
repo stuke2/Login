@@ -1,6 +1,6 @@
 <?php
 /**
- * Danish reCaptcha Lexicon Topic
+ * reCaptcha Lexicon Topic
  *
  * @package login
  * @subpackge lexicon
