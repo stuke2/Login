@@ -34,4 +34,4 @@ $_lang['login.password_new_confirm'] = 'Neues Passwort bestätigen';
 $_lang['login.password_new'] = 'Neues Passwort';
 $_lang['login.password_no_match'] = 'Die Passwörter stimmen nicht überein.';
 $_lang['login.password_old'] = 'Altes Passwort';
-$_lang['login.password_too_short'] = 'Das Passwort ist zu kurz! Bitte benutzen Sie ein Passwort mit mindestens [[+length]] Zeichen.';
+$_lang['login.password_too_short'] = 'Das Passwort ist zu kurz! Bitte geben Sie ein Passwort mit mindestens [[+length]] Zeichen ein.';
