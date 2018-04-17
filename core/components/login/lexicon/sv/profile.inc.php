@@ -20,10 +20,9 @@
  * @package login
  */
 /**
- * Profile Swedish lexicon for Login
+ * Profile English lexicon for Login
  *
  * @package login
  * @subpackage lexicon
- * @author Joakim Nyman <joakim@edgefive.com>
  */
 $_lang['profile'] = 'Profil';
