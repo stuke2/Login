@@ -27,7 +27,7 @@
  * @subpackage lexicon
  */
 $_lang['login.email'] = 'Adres e-mail';
-$_lang['login.forgot_password'] = 'Forgot Password';
+$_lang['login.forgot_password'] = 'Zapomniałem hasła';
 $_lang['login.forgot_password_email_subject'] = 'Password Retrieval Email';
 $_lang['login.forgot_password_email_text'] = '<p>Hello [[+username]],</p>
 <p>to activate your new password, please click on the following link:</p>
@@ -38,7 +38,7 @@ $_lang['login.forgot_password_email_text'] = '<p>Hello [[+username]],</p>
 <p>Thanks,<br />
 <em>[[++site_name]] Site Administration</em></p>';
 $_lang['login.or_forgot_username'] = 'Or, forgot your username?';
-$_lang['login.reset_password'] = 'Reset Password';
-$_lang['login.username'] = 'Username';
+$_lang['login.reset_password'] = 'Zresetuj hasło';
+$_lang['login.username'] = 'Nazwa użytkownika';
 $_lang['login.user_err_nf_email'] = 'If the user or email exists, you\'ll receive an email shortly.';
 $_lang['login.user_err_nf_username'] = 'If the user or email exists, you\'ll receive an email shortly.';
