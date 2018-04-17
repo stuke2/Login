@@ -21,13 +21,13 @@ $_lang['prop_login.actionkey_desc'] = 'Die REQUEST Variable die angibt, welche A
 $_lang['prop_login.loginkey_desc'] = 'Der Login-Aktion-Schlüssel.';
 $_lang['prop_login.logoutkey_desc'] = 'Der Logout-Aktion-Schlüssel.';
 $_lang['prop_login.loginviaemail_desc'] = 'Anmeldung mittels Benutzername oder Email Adresse ermöglichen.';
-$_lang['prop_login.tpltype_desc'] = 'Templatetyp für die login und logout Formulare.';
+$_lang['prop_login.tpltype_desc'] = 'Templatetyp, der für die Login und Logout Formulare benutzt wird. Der Standardwert ist Chunk.';
 $_lang['prop_login.logintpl_desc'] = 'Das Login Formulartemplate.';
 $_lang['prop_login.logouttpl_desc'] = 'Das Logout Formulartemplate.';
 $_lang['prop_login.prehooks_desc'] = 'Scripts, die vor einem Benutzerlogin/-logout ausgeführt werden sollen. Es kann eine kommaseparierte Liste von Hooks angegeben werden. Sollte eine nicht vailidieren, werden weitere nicht ausgeführt. Ein Hook kann auch ein Snippetname sein, welches dann ausgeführt wird.';
 $_lang['prop_login.posthooks_desc'] = 'Scripts, die nach einem Benutzerlogin/-logout ausgeführt werden sollen. Es kann eine kommaseparierte Liste von Hooks angegeben werden. Sollte eine nicht vailidieren, werden weitere nicht ausgeführt. Ein Hook kann auch ein Snippetname sein, welches dann ausgeführt wird.';
 $_lang['prop_login.errtpl_desc'] = 'Das Fehlertemplate.';
-$_lang['prop_login.errtpltype_desc'] = 'Der Fehlertemplatetyp.';
+$_lang['prop_login.errtpltype_desc'] = 'Der Templatetyp, der für die Fehlermeldungen benutzt wird. Standard ist Chunk.';
 $_lang['prop_login.loginresourceid_desc'] = 'Eine Ressource, zu der Benutzer nach einem erfolgreichen Login weitergeleitet werden. 0 leitet auf die gleiche Seite zurück.';
 $_lang['prop_login.loginresourceparams_desc'] = 'Ein JSON Objekt von Parametern, die zur login redirection URL angehängt werden. Bsp: {"test":123}';
 $_lang['prop_login.logoutresourceid_desc'] = 'Ressource-ID zu der nach einem erfolgreichen Logout geleitet wird. 0 leitet auf die gleiche Seite zurück.';
@@ -64,7 +64,7 @@ $_lang['prop_register.activationttl_desc'] = 'Zeit in Minuten, nach der die Akti
 $_lang['prop_register.activationresourceid_desc'] = 'Due Ressource ID, in der das ConfirmRegister Snippet für die Aktivierung steht.';
 $_lang['prop_register.activationemail_desc'] = 'Falls gesetzt, wird die Aktivierungsmail an diese E-Mail Adresse gesendet, statt an die des neu registrierten Benutzers.';
 $_lang['prop_register.activationemailsubject_desc'] = 'Der Betreff der Aktivierungsmail.';
-$_lang['prop_register.activationemailtpltype_desc'] = 'Der Templatetyp für die Aktivierungsmail.';
+$_lang['prop_register.activationemailtpltype_desc'] = 'Der Templatetyp, der für die Aktivierungsmail benutzt wird. Standard ist Chunk.';
 $_lang['prop_register.activationemailtpl_desc'] = 'Das Aktivierungsmailtemplate.';
 $_lang['prop_register.activationemailtplalt_desc'] = '(Optional) Plain-text alternative for the activation email tpl.';
 $_lang['prop_register.moderatedresourceid_desc'] = 'Wenn ein prehook den Benutzer als zu moderieren kennzeichnet, leite auf diese Ressource weiter, statt zur submittedResourceId. Lassen Sie dieses Feld leer, um diese Funktion nicht zu nutzen.';
@@ -97,8 +97,8 @@ $_lang['opt_register.blackglass'] = 'Schwarzes Glass';
 $_lang['opt_register.clean'] = 'Klar';
 $_lang['opt_register.red'] = 'Rot';
 $_lang['opt_register.white'] = 'Weiss';
-$_lang['opt_register.asc'] = 'Ascending';
-$_lang['opt_register.desc'] = 'Descending';
+$_lang['opt_register.asc'] = 'Aufsteigend';
+$_lang['opt_register.desc'] = 'Absteigend';
 
 /* ConfirmRegister snippet */
 $_lang['prop_confirmregister.redirectto_desc'] = 'Optional. Leitet nach einer erfolgreichen Aktivierung auf die angegebene Ressource.';
@@ -110,7 +110,7 @@ $_lang['prop_confirmregister.activepage_desc'] = 'Optional. If set, will redirec
 
 /* ResetPassword snippet */
 $_lang['prop_resetpassword.tpl_desc'] = 'Das Passwort-vergessen-Nachricht-Template.';
-$_lang['prop_resetpassword.tpltype_desc'] = 'Der Templatetyp, der genutzt werden soll. Standard ist Chunk.';
+$_lang['prop_resetpassword.tpltype_desc'] = 'Der Templatetyp, der für die tpl-Eigenschaft benutzt wird. Standard ist Chunk.';
 $_lang['prop_resetpassword.loginresourceid_desc'] = 'Die Ressource, zu der Nutzer nach einer erfolgreichen Bestätigung geleitet werden sollen.';
 
 /* UpdateProfile snippet */
@@ -147,7 +147,7 @@ $_lang['prop_isloggedin.redirectparams_desc'] = 'Falls redirectTo genutzt wird, 
 
 /* ActiveUsers snippet */
 $_lang['prop_activeusers.tpl'] = 'The Chunk to use for outputting each active user.';
-$_lang['prop_activeusers.tplType'] = 'The type of tpl being provided. Defaults to a Chunk.';
+$_lang['prop_activeusers.tplType'] = 'Templatetyp, der für die tpl-Eigenschaft benutzt wird. Der Standardwert ist Chunk.';
 $_lang['prop_activeusers.sortBy'] = 'The field to sort by for the users.';
 $_lang['prop_activeusers.sortDir'] = 'The direction to sort by for the users.';
 $_lang['prop_activeusers.limit'] = 'The number of users to limit displaying.';
