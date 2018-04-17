@@ -4,9 +4,6 @@
  *
  * @package login
  * @subpackge lexicon
- *
- * @author modxcms.cz
- * @updated 2011-01-04
  */
 $_lang['recaptcha.empty_answer'] = 'Nesprávná captcha slova. Zkontrolujte svou odpověď a zkuste to znovu.';
 $_lang['recaptcha.incorrect'] = 'reCAPTCHA nebyla zadána správně. Jděte zpět a zkuste to znovu. [[+error]]';
