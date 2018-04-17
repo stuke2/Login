@@ -21,10 +21,9 @@
  * @package login
  */
 /**
- * Default Dutch language strings for Login
+ * Default English language strings for Login
  * @package login
  * @subpackage lexicon
- * @author Bert Oost, bertoost85@gmail.com
  */
 $_lang['login'] = 'Inloggen';
 $_lang['login.invalid_post'] = 'WebLogin foutieve POST actie: [[+action]]';
