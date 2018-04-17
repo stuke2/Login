@@ -20,18 +20,18 @@
  * @package login
  */
 /**
- * Change Password Dutch lexicon for Login
+ * Change Password English lexicon for Login
  *
  * @package login
  * @subpackage lexicon
- * @author Kristof Polleunis, kristofp72@gmail.com
  */
 $_lang['login.change_password'] = 'Wachtwoord wijzigen';
-$_lang['login.password_new_confirm'] = 'Bevestig het nieuwe wachtwoord';
+$_lang['login.password_changed'] = 'Password changed.';
 $_lang['login.password_err'] = 'Foutief wachtwoord.';
 $_lang['login.password_err_change'] = 'Een fout is opgetreden tijdens wijzigen van het wachtwoord. Gelieve uw invulvelden na te kijken.';
 $_lang['login.password_invalid_old'] = 'Ongeldige oud wachtwoord.';
-$_lang['login.password_too_short'] = 'Wachtwoord is te kort! Vul een wachtwoord in van minstens [[+length]] tekens .';
+$_lang['login.password_new_confirm'] = 'Bevestig het nieuwe wachtwoord';
 $_lang['login.password_new'] = 'Nieuw wachtwoord';
 $_lang['login.password_no_match'] = 'Wachtwoorden komen niet overeen.';
 $_lang['login.password_old'] = 'Oud wachtwoord';
+$_lang['login.password_too_short'] = 'Wachtwoord is te kort! Vul een wachtwoord in van minstens [[+length]] tekens .';
