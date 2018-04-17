@@ -21,7 +21,7 @@
  * @package login
  */
 /**
- * Register Italian lexicon for Login
+ * Register English lexicon for Login
  *
  * @package login
  * @subpackage lexicon
@@ -55,6 +55,8 @@ $_lang['register.recaptcha_err_load'] = 'Impossibile caricare il reCaptcha class
 $_lang['register.register'] = 'Registrare';
 $_lang['register.spam_blocked'] = 'La tua domanda è stata bloccata da un filtro anti-spam:';
 $_lang['register.spam_marked'] = ' – riconosciuto come spam.';
-$_lang['register.user_err_save'] =  'Si è verificato un errore durante il tentativo di salvare l\'utente.';
+$_lang['register.use_stronger_password'] = 'Your password is not strong enough. Perhaps you should strengthen it, by replacing letters with numbers or adding more words to the password (try multiple word passwords). Suggestions: [[+suggestions]]';
+$_lang['register.user_err_save'] = 'Si è verificato un errore durante il tentativo di salvare l\'utente.';
 $_lang['register.username'] = 'Nome utente';
 $_lang['register.username_taken'] = 'Nome utente già in uso. Prego sceglierne un altro';
+$_lang['register.validation_error_message'] = 'A form validation error occurred. Please check the values you have entered.';
