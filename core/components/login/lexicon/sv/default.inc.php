@@ -21,10 +21,9 @@
  * @package login
  */
 /**
- * Default Swedish language strings for Login
+ * Default English language strings for Login
  * @package login
  * @subpackage lexicon
- * @author Joakim Nyman <joakim@edgefive.com>
  */
 $_lang['login'] = 'Login';
 $_lang['login.invalid_post'] = 'WebLogin invalid POST action: [[+action]]';
