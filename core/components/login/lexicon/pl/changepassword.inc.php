@@ -25,13 +25,13 @@
  * @package login
  * @subpackage lexicon
  */
-$_lang['login.change_password'] = 'Change Password';
-$_lang['login.password_changed'] = 'Password changed.';
+$_lang['login.change_password'] = 'Zmień hasło';
+$_lang['login.password_changed'] = 'Hasło zostało zmienione.';
 $_lang['login.password_err'] = 'Incorrect password.';
 $_lang['login.password_err_change'] = 'An error occurred while attempting to change the password. Please review your fields.';
-$_lang['login.password_invalid_old'] = 'Invalid old password.';
-$_lang['login.password_new_confirm'] = 'Confirm New Password';
-$_lang['login.password_new'] = 'New Password';
+$_lang['login.password_invalid_old'] = 'Nieprawidłowe stare hasło.';
+$_lang['login.password_new_confirm'] = 'Potwierdź nowe hasło';
+$_lang['login.password_new'] = 'Nowe hasło';
 $_lang['login.password_no_match'] = 'Passwords do not match.';
-$_lang['login.password_old'] = 'Old Password';
-$_lang['login.password_too_short'] = 'Password is too short! Please specify a password of at least [[+length]] characters.';
+$_lang['login.password_old'] = 'Bieżące hasło';
+$_lang['login.password_too_short'] = 'Hasło jest zbyt krótkie, proszę wprowadź hasło, które jest dłuższe niż [[+length]] znaków.';
