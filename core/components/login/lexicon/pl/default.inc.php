@@ -27,7 +27,7 @@
  */
 $_lang['login'] = 'Zaloguj się';
 $_lang['login.invalid_post'] = 'WebLogin invalid POST action: [[+action]]';
-$_lang['login.login_err'] = 'Unknown error logging in!';
+$_lang['login.login_err'] = 'Nieznany błąd logowania!';
 $_lang['login.logout'] = 'Wyloguj';
 $_lang['login.logout_err'] = 'Unknown error logging out!';
 $_lang['login.password'] = 'Hasło';
