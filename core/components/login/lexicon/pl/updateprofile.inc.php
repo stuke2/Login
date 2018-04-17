@@ -28,7 +28,7 @@
  */
 $_lang['login.address'] = 'Address';
 $_lang['login.city'] = 'Miasto';
-$_lang['login.country'] = 'Country';
+$_lang['login.country'] = 'Kraj';
 $_lang['login.email'] = 'Adres e-mail';
 $_lang['login.email_taken'] = 'The email "[[+email]]" is already in use. Make sure you are not already registered, and if not, please specify another email address.';
 $_lang['login.fax'] = 'Fax';
