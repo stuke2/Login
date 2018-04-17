@@ -20,11 +20,10 @@
  * @package login
  */
 /**
- * Change Password Swedish lexicon for Login
+ * Change Password English lexicon for Login
  *
  * @package login
  * @subpackage lexicon
- * @author Joakim Nyman <joakim@edgefive.com>
  */
 $_lang['login.change_password'] = 'Byt lösenord';
 $_lang['login.password_changed'] = 'Lösenordet har blivit bytt.';
