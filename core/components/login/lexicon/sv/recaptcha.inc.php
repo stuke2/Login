@@ -3,8 +3,7 @@
  * reCaptcha Lexicon Topic
  *
  * @package login
- * @subpackage lexicon
- * @author Joakim Nyman <joakim@edgefive.com>
+ * @subpackge lexicon
  */
 $_lang['recaptcha.empty_answer'] = 'Felaktiga captcha ord. Vänligen kontrollera dina svar och försök igen.';
 $_lang['recaptcha.incorrect'] = 'reCAPTCHA fylldes inte i korrekt. Gå tillbaka och försök igen. [[+error]]';
