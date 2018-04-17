@@ -11,10 +11,10 @@ $_lang['prop_forgotpassword.senttpltype_desc'] = 'Templatetyp, der für die send
 $_lang['prop_forgotpassword.tpl_desc'] = 'Das Passwort-vergessen Template.';
 $_lang['prop_forgotpassword.tpltype_desc'] = 'Templatetyp, der für die tpl-Eigenschaft benutzt wird. Der Standardwert ist Chunk.';
 $_lang['prop_forgotpassword.errtpl_desc'] = 'The tpl to wrap error messages in.';
-$_lang['prop_forgotpassword.errtpltype_desc'] = 'The type of tpl to use for errTpl.';
+$_lang['prop_forgotpassword.errtpltype_desc'] = 'Templatetyp, der für die errTpl-Eigenschaft benutzt wird. Der Standardwert ist Chunk.';
 $_lang['prop_forgotpassword.emailsubject_desc'] = 'Der Betreff für die Passwort-vergessen E-Mail.';
 $_lang['prop_forgotpassword.emailtplalt_desc'] = '(Optional) Plain-text alternative for the confirmation email message tpl.';
-$_lang['prop_forgotpassword.resetresourceid_desc'] = 'Die Ressource-ID zu der Benutzer aus der Aktivierungsmail gleitet werden sollen, in der auch der ResetPassword Snippet Aufruf steht.';
+$_lang['prop_forgotpassword.resetresourceid_desc'] = 'Die Ressourcen-Id zu der Benutzer aus der Aktivierungsmail gleitet werden und in der der ResetPassword Snippet Aufruf steht.';
 
 /* Login snippet */
 $_lang['prop_login.actionkey_desc'] = 'Die REQUEST Variable die angibt, welche Aktion ausgeführt werden soll.';
