@@ -21,26 +21,30 @@
  * @package login
  */
 /**
- * Register Dutch lexicon for Login
+ * Register English lexicon for Login
  *
  * @package login
  * @subpackage lexicon
- * @author Bert Oost, bertoost85@gmail.com
  */
+$_lang['register.activation_email_subject'] = 'Thanks for Registering. Please Activate!';
 $_lang['register.email'] = 'E-mail';
 $_lang['register.email_invalid'] = 'Vul een correct e-mailadres in.';
 $_lang['register.email_invalid_domain'] = 'Uw e-mailadres bevat niet een correcte domeinnaam.';
 $_lang['register.email_no_recipient'] = 'Het e-mailadres van de ontvanger is niet ingevuld.';
 $_lang['register.email_not_sent'] = 'Er is een fout opgetreden tijdens het versturen van een e-mail.';
+$_lang['register.email_taken'] = 'The email "[[+email]]" is already in use. Make sure you are not already registered, and if not, please specify another email address.';
 $_lang['register.field_not_empty'] = 'Dit veld moet leeg zijn.';
 $_lang['register.field_required'] = 'Dit veld is verplicht.';
 $_lang['register.fullname'] = 'Volledige naam';
+$_lang['register.math_incorrect'] = 'Incorrect answer!';
+$_lang['register.math_field_nf'] = '[[+field]] input field not specified in form.';
 $_lang['register.max_length'] = 'Dit veld mag niet langer dan [[+length]] karakters lang zijn.';
 $_lang['register.max_value'] = 'Dit veld mag niet langer zijn dan [[+value]].';
 $_lang['register.min_length'] = 'Dit veld moet minimaal [[+length]] karakters lang zijn.';
 $_lang['register.min_value'] = 'Dit veld mag niet kleiner zijn dan [[+value]].';
 $_lang['register.not_date'] = 'Dit veld moet een geldige datum zijn.';
 $_lang['register.not_number'] = 'Dit veld moet een geldig nummer zijn.';
+$_lang['register.not_regexp'] = 'This field has an invalid value.';
 $_lang['register.password'] = 'Wachtwoord';
 $_lang['register.password_confirm'] = 'Bevestig wachtwoord';
 $_lang['register.password_dont_match'] = 'De wachtwoorden komen niet overeen.';
@@ -51,6 +55,8 @@ $_lang['register.recaptcha_err_load'] = 'Kan de reCaptcha service klasse niet la
 $_lang['register.register'] = 'Registreer';
 $_lang['register.spam_blocked'] = 'Uw verzending is geblokkeerd door een spamfilter: ';
 $_lang['register.spam_marked'] = ' - gemarkeerd als spam.';
+$_lang['register.use_stronger_password'] = 'Your password is not strong enough. Perhaps you should strengthen it, by replacing letters with numbers or adding more words to the password (try multiple word passwords). Suggestions: [[+suggestions]]';
 $_lang['register.user_err_save'] = 'Er is een fout opgetreden bij het opslaan van de gebruiker.';
 $_lang['register.username'] = 'Gebruikersnaam';
 $_lang['register.username_taken'] = 'Gebruikersnaam bestaat reeds. Kies een alternatief.';
+$_lang['register.validation_error_message'] = 'A form validation error occurred. Please check the values you have entered.';
