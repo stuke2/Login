@@ -42,21 +42,21 @@ $_lang['prop_login.toplaceholder_desc'] = 'Wenn diese Einstellung aktiv ist, wir
 
 /* Profile snippet */
 $_lang['prop_profile.prefix_desc'] = 'Ein vorangestellter String aller Platzhalter für Felder, die von diesem Snippet gesetzt werden.';
-$_lang['prop_profile.user_desc'] = '(Optional). Entweder eine Benutzer-Id oder ein Benutzername. Falls gesetzt, wird dieser Wert genutzt statt der des aktuell eingeloggten Nutzers.';
+$_lang['prop_profile.user_desc'] = '(Optional). Entweder eine Benutzer-Id oder ein Benutzername. Falls gesetzt, wird dieser Wert genutzt statt der des aktuell eingeloggten Benutzers.';
 $_lang['prop_profile.useextended_desc'] = 'Legt fest, ob erweiterte Felder zum Profile-extended-field benutzt werden sollen. Dies kann für erweiterte Benutzerfelder genutzt werden.';
 
 /* Register snippet */
 $_lang['prop_register.submitvar_desc'] = 'Die Prüfvariable für die Register Snippet Funktionalität. Falls nicht gesetzt oder leer, wird Register alle POST-Inhalte des Formulars auswerten.';
 $_lang['prop_register.usergroups_desc'] = '(Optional) Eine kommaseparierte Liste von Benutzergruppen-Namen oder -Ids um neu registrierte Benutzer zu diesen Benutzergruppen hinzuzufügen.';
 $_lang['prop_register.usergroupsfield_desc'] = 'The name of the field to use to specify the User Group(s) to automatically add the new User to. Only used if this value is not blank.';
-$_lang['prop_register.submittedresourceid_desc'] = 'Wenn diese Einstellung aktiv ist, wird der Nutzer zu dieser Ressource-Id nach dem Absenden des Registrierungsformulars weitergeleitet.';
+$_lang['prop_register.submittedresourceid_desc'] = 'Wenn diese Einstellung aktiv ist, wird der Benutzer zu dieser Ressource-Id nach dem Absenden des Registrierungsformulars weitergeleitet.';
 $_lang['prop_register.usernamefield_desc'] = 'Der Name des Feldes für den neuen Benutzernamen.';
 $_lang['prop_register.passwordfield_desc'] = 'Der Name des Feldes für das Passwort des neuen Benutzers.';
-$_lang['prop_register.emailfield_desc'] = 'Der Name des Feldes für die E-mail Adresse des neuen Benutzers.';
+$_lang['prop_register.emailfield_desc'] = 'Der Name des Feldes für die E-Mail Adresse des neuen Benutzers.';
 $_lang['prop_register.successmsg_desc'] = '(Optional). Falls der Benutzer nicht mittels des submittedResourceId Parameters weitergeleitet wird, wird diese Nachricht angezeigt.';
 $_lang['prop_register.persistparams_desc'] = '(Optional) Ein JSON Objekt mit Parametern, die über den Registrierungsprozess hinaus gespeichert werden sollen. Dies ist nützlich, wenn Sie die ConfirmRegister-Weiterleitung benutzen um auf eine andere Seite zu weiterzuleiten (z.B. Einkaufswägen).';
 $_lang['prop_register.prehooks_desc'] = 'Skripte, die vor einer Validation ausgeführt werden sollen. Dies kann eine kommaseparierte Liste von Hooks sein. Sollte eine nicht vailidieren, werden weitere nicht ausgeführt. Ein Hook kann auch ein Snippetname sein, welches dann ausgeführt wird.';
-$_lang['prop_register.posthooks_desc'] = 'Skripte, die nach der Registrierung des Nutzers ausgeführt werden sollen. Dies kann eine kommaseparierte Liste von Hooks sein. Sollte eine nicht vailidieren, werden weitere nicht ausgeführt. Ein Hook kann auch ein Snippetname sein, welches dann ausgeführt wird.';
+$_lang['prop_register.posthooks_desc'] = 'Skripte, die nach der Registrierung des Nutzers ausgeführt werden sollen. Dies kann eine kommaseparierte Liste von Hooks sein. Sollte eine nicht validieren, werden weitere nicht ausgeführt. Ein Hook kann auch ein Snippetname sein, welches dann ausgeführt wird.';
 $_lang['prop_register.useextended_desc'] = 'Legt fest, ob erweiterte Felder zum Profile-extended-field benutzt werden sollen. Dies kann für erweiterte Benutzerfelder genutzt werden.';
 $_lang['prop_register.excludeextended_desc'] = 'Eine kommaseparaierte Liste von Feldern, die nicht als extended-fields gekennzeichnet werden sollen.';
 $_lang['prop_register.activation_desc'] = 'Legt fest, ob eine Aktivierung für die Registrierung benötigt wird oder nicht. Falls ja, wird der Benutzer nicht als aktiv gekennzeichnet, bis er seinen Account aktiviert hat. Standard ist ja. Funktioniert nur, wenn der Registrierungprozess ein E-Mail-Feld übergibt.';
@@ -104,14 +104,14 @@ $_lang['opt_register.desc'] = 'Absteigend';
 $_lang['prop_confirmregister.redirectto_desc'] = '(Optional) Nach einer erfolgreichen Aktivierung wird auf auf die angegebene Ressourcen-Id weitergeleitet.';
 $_lang['prop_confirmregister.redirectparams_desc'] = '(Optional) Ein JSON Objekt mit Parametern, die bei der Weiterleitung mittels redirectTo übergeben werden.';
 $_lang['prop_confirmregister.authenticate_desc'] = 'Authentifiziere und logge den Benutzer automatisch nach der Registrierung in den aktuellen Kontext ein. Standard ist aktiv.';
-$_lang['prop_confirmregister.authenticatecontexts_desc'] = 'Optional. Eine kommaseparierte Liste von Kontexten, für die der Nutzer authentifiziert werden soll. Standard ist der aktuelle Kontext.';
-$_lang['prop_confirmregister.errorpage_desc'] = '(Optional) Wenn diese Einstellung aktiv ist, wird der Nutzer zu dieser benutzerdefinierten Fehlerseite geleitet, falls er versucht, die Bestätigungsseite mit einem Validierungsfehler aufzurufen.';
+$_lang['prop_confirmregister.authenticatecontexts_desc'] = '(Optional) Eine kommaseparierte Liste von Kontexten, für die der Benutzer authentifiziert werden soll. Standard ist der aktuelle Kontext.';
+$_lang['prop_confirmregister.errorpage_desc'] = '(Optional) Wenn diese Einstellung aktiv ist, wird der Benutzer zu dieser benutzerdefinierten Fehlerseite geleitet, falls er versucht, die Bestätigungsseite mit einem Validierungsfehler aufzurufen.';
 $_lang['prop_confirmregister.activepage_desc'] = '(Optional) Wenn diese Einstellung aktiv ist, wird der Nutzer zu dieser benutzerdefinierten Fehlerseite geleitet, falls er versucht, die Bestätigungsseite mit einem aktivierten Benutzerkonto erneut aufzurufen.';
 
 /* ResetPassword snippet */
 $_lang['prop_resetpassword.tpl_desc'] = 'Das Passwort-vergessen-Nachricht Template.';
 $_lang['prop_resetpassword.tpltype_desc'] = 'Der Templatetyp, der für die tpl-Eigenschaft benutzt wird. Standard ist Chunk.';
-$_lang['prop_resetpassword.loginresourceid_desc'] = 'Die Ressource, zu der Nutzer nach einer erfolgreichen Bestätigung geleitet werden sollen.';
+$_lang['prop_resetpassword.loginresourceid_desc'] = 'Die Ressourcen-Id, zu der Nutzer nach einer erfolgreichen Bestätigung geleitet werden.';
 
 /* UpdateProfile snippet */
 $_lang['prop_updateprofile.allowedextendedfields_desc'] = '(Optional) Wenn diese Einstellung aktiv ist, werden Änderungen der erweiterten Benutzerdaten auf die Feldnamen in der kommaseparierten Liste eingeschränkt.';
@@ -121,7 +121,7 @@ $_lang['prop_updateprofile.excludeextended_desc'] = 'Eine kommaseparierte Liste 
 $_lang['prop_updateprofile.placeholderprefix_desc'] = 'Das Prefix, das für alle Platzhalter des Snippets genutzt werden soll.';
 $_lang['prop_updateprofile.posthooks_desc'] = 'Skripte, die nach der Validierung des Formulars ausgeführt werden sollen. Dies kann eine kommaseparierte Liste von Hooks sein. Sollte eine nicht vailidieren, werden weitere nicht ausgeführt. Ein Hook kann auch ein Snippetname sein, welches dann ausgeführt wird.';
 $_lang['prop_updateprofile.prehooks_desc'] = 'Skripte, die vor der Validierung des Formulars ausgeführt werden sollen. Dies kann eine kommaseparierte Liste von Hooks sein. Sollte eine nicht vailidieren, werden weitere nicht ausgeführt. Ein Hook kann auch ein Snippetname sein, welches dann ausgeführt wird.';
-$_lang['prop_updateprofile.redirecttologin_desc'] = 'Wenn ein Benutzer nicht eingeloggt ist und diese Ressource aufruft, leite an die Unauthorized Seite weiter.';
+$_lang['prop_updateprofile.redirecttologin_desc'] = 'Leitet einen nicht eingeloggten Benutzer auf die Seite für unautorisierte Zugriffe weiter.';
 $_lang['prop_updateprofile.reloadonsuccess_desc'] = 'Wenn diese Einstellung aktiv ist, leitet die Seite an sich selbst mit einem GET-Parameter zurück, um Doppelsendungen zu vermeiden. Sonst wird lediglich ein Erfolg-Platzhalter angezeigt.';
 $_lang['prop_updateprofile.submitvar_desc'] = 'Die Prüfvariable für die UpdateProfile Snippet Funktionalität. Falls nicht gesetzt oder leer, wird UpdateProfile alle POST-Inhalte des Formulars auswerten.';
 $_lang['prop_updateprofile.syncusername_desc'] = 'Wenn diese Einstellung auf einen Spaltennamen im Profil gesetzt ist, versucht UpdateProfile, den Benutzernamen mit diesem Feld nach erfolgreichem Speichern zu synchronisieren.';
@@ -134,9 +134,9 @@ $_lang['prop_changepassword.fieldoldpassword_desc'] = 'Der Feldname für das alt
 $_lang['prop_changepassword.fieldnewpassword_desc'] = 'Der Feldname für das neue Passwort.';
 $_lang['prop_changepassword.fieldconfirmnewpassword_desc'] = '(Optional). Name des Feldes für die Überprüfung des neuen Passworts.';
 $_lang['prop_changepassword.prehooks_desc'] = 'Skripte, die nach der Validierung aber noch vor dem Speichern des Formulars ausgeführt werden sollen. Dies kann eine kommaseparierte Liste von Hooks sein. Sollte eine nicht vailidieren, werden weitere nicht ausgeführt. Ein Hook kann auch ein Snippetname sein, welches dann ausgeführt wird.';
-$_lang['prop_changepassword.posthooks_desc'] = 'Skripte, die nach der Registrierung eines Benutzers ausgeführt werden sollen. Dies kann eine kommaseparierte Liste von Hooks sein. Sollte eine nicht vailidieren, werden weitere nicht ausgeführt. Ein Hook kann auch ein Snippetname sein, welches dann ausgeführt wird.';
-$_lang['prop_changepassword.redirecttologin_desc'] = 'If a user is not logged in and accesses this Resource, redirect them to the Unauthorized Page.';
-$_lang['prop_changepassword.reloadonsuccess_desc'] = 'Falls gesetzt, leitet die Seite an sich selbst mit einem GET-Parameter zurück, um Doppelsendungen zu vermeiden. Falls nicht gesetzt, wird lediglich ein Erfolg-Platzhalter angezeigt.';
+$_lang['prop_changepassword.posthooks_desc'] = 'Skripte, die nach der Registrierung eines Benutzers ausgeführt werden sollen. Dies kann eine kommaseparierte Liste von Hooks sein. Sollte eine nicht validieren, werden weitere nicht ausgeführt. Ein Hook kann auch ein Snippetname sein, welches dann ausgeführt wird.';
+$_lang['prop_changepassword.redirecttologin_desc'] = 'Leitet einen nicht eingeloggten Benutzer auf die Seite für unautorisierte Zugriffe weiter.';
+$_lang['prop_changepassword.reloadonsuccess_desc'] = 'Wenn diese Einstellung aktiv ist, leitet die Seite an sich selbst mit einem GET-Parameter zurück, um Doppelsendungen zu vermeiden. Sonst wird lediglich ein Erfolg-Platzhalter angezeigt.';
 $_lang['prop_changepassword.successmessage_desc'] = 'Falls reloadOnSuccess als false gekennzeichnet ist, wird diese Nachricht im [prefix].successMessage Platzhalter ausgegeben.';
 $_lang['prop_changepassword.placeholderprefix_desc'] = 'Das Prefix, das für alle Platzhalter des Snippets genutzt werden soll.';
 
