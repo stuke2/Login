@@ -105,8 +105,8 @@ $_lang['prop_confirmregister.redirectto_desc'] = '(Optional) Nach einer erfolgre
 $_lang['prop_confirmregister.redirectparams_desc'] = 'Optional. Ein JSON Objekt an Parametern, die bei der Weiterleitung mittels redirectTo übergeben werden.';
 $_lang['prop_confirmregister.authenticate_desc'] = 'Authentifiziere und logge den Benutzer automatisch nach der Registrierung in den aktuellen Kontext ein. Standard ist aktiv.';
 $_lang['prop_confirmregister.authenticatecontexts_desc'] = 'Optional. Eine kommaseparierte Liste von Kontexten, für die der Nutzer authentifiziert werden soll. Standard ist der aktuelle Kontext.';
-$_lang['prop_confirmregister.errorpage_desc'] = 'Optional. Falls gesetzt, wird der Nutzer zu einer benutzerdefinierten Fehlerseite geleitet, wenn dieser versucht nach der Aktivierung diese Seite erneut aufzurufen.';
-$_lang['prop_confirmregister.activepage_desc'] = 'Optional. If set, will redirect user to a active error page if they try to access this the confirm register page with an already activated account.';
+$_lang['prop_confirmregister.errorpage_desc'] = '(Optional) Wenn diese Einstellung aktiv ist, wird der Nutzer zu dieser benutzerdefinierten Fehlerseite geleitet, falls er versucht, die Bestätigungsseite mit einem Validierungsfehler aufzurufen.';
+$_lang['prop_confirmregister.activepage_desc'] = '(Optional) Wenn diese Einstellung aktiv ist, wird der Nutzer zu dieser benutzerdefinierten Fehlerseite geleitet, falls er versucht, die Bestätigungsseite mit einem aktivierten Benutzerkonto erneut aufzurufen.';
 
 /* ResetPassword snippet */
 $_lang['prop_resetpassword.tpl_desc'] = 'Das Passwort-vergessen-Nachricht-Template.';
@@ -132,7 +132,7 @@ $_lang['prop_updateprofile.user_desc'] = 'Optional. If specified, will load the 
 $_lang['prop_changepassword.submitvar_desc'] = 'Die Prüfvariable für die ChangePassword Funktionalität. Falls nicht gesetzt oder leer, wird ChangePassword alle POST-Inhalte des Formulars auswerten.';
 $_lang['prop_changepassword.fieldoldpassword_desc'] = 'Der Name des alten Passwort Feldes.';
 $_lang['prop_changepassword.fieldnewpassword_desc'] = 'Der Name des neuen Passwort Feldes.';
-$_lang['prop_changepassword.fieldconfirmnewpassword_desc'] = 'Optional. Falls gesetzt, Name des Feldes für die Überprüfung des neuen Passworts.';
+$_lang['prop_changepassword.fieldconfirmnewpassword_desc'] = '(Optional). Name des Feldes für die Überprüfung des neuen Passworts.';
 $_lang['prop_changepassword.prehooks_desc'] = 'Skripte, die nach der Validierung aber noch vor dem Speichern des Formulars ausgeführt werden sollen. Dies kann eine kommaseparierte Liste von Hooks sein. Sollte eine nicht vailidieren, werden weitere nicht ausgeführt. Ein Hook kann auch ein Snippetname sein, welches dann ausgeführt wird.';
 $_lang['prop_changepassword.posthooks_desc'] = 'Skripte, die nach der Registrierung eines Benutzers ausgeführt werden sollen. Dies kann eine kommaseparierte Liste von Hooks sein. Sollte eine nicht vailidieren, werden weitere nicht ausgeführt. Ein Hook kann auch ein Snippetname sein, welches dann ausgeführt wird.';
 $_lang['prop_changepassword.redirecttologin_desc'] = 'If a user is not logged in and accesses this Resource, redirect them to the Unauthorized Page.';
