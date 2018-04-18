@@ -6,14 +6,14 @@
 /* ForgotPassword snippet */
 $_lang['prop_forgotpassword.emailtpl_desc'] = 'Das Template für die Bestätigungsemail.';
 $_lang['prop_forgotpassword.emailtpltype_desc'] = 'Templatetyp, der für die emailTpl-Eigenschaft benutzt wird. Der Standardwert ist Chunk.';
-$_lang['prop_forgotpassword.senttpl_desc'] = 'Das Template für die Nachricht, dass eine E-Mail erfolgreich verschickt worden ist.';
-$_lang['prop_forgotpassword.senttpltype_desc'] = 'Templatetyp, der für die sendTpl-Eigenschaft benutzt wird. Der Standardwert ist Chunk.';
+$_lang['prop_forgotpassword.senttpl_desc'] = 'Das Template für die Bildschirmnachricht, dass eine E-Mail erfolgreich verschickt worden ist.';
+$_lang['prop_forgotpassword.senttpltype_desc'] = 'Der Templatetyp, der für die sendTpl-Eigenschaft benutzt wird. Der Standardwert ist Chunk.';
 $_lang['prop_forgotpassword.tpl_desc'] = 'Das Passwort-vergessen Template.';
-$_lang['prop_forgotpassword.tpltype_desc'] = 'Templatetyp, der für die tpl-Eigenschaft benutzt wird. Der Standardwert ist Chunk.';
+$_lang['prop_forgotpassword.tpltype_desc'] = 'Der Templatetyp, der für die tpl-Eigenschaft benutzt wird. Der Standardwert ist Chunk.';
 $_lang['prop_forgotpassword.errtpl_desc'] = 'Das Template innerhalb dem die Fehlermeldungen ausgegeben werden.';
-$_lang['prop_forgotpassword.errtpltype_desc'] = 'Templatetyp, der für die errTpl-Eigenschaft benutzt wird. Der Standardwert ist Chunk.';
+$_lang['prop_forgotpassword.errtpltype_desc'] = 'Der Templatetyp, der für die errTpl-Eigenschaft benutzt wird. Der Standardwert ist Chunk.';
 $_lang['prop_forgotpassword.emailsubject_desc'] = 'Der Betreff für die Passwort-vergessen E-Mail.';
-$_lang['prop_forgotpassword.emailtplalt_desc'] = '(Optional) Template für die Nur-Text-Alternative der Bestätigungmail.';
+$_lang['prop_forgotpassword.emailtplalt_desc'] = '(Optional) Das Template für die Nur-Text-Alternative der Bestätigungmail.';
 $_lang['prop_forgotpassword.resetresourceid_desc'] = 'Die Ressourcen-Id zu der Benutzer aus der Aktivierungsmail gleitet werden und in der der ResetPassword Snippet Aufruf steht.';
 
 /* Login snippet */
@@ -21,7 +21,7 @@ $_lang['prop_login.actionkey_desc'] = 'Die REQUEST Variable die angibt, welche A
 $_lang['prop_login.loginkey_desc'] = 'Der Login-Aktion-Schlüssel.';
 $_lang['prop_login.logoutkey_desc'] = 'Der Logout-Aktion-Schlüssel.';
 $_lang['prop_login.loginviaemail_desc'] = 'Anmeldung mittels Benutzername oder E-Mail Adresse ermöglichen.';
-$_lang['prop_login.tpltype_desc'] = 'Templatetyp, der für die Login und Logout Formulare benutzt wird. Der Standardwert ist Chunk.';
+$_lang['prop_login.tpltype_desc'] = 'Der Templatetyp, der für die Login und Logout Formulare benutzt wird. Der Standardwert ist Chunk.';
 $_lang['prop_login.logintpl_desc'] = 'Das Logintemplate.';
 $_lang['prop_login.logouttpl_desc'] = 'Das Logouttemplate.';
 $_lang['prop_login.prehooks_desc'] = 'Scripts, die vor einem Benutzerlogin/-logout ausgeführt werden sollen. Es kann eine kommaseparierte Liste von Hooks angegeben werden. Sollte ein Hook nicht validieren, werden keine weitere ausgeführt. Ein Hook kann auch ein Snippetname sein, welches dann ausgeführt wird.';
@@ -65,16 +65,16 @@ $_lang['prop_register.activationresourceid_desc'] = 'Die Ressourcen-Id, auf der 
 $_lang['prop_register.activationemail_desc'] = 'Wenn diese Einstellung aktiv ist, wird die Aktivierungsmail an diese E-Mail Adresse gesendet, statt an die des neu registrierten Benutzers.';
 $_lang['prop_register.activationemailsubject_desc'] = 'Der Betreff der Aktivierungsmail.';
 $_lang['prop_register.activationemailtpltype_desc'] = 'Der Templatetyp, der für die Aktivierungsmail benutzt wird. Standard ist Chunk.';
-$_lang['prop_register.activationemailtpl_desc'] = 'Das Aktivierungsmailtemplate.';
-$_lang['prop_register.activationemailtplalt_desc'] = '(Optional) Plain-text alternative for the activation email tpl.';
+$_lang['prop_register.activationemailtpl_desc'] = 'Das Aktivierungsmail Template.';
+$_lang['prop_register.activationemailtplalt_desc'] = '(Optional) Das Template für die Nur-Text-Alternative der Aktivierungsmail.';
 $_lang['prop_register.moderatedresourceid_desc'] = 'Wenn ein prehook den Benutzer als zu moderieren kennzeichnet, leite auf diese Ressource weiter, statt zur submittedResourceId. Lassen Sie dieses Feld leer, um diese Funktion nicht zu nutzen.';
 $_lang['prop_register.placeholderprefix_desc'] = 'Das prefix, das sie für alle Platzhalter dieses Snippets nutzen.';
-$_lang['prop_register.recaptchaheight_desc'] = 'Falls `recaptcha` als preHook gesetzt ist, setzt dies die Höhe des reCaptcha Widgets.';
-$_lang['prop_register.recaptchatheme_desc'] = 'Falls `recaptcha` als preHook gesetzt ist, setzt dies das Thema des reCaptcha Widgets.';
-$_lang['prop_register.recaptchawidth_desc'] = 'Falls `recaptcha` als preHook gesetzt ist, setzt dies die Breite des reCaptcha Widgets.';
-$_lang['prop_register.mathminrange_desc'] = 'Falls `math` als preHook gesetzt ist, geben Sie die minimalen Zahlenstellen für jede Nummer der Gleichung an.';
-$_lang['prop_register.mathmaxrange_desc'] = 'Falls `math` als preHook gesetzt ist, geben Sie die maximalen Zahlenstellen für jede Nummer der Gleichung an.';
-$_lang['prop_register.mathfield_desc'] = 'Falls `math` als preHook gesetzt ist, geben Sie den Namen des Antwort-input Felds an.';
+$_lang['prop_register.recaptchaheight_desc'] = 'Falls \'recaptcha\' als preHook gesetzt ist, setzt dies die Höhe des reCaptcha Widgets.';
+$_lang['prop_register.recaptchatheme_desc'] = 'Falls \'recaptcha\' als preHook gesetzt ist, setzt dies das Thema des reCaptcha Widgets.';
+$_lang['prop_register.recaptchawidth_desc'] = 'Falls \'recaptcha\' als preHook gesetzt ist, setzt dies die Breite des reCaptcha Widgets.';
+$_lang['prop_register.mathminrange_desc'] = 'Falls \'math\' als preHook gesetzt ist, gibt dieser Wert die minimalen Zahlenstellen für jede Nummer der Gleichung an.';
+$_lang['prop_register.mathmaxrange_desc'] = 'Falls \'math\' als preHook gesetzt ist, gibt dieser Wert die die maximalen Zahlenstellen für jede Nummer der Gleichung an.';
+$_lang['prop_register.mathfield_desc'] = 'Falls \'math\' als preHook gesetzt ist, gibt dieser Wert den Namen des Antwort Feldes an.';
 $_lang['prop_register.mathop1field_desc'] = 'Falls `math` als preHook gesetzt ist, geben Sie den Namen des Feldes für die erste Zahl der Gleichung an.';
 $_lang['prop_register.mathop2field_desc'] = 'Falls `math` als preHook gesetzt ist, geben Sie den Namen des for Feldes für die zweite Zahl der Gleichung an.';
 $_lang['prop_register.mathoperatorfield_desc'] = 'Falls `math` als preHook gesetzt ist, geben Sie den Namen des Feldes für den Operator der Gleichung an.';
@@ -109,7 +109,7 @@ $_lang['prop_confirmregister.errorpage_desc'] = '(Optional) Wenn diese Einstellu
 $_lang['prop_confirmregister.activepage_desc'] = '(Optional) Wenn diese Einstellung aktiv ist, wird der Nutzer zu dieser benutzerdefinierten Fehlerseite geleitet, falls er versucht, die Bestätigungsseite mit einem aktivierten Benutzerkonto erneut aufzurufen.';
 
 /* ResetPassword snippet */
-$_lang['prop_resetpassword.tpl_desc'] = 'Das Passwort-vergessen-Nachricht-Template.';
+$_lang['prop_resetpassword.tpl_desc'] = 'Das Passwort-vergessen-Nachricht Template.';
 $_lang['prop_resetpassword.tpltype_desc'] = 'Der Templatetyp, der für die tpl-Eigenschaft benutzt wird. Standard ist Chunk.';
 $_lang['prop_resetpassword.loginresourceid_desc'] = 'Die Ressource, zu der Nutzer nach einer erfolgreichen Bestätigung geleitet werden sollen.';
 
@@ -146,8 +146,8 @@ $_lang['prop_isloggedin.redirectto_desc'] = 'Die Id einer Ressource, auf die wei
 $_lang['prop_isloggedin.redirectparams_desc'] = 'Falls redirectTo genutzt wird, kann ein JSON Objekt eines REQUEST Parameters mit der Weiterleitung übergeben werden.';
 
 /* ActiveUsers snippet */
-$_lang['prop_activeusers.tpl'] = 'The Chunk to use for outputting each active user.';
-$_lang['prop_activeusers.tplType'] = 'Templatetyp, der für die tpl-Eigenschaft benutzt wird. Der Standardwert ist Chunk.';
+$_lang['prop_activeusers.tpl'] = 'Der Chunk, der benutzt wird, um einen einzelnen aktiven Benutzer auszugeben.';
+$_lang['prop_activeusers.tplType'] = 'Der Templatetyp, der für die tpl-Eigenschaft benutzt wird. Der Standardwert ist Chunk.';
 $_lang['prop_activeusers.sortBy'] = 'The field to sort by for the users.';
 $_lang['prop_activeusers.sortDir'] = 'The direction to sort by for the users.';
 $_lang['prop_activeusers.limit'] = 'The number of users to limit displaying.';
