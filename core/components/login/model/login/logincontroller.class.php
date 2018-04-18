@@ -143,8 +143,8 @@ abstract class LoginController {
         if (is_array($val)) {
             $val = array_map(array($this, 'escapePlaceholders'), $val);
         } else {
-            $val = str_replace(array('[', ']'), array('&#91;', '&#93;'), $val);
             $val = htmlspecialchars($val, ENT_QUOTES, $this->modx->getOption('modx_charset', null, 'UTF-8'));
+            $val = str_replace(array('[', ']'), array('&#91;', '&#93;'), $val);
         }
         return $val;
     }
@@ -250,7 +250,7 @@ abstract class LoginProcessor {
     public $dictionary;
     /** @var array $config */
     public $config = array();
-    
+
     /**
      * @param Login &$login A reference to the Login instance
      * @param LoginController &$controller
