@@ -35,7 +35,7 @@ $_lang['prop_login.logoutresourceparams_desc'] = 'Ein JSON Objekt von Parametern
 $_lang['prop_login.loginmsg_desc'] = '(Optional) Nachricht für die Login Aktion. Falls leer, wird der Standardeintrag im Lexicon ausgegeben.';
 $_lang['prop_login.logoutmsg_desc'] = '(Optional) Nachricht für die Logout Aktion. Falls leer, wird der Standardeintrag im Lexicon ausgegeben.';
 $_lang['prop_login.redirecttoprior_desc'] = 'Wenn diese Einstellung aktiv ist, wird der Benutzer nach erfolgreichem Login zur Referrer-Seite geleitet (HTTP_REFERER).';
-$_lang['prop_login.redirecttoonfailedauth_desc'] = 'If set to a non-zero number, will redirect the user to this page if their attempt to login is unsuccessful.';
+$_lang['prop_login.redirecttoonfailedauth_desc'] = 'Eine Ressourcen-Id, zu der Benutzer nach einem nicht erfolgreichen Login weitergeleitet werden. 0 leitet auf die gleiche Seite zurück.';
 $_lang['prop_login.rememberme_desc'] = '(Optional) Dieses Feld kann genutzt werden, um den Login Status zu merken. Standard ist \'rememberme\'.';
 $_lang['prop_login.contexts_desc'] = '(Experimentell) Eine kommaseparierte Liste von Kontexten, für die der Login gilt. Standardmäßig ist nur der aktuelle Kontext eingestellt.';
 $_lang['prop_login.toplaceholder_desc'] = 'Wenn diese Einstellung aktiv ist, wird die Ausgabe des login Snippets an einen Platzhalter dieses Namens übergeben statt die Inhalte direkt auszugeben.';
@@ -46,7 +46,7 @@ $_lang['prop_profile.user_desc'] = '(Optional). Entweder eine Benutzer-Id oder e
 $_lang['prop_profile.useextended_desc'] = 'Legt fest, ob erweiterte Felder zum Profile-extended-field benutzt werden sollen. Dies kann für erweiterte Benutzerfelder genutzt werden.';
 
 /* Register snippet */
-$_lang['prop_register.submitvar_desc'] = 'Die Prüfvariable für die Registrierungsfunktionalität. Falls leer oder nicht gesetzt, wird das Formular alle POST-Variablen im Formular verwenden.';
+$_lang['prop_register.submitvar_desc'] = 'Die Prüfvariable für die Register Snippet Funktionalität. Falls nicht gesetzt oder leer, wird Register alle POST-Inhalte des Formulars auswerten.';
 $_lang['prop_register.usergroups_desc'] = '(Optional) Eine kommaseparierte Liste von Benutzergruppen-Namen oder -Ids um neu registrierte Benutzer zu diesen Benutzergruppen hinzuzufügen.';
 $_lang['prop_register.usergroupsfield_desc'] = 'The name of the field to use to specify the User Group(s) to automatically add the new User to. Only used if this value is not blank.';
 $_lang['prop_register.submittedresourceid_desc'] = 'Wenn diese Einstellung aktiv ist, wird der Nutzer zu dieser Ressource-Id nach dem Absenden des Registrierungsformulars weitergeleitet.';
@@ -122,14 +122,14 @@ $_lang['prop_updateprofile.placeholderprefix_desc'] = 'Das Prefix, das für alle
 $_lang['prop_updateprofile.posthooks_desc'] = 'Skripte, die nach der Validierung des Formulars ausgeführt werden sollen. Dies kann eine kommaseparierte Liste von Hooks sein. Sollte eine nicht vailidieren, werden weitere nicht ausgeführt. Ein Hook kann auch ein Snippetname sein, welches dann ausgeführt wird.';
 $_lang['prop_updateprofile.prehooks_desc'] = 'Skripte, die vor der Validierung des Formulars ausgeführt werden sollen. Dies kann eine kommaseparierte Liste von Hooks sein. Sollte eine nicht vailidieren, werden weitere nicht ausgeführt. Ein Hook kann auch ein Snippetname sein, welches dann ausgeführt wird.';
 $_lang['prop_updateprofile.redirecttologin_desc'] = 'Wenn ein Benutzer nicht eingeloggt ist und diese Ressource aufruft, leite an die Unauthorized Seite weiter.';
-$_lang['prop_updateprofile.reloadonsuccess_desc'] = 'Falls gesetzt, leitet die Seite an sich selbst mit einem GET-Parameter zurück, um Doppelsendungen zu vermeiden. Falls nicht gesetzt, wird lediglich ein Erfolg-Platzhalter angezeigt.';
-$_lang['prop_updateprofile.submitvar_desc'] = 'Die Prüfvariable für die UpdateProfile Funktionalität. Falls nicht gesetzt oder leer, wird UpdateProfile das Formular auf alle POST-Anfragen prüfen.';
-$_lang['prop_updateprofile.syncusername_desc'] = 'Falls auf einen Spaltennamen im Profil gesetzt, wird UpdateProfile versuchen, den Benutzernamen mit diesem Feld nach erfolgreichem Speichern zu synchronisieren.';
+$_lang['prop_updateprofile.reloadonsuccess_desc'] = 'Wenn diese Einstellung aktiv ist, leitet die Seite an sich selbst mit einem GET-Parameter zurück, um Doppelsendungen zu vermeiden. Sonst wird lediglich ein Erfolg-Platzhalter angezeigt.';
+$_lang['prop_updateprofile.submitvar_desc'] = 'Die Prüfvariable für die UpdateProfile Snippet Funktionalität. Falls nicht gesetzt oder leer, wird UpdateProfile alle POST-Inhalte des Formulars auswerten.';
+$_lang['prop_updateprofile.syncusername_desc'] = 'Wenn diese Einstellung auf einen Spaltennamen im Profil gesetzt ist, versucht UpdateProfile, den Benutzernamen mit diesem Feld nach erfolgreichem Speichern zu synchronisieren.';
 $_lang['prop_updateprofile.useextended_desc'] = 'Legt fest, ob erweiterte Felder zum Profile-extended-field benutzt werden sollen. Dies kann für erweiterte Benutzerfelder genutzt werden.';
 $_lang['prop_updateprofile.user_desc'] = '(Optional) Entweder eine Benutzer-Id oder ein Benutzername. Falls gesetzt, wird dieser Wert genutzt um den Benutzerdaten zu laden anstatt die Daten des aktuell eingeloggten Benutzers.';
 
 /* ChangePassword snippet */
-$_lang['prop_changepassword.submitvar_desc'] = 'Die Prüfvariable für die ChangePassword Funktionalität. Falls nicht gesetzt oder leer, wird ChangePassword alle POST-Inhalte des Formulars auswerten.';
+$_lang['prop_changepassword.submitvar_desc'] = 'Die Prüfvariable für die ChangePassword Snippet Funktionalität. Falls nicht gesetzt oder leer, wird ChangePassword alle POST-Inhalte des Formulars auswerten.';
 $_lang['prop_changepassword.fieldoldpassword_desc'] = 'Der Feldname für das alte Passwort.';
 $_lang['prop_changepassword.fieldnewpassword_desc'] = 'Der Feldname für das neue Passwort.';
 $_lang['prop_changepassword.fieldconfirmnewpassword_desc'] = '(Optional). Name des Feldes für die Überprüfung des neuen Passworts.';
@@ -142,7 +142,7 @@ $_lang['prop_changepassword.placeholderprefix_desc'] = 'Das Prefix, das für all
 
 /* isLoggedIn snippet */
 $_lang['prop_isloggedin.contexts_desc'] = 'Eine kommaseparierte Liste von Kontexten, für die der Authentifizierungsstatus geprüft werden soll. Standard ist der aktuelle Kontext.';
-$_lang['prop_isloggedin.redirectto_desc'] = 'Die Id einer Ressource, auf die weitergeleitet wird, wenn der Nutzer nicht eingeloggt ist. Standard ist die unauthorized_page.';
+$_lang['prop_isloggedin.redirectto_desc'] = 'Die Ressourcen-Id, auf die weitergeleitet wird, wenn der Nutzer nicht eingeloggt ist. Standard ist die unauthorized_page.';
 $_lang['prop_isloggedin.redirectparams_desc'] = 'Falls redirectTo genutzt wird, kann ein JSON Objekt eines REQUEST Parameters mit der Weiterleitung übergeben werden.';
 
 /* ActiveUsers snippet */
