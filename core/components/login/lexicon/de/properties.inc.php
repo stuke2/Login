@@ -32,28 +32,28 @@ $_lang['prop_login.loginresourceid_desc'] = 'Eine Ressourcen-Id, zu der Benutzer
 $_lang['prop_login.loginresourceparams_desc'] = 'Ein JSON Objekt von Parametern, die bei einem Login Redirekt an die URL angehängt werden, z.B.: {"test":123}';
 $_lang['prop_login.logoutresourceid_desc'] = 'Ressourcen-Id zu der nach einem erfolgreichen Logout geleitet wird. 0 leitet auf die gleiche Seite zurück.';
 $_lang['prop_login.logoutresourceparams_desc'] = 'Ein JSON Objekt von Parametern, die an die URL der Logout Weiterleitung angehängt werden, z.B.: {"test":123}';
-$_lang['prop_login.loginmsg_desc'] = 'Optionale label Nachricht für die login Aktion. Falls leer, wird der Standardstring des Lexicons verwendet.';
+$_lang['prop_login.loginmsg_desc'] = '(Optional) label Nachricht für die login Aktion. Falls leer, wird der Standardstring des Lexicons verwendet.';
 $_lang['prop_login.logoutmsg_desc'] = 'Optionale label Nachricht für die logout Aktion. Falls leer, wird der Standardstring des Lexicons verwendet.';
 $_lang['prop_login.redirecttoprior_desc'] = 'Falls aktiv, wird der Nutzer nach erfolgreichem Login zur Referrer-Seite geleitet (HTTP_REFERER).';
 $_lang['prop_login.redirecttoonfailedauth_desc'] = 'If set to a non-zero number, will redirect the user to this page if their attempt to login is unsuccessful.';
-$_lang['prop_login.rememberme_desc'] = 'Optional. Dieses Feld kann genutzt werden, um einen Loginstatus zu erhalten. Standard ist `merken`.';
+$_lang['prop_login.rememberme_desc'] = '(Optional) Dieses Feld kann genutzt werden, um den Login Status zu merken. Standard ist \'rememberme\'.';
 $_lang['prop_login.contexts_desc'] = '(Experimentell) Eine kommaseparierte Liste von Kontexten, für die der Login gilt. Standardmäßig ist nur der aktuelle Kontext eingestellt.';
 $_lang['prop_login.toplaceholder_desc'] = 'Falls gesetzt, wird die Ausgabe des login Snippets an einen Platzhalter dieses Namens übergeben statt die Inhalte direkt auszugeben.';
 
 /* Profile snippet */
 $_lang['prop_profile.prefix_desc'] = 'Ein vorangestellter String aller Platzhalter für Felder, die von diesem Snippet gesetzt werden.';
-$_lang['prop_profile.user_desc'] = 'Optional. Entweder eine Benutzer-ID oder ein Benutzername. Falls gesetzt, wird dieser Wert genutzt statt der des aktuell eingeloggten Nutzers.';
+$_lang['prop_profile.user_desc'] = '(Optional). Entweder eine Benutzer-Id oder ein Benutzername. Falls gesetzt, wird dieser Wert genutzt statt der des aktuell eingeloggten Nutzers.';
 $_lang['prop_profile.useextended_desc'] = 'Legt fest, ob erweiterte Felder zum Profile-extended-field benutzt werden sollen. Dies kann für erweiterte Benutzerfelder genutzt werden.';
 
 /* Register snippet */
 $_lang['prop_register.submitvar_desc'] = 'Die Prüfvariable für die Registrierungsfunktionalität. Falls leer oder nicht gesetzt, wird das Formular alle POST-Variablen im Formular verwenden.';
-$_lang['prop_register.usergroups_desc'] = 'Optional. Eine kommaseparierte Liste von Benutzergruppennamen oder IDs um neu registrierte Benutzer zu diesen hinzuzufügen.';
+$_lang['prop_register.usergroups_desc'] = '(Optional) Eine kommaseparierte Liste von Benutzergruppen-Namen oder -Ids um neu registrierte Benutzer zu diesen Benutzergruppen hinzuzufügen.';
 $_lang['prop_register.usergroupsfield_desc'] = 'The name of the field to use to specify the User Group(s) to automatically add the new User to. Only used if this value is not blank.';
 $_lang['prop_register.submittedresourceid_desc'] = 'Falls gesetzt, wird der Nutzer zu dieser Ressource nach dem Absenden des Registrierungsformulars weitergeleitet.';
 $_lang['prop_register.usernamefield_desc'] = 'Der Name des Feldes für den neuen Benutzernamen.';
 $_lang['prop_register.passwordfield_desc'] = 'Der Name des Feldes für das Passwort des neuen Benutzers.';
 $_lang['prop_register.emailfield_desc'] = 'Der Name des Feldes für die E-mail Adresse des neuen Benutzers.';
-$_lang['prop_register.successmsg_desc'] = 'Optional. Falls Sie nicht mittels des submittedResourceId Parameters weiterleiten, wird diese Nachricht angezeigt.';
+$_lang['prop_register.successmsg_desc'] = '(Optional). Falls der Benutzer nicht mittels des submittedResourceId Parameters weitergeleitet wird, wird diese Nachricht angezeigt.';
 $_lang['prop_register.persistparams_desc'] = '(Optional) Ein JSON Objekt mit Parametern, die über den Registrierungsprozess hinaus gespeichert werden sollen. Dies ist nützlich, wenn Sie die ConfirmRegister-Weiterleitung benutzen um auf eine andere Seite zu weiterzuleiten (z.B. Einkaufswägen).';
 $_lang['prop_register.prehooks_desc'] = 'Skripte, die vor einer Validation ausgeführt werden sollen. Dies kann eine kommaseparierte Liste von Hooks sein. Sollte eine nicht vailidieren, werden weitere nicht ausgeführt. Ein Hook kann auch ein Snippetname sein, welches dann ausgeführt wird.';
 $_lang['prop_register.posthooks_desc'] = 'Skripte, die nach der Registrierung des Nutzers ausgeführt werden sollen. Dies kann eine kommaseparierte Liste von Hooks sein. Sollte eine nicht vailidieren, werden weitere nicht ausgeführt. Ein Hook kann auch ein Snippetname sein, welches dann ausgeführt wird.';
@@ -75,9 +75,9 @@ $_lang['prop_register.recaptchawidth_desc'] = 'Falls \'recaptcha\' als preHook g
 $_lang['prop_register.mathminrange_desc'] = 'Falls \'math\' als preHook gesetzt ist, gibt dieser Wert die minimalen Zahlenstellen für jede Nummer der Gleichung an.';
 $_lang['prop_register.mathmaxrange_desc'] = 'Falls \'math\' als preHook gesetzt ist, gibt dieser Wert die die maximalen Zahlenstellen für jede Nummer der Gleichung an.';
 $_lang['prop_register.mathfield_desc'] = 'Falls \'math\' als preHook gesetzt ist, gibt dieser Wert den Namen des Antwort Feldes an.';
-$_lang['prop_register.mathop1field_desc'] = 'Falls `math` als preHook gesetzt ist, geben Sie den Namen des Feldes für die erste Zahl der Gleichung an.';
-$_lang['prop_register.mathop2field_desc'] = 'Falls `math` als preHook gesetzt ist, geben Sie den Namen des for Feldes für die zweite Zahl der Gleichung an.';
-$_lang['prop_register.mathoperatorfield_desc'] = 'Falls `math` als preHook gesetzt ist, geben Sie den Namen des Feldes für den Operator der Gleichung an.';
+$_lang['prop_register.mathop1field_desc'] = 'Falls \'math\' als preHook gesetzt ist, gibt dieser Wert den Namen des Feldes für die erste Zahl der Gleichung an.';
+$_lang['prop_register.mathop2field_desc'] = 'Falls \'math\' als preHook gesetzt ist, gibt dieser Wert den Namen des Feldes für die zweite Zahl der Gleichung an.';
+$_lang['prop_register.mathoperatorfield_desc'] = 'Falls \'math\' als preHook gesetzt ist, gibt dieser Wert den Namen des Feldes für den Operator der Gleichung an.';
 $_lang['prop_register.validatepassword_desc'] = 'Whether or not to validate the sent password when registering. Recommended to leave this Yes unless you are generating your own password in a hook.';
 $_lang['prop_register.generatepassword_desc'] = 'If set to Yes, Register will generate a random password for the user, overwriting any passed password. Useful for automatic generation of passwords.';
 $_lang['prop_register.trimpassword_desc'] = 'If set to Yes, Register will trim the submitted password for whitespace.';
@@ -102,7 +102,7 @@ $_lang['opt_register.desc'] = 'Absteigend';
 
 /* ConfirmRegister snippet */
 $_lang['prop_confirmregister.redirectto_desc'] = '(Optional) Nach einer erfolgreichen Aktivierung wird auf auf die angegebene Ressourcen-Id weitergeleitet.';
-$_lang['prop_confirmregister.redirectparams_desc'] = 'Optional. Ein JSON Objekt an Parametern, die bei der Weiterleitung mittels redirectTo übergeben werden.';
+$_lang['prop_confirmregister.redirectparams_desc'] = '(Optional) Ein JSON Objekt mit Parametern, die bei der Weiterleitung mittels redirectTo übergeben werden.';
 $_lang['prop_confirmregister.authenticate_desc'] = 'Authentifiziere und logge den Benutzer automatisch nach der Registrierung in den aktuellen Kontext ein. Standard ist aktiv.';
 $_lang['prop_confirmregister.authenticatecontexts_desc'] = 'Optional. Eine kommaseparierte Liste von Kontexten, für die der Nutzer authentifiziert werden soll. Standard ist der aktuelle Kontext.';
 $_lang['prop_confirmregister.errorpage_desc'] = '(Optional) Wenn diese Einstellung aktiv ist, wird der Nutzer zu dieser benutzerdefinierten Fehlerseite geleitet, falls er versucht, die Bestätigungsseite mit einem Validierungsfehler aufzurufen.';
@@ -126,7 +126,7 @@ $_lang['prop_updateprofile.reloadonsuccess_desc'] = 'Falls gesetzt, leitet die S
 $_lang['prop_updateprofile.submitvar_desc'] = 'Die Prüfvariable für die UpdateProfile Funktionalität. Falls nicht gesetzt oder leer, wird UpdateProfile das Formular auf alle POST-Anfragen prüfen.';
 $_lang['prop_updateprofile.syncusername_desc'] = 'Falls auf einen Spaltennamen im Profil gesetzt, wird UpdateProfile versuchen, den Benutzernamen mit diesem Feld nach erfolgreichem Speichern zu synchronisieren.';
 $_lang['prop_updateprofile.useextended_desc'] = 'Legt fest, ob erweiterte Felder zum Profile-extended-field benutzt werden sollen. Dies kann für erweiterte Benutzerfelder genutzt werden.';
-$_lang['prop_updateprofile.user_desc'] = 'Optional. If specified, will load the user with the specified ID or username instead of the active user.';
+$_lang['prop_updateprofile.user_desc'] = '(Optional) Entweder eine Benutzer-Id oder ein Benutzername. Falls gesetzt, wird dieser Wert genutzt um den Benutzerdaten zu laden anstatt die Daten des aktuell eingeloggten Benutzers.';
 
 /* ChangePassword snippet */
 $_lang['prop_changepassword.submitvar_desc'] = 'Die Prüfvariable für die ChangePassword Funktionalität. Falls nicht gesetzt oder leer, wird ChangePassword alle POST-Inhalte des Formulars auswerten.';
