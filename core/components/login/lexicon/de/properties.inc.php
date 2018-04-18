@@ -10,10 +10,10 @@ $_lang['prop_forgotpassword.senttpl_desc'] = 'Das Template für die Nachricht, d
 $_lang['prop_forgotpassword.senttpltype_desc'] = 'Templatetyp, der für die sendTpl-Eigenschaft benutzt wird. Der Standardwert ist Chunk.';
 $_lang['prop_forgotpassword.tpl_desc'] = 'Das Passwort-vergessen Template.';
 $_lang['prop_forgotpassword.tpltype_desc'] = 'Templatetyp, der für die tpl-Eigenschaft benutzt wird. Der Standardwert ist Chunk.';
-$_lang['prop_forgotpassword.errtpl_desc'] = 'The tpl to wrap error messages in.';
+$_lang['prop_forgotpassword.errtpl_desc'] = 'Das Template innerhalb dem die Fehlermeldungen ausgegeben werden.';
 $_lang['prop_forgotpassword.errtpltype_desc'] = 'Templatetyp, der für die errTpl-Eigenschaft benutzt wird. Der Standardwert ist Chunk.';
 $_lang['prop_forgotpassword.emailsubject_desc'] = 'Der Betreff für die Passwort-vergessen E-Mail.';
-$_lang['prop_forgotpassword.emailtplalt_desc'] = '(Optional) Plain-text alternative for the confirmation email message tpl.';
+$_lang['prop_forgotpassword.emailtplalt_desc'] = '(Optional) Template für die Nur-Text-Alternative der Bestätigungmail.';
 $_lang['prop_forgotpassword.resetresourceid_desc'] = 'Die Ressourcen-Id zu der Benutzer aus der Aktivierungsmail gleitet werden und in der der ResetPassword Snippet Aufruf steht.';
 
 /* Login snippet */
@@ -101,9 +101,9 @@ $_lang['opt_register.asc'] = 'Aufsteigend';
 $_lang['opt_register.desc'] = 'Absteigend';
 
 /* ConfirmRegister snippet */
-$_lang['prop_confirmregister.redirectto_desc'] = 'Optional. Leitet nach einer erfolgreichen Aktivierung auf die angegebene Ressource.';
+$_lang['prop_confirmregister.redirectto_desc'] = '(Optional) Nach einer erfolgreichen Aktivierung wird auf auf die angegebene Ressourcen-Id weitergeleitet.';
 $_lang['prop_confirmregister.redirectparams_desc'] = 'Optional. Ein JSON Objekt an Parametern, die bei der Weiterleitung mittels redirectTo übergeben werden.';
-$_lang['prop_confirmregister.authenticate_desc'] = 'Authentifiziere und logge den Benutzer automatisch für den aktuellen Kontext nach der Registrierung. Standard ist aktiv.';
+$_lang['prop_confirmregister.authenticate_desc'] = 'Authentifiziere und logge den Benutzer automatisch nach der Registrierung in den aktuellen Kontext ein. Standard ist aktiv.';
 $_lang['prop_confirmregister.authenticatecontexts_desc'] = 'Optional. Eine kommaseparierte Liste von Kontexten, für die der Nutzer authentifiziert werden soll. Standard ist der aktuelle Kontext.';
 $_lang['prop_confirmregister.errorpage_desc'] = 'Optional. Falls gesetzt, wird der Nutzer zu einer benutzerdefinierten Fehlerseite geleitet, wenn dieser versucht nach der Aktivierung diese Seite erneut aufzurufen.';
 $_lang['prop_confirmregister.activepage_desc'] = 'Optional. If set, will redirect user to a active error page if they try to access this the confirm register page with an already activated account.';
@@ -152,6 +152,6 @@ $_lang['prop_activeusers.sortBy'] = 'The field to sort by for the users.';
 $_lang['prop_activeusers.sortDir'] = 'The direction to sort by for the users.';
 $_lang['prop_activeusers.limit'] = 'The number of users to limit displaying.';
 $_lang['prop_activeusers.offset'] = 'The start index of the limited number of users to show.';
-$_lang['prop_activeusers.classKey'] = 'The class key to use when grabbing the users. Defaults to modUser. You can set this to a class name that extends modUser, if you wish.';
+$_lang['prop_activeusers.classKey'] = 'Die Klasse, die benutzt wird, wenn Benutzer geladen werden sollen. Der Standardwert ist modUser. Sie können hier einen Klassennamen benutzen, der modUser erweitert.';
 $_lang['prop_activeusers.placeholderprefix_desc'] = 'The prefix to use for all placeholders set by this snippet.';
 $_lang['prop_activeusers.toplaceholder_desc'] = 'If set, will set the output of the snippet to a placeholder of this name rather than directly outputting the return contents.';
