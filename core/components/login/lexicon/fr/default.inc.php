@@ -36,6 +36,6 @@ $_lang['login.username'] = 'Identifiant';
 
 
 $_lang['setting_login.forgot_password_confirm_resource'] = 'ID de la ressource pour la confirmation du mot de passe oublié';
-$_lang['setting_login.forgot_password_confirm_resource_desc'] = 'Entrez l\'ID de la ressource o&ugrave; se trouve la page de confirmation pour modifier un mot de passe oubli&eacute;.';
-$_lang['setting_login.forgot_password_email_subject'] = 'Sujet de courriel d\'un mot de passe oubli&eacute;';
-$_lang['setting_login.forgot_password_email_subject_desc'] = 'La ligne sujet du courriel pour le courriel du mot de passe oubli&eacute;.';
+$_lang['setting_login.forgot_password_confirm_resource_desc'] = 'Entrez l\'ID de la ressource où se trouve la page de confirmation pour modifier un mot de passe oublié.';
+$_lang['setting_login.forgot_password_email_subject'] = 'Sujet de courriel d\'un mot de passe oublié';
+$_lang['setting_login.forgot_password_email_subject_desc'] = 'La ligne sujet du courriel pour le courriel du mot de passe oublié.';
