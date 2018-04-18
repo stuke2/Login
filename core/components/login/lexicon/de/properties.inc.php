@@ -32,8 +32,8 @@ $_lang['prop_login.loginresourceid_desc'] = 'Eine Ressourcen-Id, zu der Benutzer
 $_lang['prop_login.loginresourceparams_desc'] = 'Ein JSON Objekt von Parametern, die bei einem Login Redirekt an die URL angehängt werden, z.B.: {"test":123}';
 $_lang['prop_login.logoutresourceid_desc'] = 'Ressourcen-Id zu der nach einem erfolgreichen Logout geleitet wird. 0 leitet auf die gleiche Seite zurück.';
 $_lang['prop_login.logoutresourceparams_desc'] = 'Ein JSON Objekt von Parametern, die an die URL der Logout Weiterleitung angehängt werden, z.B.: {"test":123}';
-$_lang['prop_login.loginmsg_desc'] = '(Optional) label Nachricht für die login Aktion. Falls leer, wird der Standardstring des Lexicons verwendet.';
-$_lang['prop_login.logoutmsg_desc'] = 'Optionale label Nachricht für die logout Aktion. Falls leer, wird der Standardstring des Lexicons verwendet.';
+$_lang['prop_login.loginmsg_desc'] = '(Optional) Nachricht für die Login Aktion. Falls leer, wird der Standardeintrag im Lexicon ausgegeben.';
+$_lang['prop_login.logoutmsg_desc'] = '(Optional) Nachricht für die Logout Aktion. Falls leer, wird der Standardeintrag im Lexicon ausgegeben.';
 $_lang['prop_login.redirecttoprior_desc'] = 'Falls aktiv, wird der Nutzer nach erfolgreichem Login zur Referrer-Seite geleitet (HTTP_REFERER).';
 $_lang['prop_login.redirecttoonfailedauth_desc'] = 'If set to a non-zero number, will redirect the user to this page if their attempt to login is unsuccessful.';
 $_lang['prop_login.rememberme_desc'] = '(Optional) Dieses Feld kann genutzt werden, um den Login Status zu merken. Standard ist \'rememberme\'.';
@@ -114,8 +114,8 @@ $_lang['prop_resetpassword.tpltype_desc'] = 'Der Templatetyp, der für die tpl-E
 $_lang['prop_resetpassword.loginresourceid_desc'] = 'Die Ressource, zu der Nutzer nach einer erfolgreichen Bestätigung geleitet werden sollen.';
 
 /* UpdateProfile snippet */
-$_lang['prop_updateprofile.allowedextendedfields_desc'] = 'Optional. If set, will restrict the fields that are updated in the Extended fields to the names of fields in this comma-separated list.';
-$_lang['prop_updateprofile.allowedfields_desc'] = 'Optional. If set, will restrict the fields that are updated to the names of fields in this comma-separated list.';
+$_lang['prop_updateprofile.allowedextendedfields_desc'] = '(Optional) Wenn diese Einstellung aktiv ist, werden Änderungen der erweiterten Benutzerdaten auf die Feldnamen in der kommaseparierten Liste eingeschränkt.';
+$_lang['prop_updateprofile.allowedfields_desc'] = '(Optional) Wenn diese Einstellung aktiv ist, werden Änderungen der Benutzerdaten auf die Feldnamen in der kommaseparierten Liste eingeschränkt.';
 $_lang['prop_updateprofile.emailfield_desc'] = 'Der Feldname für das E-mail Feld im Formular.';
 $_lang['prop_updateprofile.excludeextended_desc'] = 'Eine kommaseparierte Liste von Feldern, die nicht als extended-fields übernommen werden sollen.';
 $_lang['prop_updateprofile.placeholderprefix_desc'] = 'Das Prefix, das für alle Platzhalter des Snippets genutzt werden soll.';
@@ -141,7 +141,7 @@ $_lang['prop_changepassword.successmessage_desc'] = 'Falls reloadOnSuccess als f
 $_lang['prop_changepassword.placeholderprefix_desc'] = 'Das Prefix, das für alle Platzhalter des Snippets genutzt werden soll.';
 
 /* isLoggedIn snippet */
-$_lang['prop_isloggedin.contexts_desc'] = 'Eine kommaseparierte Liste von Kontexten, für die der Autehntifizierungsstatus geprüft werden soll. Standard ist der aktuelle Kontext.';
+$_lang['prop_isloggedin.contexts_desc'] = 'Eine kommaseparierte Liste von Kontexten, für die der Authentifizierungsstatus geprüft werden soll. Standard ist der aktuelle Kontext.';
 $_lang['prop_isloggedin.redirectto_desc'] = 'Die Id einer Ressource, auf die weitergeleitet wird, wenn der Nutzer nicht eingeloggt ist. Standard ist die unauthorized_page.';
 $_lang['prop_isloggedin.redirectparams_desc'] = 'Falls redirectTo genutzt wird, kann ein JSON Objekt eines REQUEST Parameters mit der Weiterleitung übergeben werden.';
 
