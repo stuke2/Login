@@ -125,7 +125,7 @@ $_lang['prop_updateprofile.redirecttologin_desc'] = 'Leitet einen nicht eingelog
 $_lang['prop_updateprofile.reloadonsuccess_desc'] = 'Wenn diese Einstellung aktiv ist, leitet die Seite an sich selbst mit einem GET-Parameter zurück, um Doppelsendungen zu vermeiden. Sonst wird lediglich ein Erfolg-Platzhalter angezeigt.';
 $_lang['prop_updateprofile.submitvar_desc'] = 'Die Prüfvariable für die UpdateProfile Snippet Funktionalität. Falls nicht gesetzt oder leer, wird UpdateProfile alle POST-Inhalte des Formulars auswerten.';
 $_lang['prop_updateprofile.syncusername_desc'] = 'Wenn diese Einstellung auf einen Spaltennamen im Profil gesetzt ist, versucht UpdateProfile, den Benutzernamen mit diesem Feld nach erfolgreichem Speichern zu synchronisieren.';
-$_lang['prop_updateprofile.useextended_desc'] = 'Legt fest, ob erweiterte Felder zum Profile-extended-field benutzt werden sollen. Dies kann für erweiterte Benutzerfelder genutzt werden.';
+$_lang['prop_updateprofile.useextended_desc'] = 'Wenn diese Einstellung aktiv ist, werden zusätzliche Felder als erweiterte Benutzerfelder benutzt.';
 $_lang['prop_updateprofile.user_desc'] = '(Optional) Entweder eine Benutzer-Id oder ein Benutzername. Falls gesetzt, wird dieser Wert genutzt um den Benutzerdaten zu laden anstatt die Daten des aktuell eingeloggten Benutzers.';
 
 /* ChangePassword snippet */
@@ -148,10 +148,10 @@ $_lang['prop_isloggedin.redirectparams_desc'] = 'Falls redirectTo genutzt wird, 
 /* ActiveUsers snippet */
 $_lang['prop_activeusers.tpl'] = 'Der Chunk, der benutzt wird, um einen einzelnen aktiven Benutzer auszugeben.';
 $_lang['prop_activeusers.tplType'] = 'Der Templatetyp, der für die tpl-Eigenschaft benutzt wird. Der Standardwert ist Chunk.';
-$_lang['prop_activeusers.sortBy'] = 'Nach diesem Feld werden die Benutzer sortiert.';
-$_lang['prop_activeusers.sortDir'] = 'In dieser Richtung werden die Benutzer sortiert.';
+$_lang['prop_activeusers.sortBy'] = 'Sortierungsfeld der angezeigten Benutzer.';
+$_lang['prop_activeusers.sortDir'] = 'Sortierungsrichtung der angezeigten Benutzer.';
 $_lang['prop_activeusers.limit'] = 'Maximale Anzahl der angezeigten Benutzer.';
-$_lang['prop_activeusers.offset'] = 'Anzahl der übersprungenen Benutzer.';
-$_lang['prop_activeusers.classKey'] = 'Die Klasse, die benutzt wird, wenn Benutzer geladen werden sollen. Der Standardwert ist modUser. Sie können hier einen Klassennamen benutzen, der modUser erweitert.';
+$_lang['prop_activeusers.offset'] = 'Übersprungene Anzahl der angezeigten Benutzer.';
+$_lang['prop_activeusers.classKey'] = 'Die benutzte Klasse für geladene Benutzer. Der Standardwert ist modUser. Sie können hier einen Klassennamen benutzen, der modUser erweitert.';
 $_lang['prop_activeusers.placeholderprefix_desc'] = 'Das Prefix, das für alle Platzhalter des Snippets genutzt werden soll.';
 $_lang['prop_activeusers.toplaceholder_desc'] = 'Wenn diese Einstellung aktiv ist, wird die Ausgabe des Snippets an einen Platzhalter dieses Namens übergeben, statt die Inhalte direkt auszugeben.';
