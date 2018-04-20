@@ -148,9 +148,9 @@ $_lang['prop_isloggedin.redirectparams_desc'] = 'Falls redirectTo genutzt wird, 
 /* ActiveUsers snippet */
 $_lang['prop_activeusers.tpl'] = 'Der Chunk, der benutzt wird, um einen einzelnen aktiven Benutzer auszugeben.';
 $_lang['prop_activeusers.tplType'] = 'Der Templatetyp, der für die tpl-Eigenschaft benutzt wird. Der Standardwert ist Chunk.';
-$_lang['prop_activeusers.sortBy'] = 'The field to sort by for the users.';
-$_lang['prop_activeusers.sortDir'] = 'The direction to sort by for the users.';
-$_lang['prop_activeusers.limit'] = 'The number of users to limit displaying.';
+$_lang['prop_activeusers.sortBy'] = 'Nach diesem Feld werden die Benutzer sortiert.';
+$_lang['prop_activeusers.sortDir'] = 'In dieser Richtung werden die Benutzer sortiert.';
+$_lang['prop_activeusers.limit'] = 'Maximale Anzahl der angezeigten Benutzer.';
 $_lang['prop_activeusers.offset'] = 'The start index of the limited number of users to show.';
 $_lang['prop_activeusers.classKey'] = 'Die Klasse, die benutzt wird, wenn Benutzer geladen werden sollen. Der Standardwert ist modUser. Sie können hier einen Klassennamen benutzen, der modUser erweitert.';
 $_lang['prop_activeusers.placeholderprefix_desc'] = 'Das Prefix, das für alle Platzhalter des Snippets genutzt werden soll.';
