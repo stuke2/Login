@@ -34,31 +34,31 @@ $_lang['prop_login.logoutresourceid_desc'] = 'Ressourcen-Id zu der nach einem er
 $_lang['prop_login.logoutresourceparams_desc'] = 'Ein JSON Objekt von Parametern, die an die URL der Logout Weiterleitung angehängt werden, z.B.: {"test":123}';
 $_lang['prop_login.loginmsg_desc'] = '(Optional) Nachricht für die Login Aktion. Falls leer, wird der Standardeintrag im Lexicon ausgegeben.';
 $_lang['prop_login.logoutmsg_desc'] = '(Optional) Nachricht für die Logout Aktion. Falls leer, wird der Standardeintrag im Lexicon ausgegeben.';
-$_lang['prop_login.redirecttoprior_desc'] = 'Wenn diese Einstellung aktiv ist, wird der Benutzer nach erfolgreichem Login zur Referrer-Seite geleitet (HTTP_REFERER).';
+$_lang['prop_login.redirecttoprior_desc'] = 'Wenn diese Einstellung aktiv ist, wird der Benutzer nach erfolgreichem Login zur Referrer-Seite weitergeleitet (HTTP_REFERER).';
 $_lang['prop_login.redirecttoonfailedauth_desc'] = 'Eine Ressourcen-Id, zu der Benutzer nach einem nicht erfolgreichen Login weitergeleitet werden. 0 leitet auf die gleiche Seite zurück.';
 $_lang['prop_login.rememberme_desc'] = '(Optional) Dieses Feld kann genutzt werden, um den Login Status zu merken. Standard ist \'rememberme\'.';
-$_lang['prop_login.contexts_desc'] = '(Experimentell) Eine kommaseparierte Liste von Kontexten, für die der Login gilt. Standardmäßig ist nur der aktuelle Kontext eingestellt.';
+$_lang['prop_login.contexts_desc'] = '(Experimentell) Eine kommaseparierte Liste von Kontexten, in die der Benutzer eingeloggt wird. Standardwert ist der aktuelle Kontext.';
 $_lang['prop_login.toplaceholder_desc'] = 'Wenn diese Einstellung aktiv ist, wird die Ausgabe des Snippets an einen Platzhalter dieses Namens übergeben, statt die Inhalte direkt auszugeben.';
 
 /* Profile snippet */
 $_lang['prop_profile.prefix_desc'] = 'Das Prefix, das für alle Platzhalter des Snippets genutzt werden soll.';
 $_lang['prop_profile.user_desc'] = '(Optional). Entweder eine Benutzer-Id oder ein Benutzername. Falls gesetzt, wird dieser Wert genutzt statt der des aktuell eingeloggten Benutzers.';
-$_lang['prop_profile.useextended_desc'] = 'Legt fest, ob erweiterte Felder zum Profile-extended-field benutzt werden sollen. Dies kann für erweiterte Benutzerfelder genutzt werden.';
+$_lang['prop_profile.useextended_desc'] = 'Wenn diese Einstellung aktiv ist, werden zusätzliche Felder als erweiterte Benutzerfelder benutzt.';
 
 /* Register snippet */
 $_lang['prop_register.submitvar_desc'] = 'Die Prüfvariable für die Register Snippet Funktionalität. Falls nicht gesetzt oder leer, wird Register alle POST-Inhalte des Formulars auswerten.';
 $_lang['prop_register.usergroups_desc'] = '(Optional) Eine kommaseparierte Liste von Benutzergruppen-Namen oder -Ids um neu registrierte Benutzer zu diesen Benutzergruppen hinzuzufügen.';
-$_lang['prop_register.usergroupsfield_desc'] = 'The name of the field to use to specify the User Group(s) to automatically add the new User to. Only used if this value is not blank.';
+$_lang['prop_register.usergroupsfield_desc'] = 'Der Name des Feldes, mit dem die Benutzergruppen angegeben werden, denen neue Benutzer automatisch zugewiesen werden.';
 $_lang['prop_register.submittedresourceid_desc'] = 'Wenn diese Einstellung aktiv ist, wird der Benutzer zu dieser Ressource-Id nach dem Absenden des Registrierungsformulars weitergeleitet.';
-$_lang['prop_register.usernamefield_desc'] = 'Der Name des Feldes für den neuen Benutzernamen.';
+$_lang['prop_register.usernamefield_desc'] = 'Der Name des Feldes für den Benutzernamen des registrierten Benutzers.';
 $_lang['prop_register.passwordfield_desc'] = 'Der Name des Feldes für das Passwort des neuen Benutzers.';
 $_lang['prop_register.emailfield_desc'] = 'Der Name des Feldes für die E-Mail Adresse des neuen Benutzers.';
 $_lang['prop_register.successmsg_desc'] = '(Optional). Falls der Benutzer nicht mittels des submittedResourceId Parameters weitergeleitet wird, wird diese Nachricht angezeigt.';
 $_lang['prop_register.persistparams_desc'] = '(Optional) Ein JSON Objekt mit Parametern, die über den Registrierungsprozess hinaus gespeichert werden sollen. Dies ist nützlich, wenn Sie die ConfirmRegister-Weiterleitung benutzen um auf eine andere Seite zu weiterzuleiten (z.B. Einkaufswägen).';
 $_lang['prop_register.prehooks_desc'] = 'Skripte, die vor einer Validation ausgeführt werden sollen. Es kann eine kommaseparierte Liste von Hooks angegeben werden. Sollte ein Hook nicht validieren, werden keine weitere ausgeführt. Ein Hook kann ein Snippetname oder ein Dateiname im Format \'[[++assets_path]]hooks/my.hook.php\' sein.';
 $_lang['prop_register.posthooks_desc'] = 'Skripte, die nach der Registrierung des Nutzers ausgeführt werden sollen. Es kann eine kommaseparierte Liste von Hooks angegeben werden. Sollte ein Hook nicht validieren, werden keine weitere ausgeführt. Ein Hook kann ein Snippetname oder ein Dateiname im Format \'[[++assets_path]]hooks/my.hook.php\' sein.';
-$_lang['prop_register.useextended_desc'] = 'Legt fest, ob erweiterte Felder zum Profile-extended-field benutzt werden sollen. Dies kann für erweiterte Benutzerfelder genutzt werden.';
-$_lang['prop_register.excludeextended_desc'] = 'Eine kommaseparaierte Liste von Feldern, die nicht als extended-fields gekennzeichnet werden sollen.';
+$_lang['prop_register.useextended_desc'] = 'Wenn diese Einstellung aktiv ist, werden zusätzliche Felder als erweiterte Benutzerfelder benutzt.';
+$_lang['prop_register.excludeextended_desc'] = 'Eine kommaseparierte Liste mit Feldnamen, die nicht als erweiterte Felder gespeichert werden.';
 $_lang['prop_register.activation_desc'] = 'Legt fest, ob eine Aktivierung für die Registrierung benötigt wird oder nicht. Falls ja, wird der Benutzer nicht als aktiv gekennzeichnet, bis er seinen Account aktiviert hat. Standard ist ja. Funktioniert nur, wenn der Registrierungprozess ein E-Mail-Feld übergibt.';
 $_lang['prop_register.activationttl_desc'] = 'Zeit in Minuten, nach der die Aktivierungsmail ungültig wird. Standard ist 3 Stunden.';
 $_lang['prop_register.activationresourceid_desc'] = 'Die Ressourcen-Id, auf der das ConfirmRegister Snippet für die Aktivierung aufgerufen wird.';
@@ -67,7 +67,7 @@ $_lang['prop_register.activationemailsubject_desc'] = 'Der Betreff der Aktivieru
 $_lang['prop_register.activationemailtpltype_desc'] = 'Der Templatetyp, der für die Aktivierungsmail benutzt wird. Standard ist Chunk.';
 $_lang['prop_register.activationemailtpl_desc'] = 'Das Aktivierungsmail Template.';
 $_lang['prop_register.activationemailtplalt_desc'] = '(Optional) Das Template für die Nur-Text-Alternative der Aktivierungsmail.';
-$_lang['prop_register.moderatedresourceid_desc'] = 'Wenn ein prehook den Benutzer als zu moderieren kennzeichnet, leite auf diese Ressource weiter, statt zur submittedResourceId. Lassen Sie dieses Feld leer, um diese Funktion nicht zu nutzen.';
+$_lang['prop_register.moderatedresourceid_desc'] = 'Wenn ein prehook den Benutzer als zu moderieren kennzeichnet, wird er auf diese Ressourcen-Id statt zur submittedResourceId weitergeleitet. Lassen Sie dieses Feld leer, um die Funktion nicht zu nutzen.';
 $_lang['prop_register.placeholderprefix_desc'] = 'Das Prefix, das für alle Platzhalter des Snippets genutzt werden soll.';
 $_lang['prop_register.recaptchaheight_desc'] = 'Falls \'recaptcha\' als preHook gesetzt ist, setzt dies die Höhe des reCaptcha Widgets.';
 $_lang['prop_register.recaptchatheme_desc'] = 'Falls \'recaptcha\' als preHook gesetzt ist, setzt dies das Thema des reCaptcha Widgets.';
@@ -88,7 +88,7 @@ $_lang['prop_register.maximumPossibleStrongerPasswords_desc'] = 'Wenn ensurePass
 $_lang['prop_register.ensurePasswordStrengthSuggestions'] = 'Wenn ensurePasswordStrength aktiv ist und die Überprüfung der Passwortstärke fehlschlägt, schlägt Register dem Benutzer eine in der Einstellung angegebene Anzahl von sicheren Passwörtern vor.';
 $_lang['prop_register.allowedfields_desc'] = 'Wenn diese Einstellung aktiv ist, wird die Speicherung der Benutzerfelder auf die Feldnamen in der kommaseparierten Liste eingeschränkt. Gilt ebenso für erweiterte Benutzerfelder.';
 $_lang['prop_register.removeexpiredregistrations_desc'] = 'Wenn diese Einstellung aktiv ist, werden registrierte Benutzer entfernt, die sich bis zum Ablauf der Aktivierungszeit nicht aktiviert haben. Es wird empfohlen, diese Einstellung aktiv zu lassen.';
-$_lang['prop_register.preservefieldsafterregister_desc'] = 'If true, data of registration fields will be saved after successfull registration. To reset fields data, set to false';
+$_lang['prop_register.preservefieldsafterregister_desc'] = 'Wenn diese Einstellung aktiv ist, werden Daten der Registrierung nach erfolgreicher Registrierung gespeichert. Deaktivieren Sie diese Einstellung um die Daten zurückzusetzen.';
 $_lang['opt_register.chunk'] = 'Chunk';
 $_lang['opt_register.file'] = 'Datei';
 $_lang['opt_register.inline'] = 'Inline';
@@ -105,19 +105,19 @@ $_lang['prop_confirmregister.redirectto_desc'] = '(Optional) Nach einer erfolgre
 $_lang['prop_confirmregister.redirectparams_desc'] = '(Optional) Ein JSON Objekt mit Parametern, die bei der Weiterleitung mittels redirectTo übergeben werden.';
 $_lang['prop_confirmregister.authenticate_desc'] = 'Authentifiziere und logge den Benutzer automatisch nach der Registrierung in den aktuellen Kontext ein. Standard ist aktiv.';
 $_lang['prop_confirmregister.authenticatecontexts_desc'] = '(Optional) Eine kommaseparierte Liste von Kontexten, für die der Benutzer authentifiziert werden soll. Standard ist der aktuelle Kontext.';
-$_lang['prop_confirmregister.errorpage_desc'] = '(Optional) Wenn diese Einstellung aktiv ist, wird der Benutzer zu dieser benutzerdefinierten Fehlerseite geleitet, falls er versucht, die Bestätigungsseite mit einem Validierungsfehler aufzurufen.';
-$_lang['prop_confirmregister.activepage_desc'] = '(Optional) Wenn diese Einstellung aktiv ist, wird der Nutzer zu dieser benutzerdefinierten Fehlerseite geleitet, falls er versucht, die Bestätigungsseite mit einem aktivierten Benutzerkonto erneut aufzurufen.';
+$_lang['prop_confirmregister.errorpage_desc'] = '(Optional) Wenn diese Einstellung aktiv ist, wird der Benutzer zu dieser benutzerdefinierten Fehlerseite weitergeleitet, falls er versucht, die Bestätigungsseite mit einem Validierungsfehler aufzurufen.';
+$_lang['prop_confirmregister.activepage_desc'] = '(Optional) Wenn diese Einstellung aktiv ist, wird der Nutzer zu dieser benutzerdefinierten Fehlerseite weitergeleitet, falls er versucht, die Bestätigungsseite mit einem aktivierten Benutzerkonto erneut aufzurufen.';
 
 /* ResetPassword snippet */
 $_lang['prop_resetpassword.tpl_desc'] = 'Das Passwort-vergessen-Nachricht Template.';
 $_lang['prop_resetpassword.tpltype_desc'] = 'Der Templatetyp, der für die tpl-Eigenschaft benutzt wird. Standard ist Chunk.';
-$_lang['prop_resetpassword.loginresourceid_desc'] = 'Die Ressourcen-Id, zu der Nutzer nach einer erfolgreichen Bestätigung geleitet werden.';
+$_lang['prop_resetpassword.loginresourceid_desc'] = 'Die Ressourcen-Id, zu der Nutzer nach einer erfolgreichen Bestätigung weitergeleitet werden.';
 
 /* UpdateProfile snippet */
 $_lang['prop_updateprofile.allowedextendedfields_desc'] = '(Optional) Wenn diese Einstellung aktiv ist, werden Änderungen der erweiterten Benutzerdaten auf die Feldnamen in der kommaseparierten Liste eingeschränkt.';
 $_lang['prop_updateprofile.allowedfields_desc'] = '(Optional) Wenn diese Einstellung aktiv ist, werden Änderungen der Benutzerdaten auf die Feldnamen in der kommaseparierten Liste eingeschränkt.';
-$_lang['prop_updateprofile.emailfield_desc'] = 'Der Feldname für das E-mail Feld im Formular.';
-$_lang['prop_updateprofile.excludeextended_desc'] = 'Eine kommaseparierte Liste von Feldern, die nicht als extended-fields übernommen werden sollen.';
+$_lang['prop_updateprofile.emailfield_desc'] = 'Der Feldname für das E-Mail Feld im Formular.';
+$_lang['prop_updateprofile.excludeextended_desc'] = 'Eine kommaseparierte Liste von Feldern, die nicht in den erweiterten Felder gespeichert werden.';
 $_lang['prop_updateprofile.placeholderprefix_desc'] = 'Das Prefix, das für alle Platzhalter des Snippets genutzt werden soll.';
 $_lang['prop_updateprofile.posthooks_desc'] = 'Skripte, die nach der Validierung des Formulars ausgeführt werden sollen. Es kann eine kommaseparierte Liste von Hooks angegeben werden. Sollte ein Hook nicht validieren, werden keine weitere ausgeführt. Ein Hook kann ein Snippetname oder ein Dateiname im Format \'[[++assets_path]]hooks/my.hook.php\' sein.';
 $_lang['prop_updateprofile.prehooks_desc'] = 'Skripte, die vor der Validierung des Formulars ausgeführt werden sollen. Es kann eine kommaseparierte Liste von Hooks angegeben werden. Sollte ein Hook nicht validieren, werden keine weitere ausgeführt. Ein Hook kann ein Snippetname oder ein Dateiname im Format \'[[++assets_path]]hooks/my.hook.php\' sein.';
