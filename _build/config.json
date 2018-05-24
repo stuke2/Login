@@ -994,8 +994,13 @@
     ]
   },
   "build": {
+    "readme": "docs/readme.md",
+    "license": "docs/license.md",
+    "changelog": "docs/changelog.md",
     "resolver": {
-      "after": ["fix.namespace.php"]
+      "after": [
+        "fix.namespace.php"
+      ]
     }
   }
 }

@@ -1,5 +1,11 @@
 Changelog file for Login component.
 
+Login 1.9.6
+====================================
+- Register snippet PII improvements [#130]
+- JSON responses for the Login controller/snippet [#121]
+- Use Crowdin for translations: https://crowdin.com/project/modx-login
+
 Login 1.9.5
 ====================================
 - Fix ResetPassword passing null instead of an array to getChunk
