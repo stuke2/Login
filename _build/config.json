@@ -3,7 +3,7 @@
   "lowCaseName": "login",
   "description": "Login and Registrations",
   "author": "Jason Coward & Shaun McCormick",
-  "version": "1.9.5",
+  "version": "1.9.6",
   "package": {
     "elements": {
       "snippets": [
@@ -154,6 +154,12 @@
               "name": "redirectParams",
               "description": "prop_confirmregister.redirectparams_desc",
               "value": ""
+            },
+            {
+              "name": "redirectUnsetDefaultParams",
+              "description": "prop_confirmregister.redirectUnsetDefaultParam_desc",
+              "type": "combo-boolean",
+              "value": false
             },
             {
               "name": "authenticate",
@@ -797,6 +803,12 @@
               "description": "prop_register.preservefieldsafterregister_desc",
               "type": "combo-boolean",
               "value": true
+            },
+            {
+              "name": "redirectUnsetDefaultParams",
+              "description": "prop_register.redirectUnsetDefaultParam_desc",
+              "type": "combo-boolean",
+              "value": false
             }
           ]
         },
