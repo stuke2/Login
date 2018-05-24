@@ -21,7 +21,7 @@
  * @package login
  */
 /**
- * Update Profile German lexicon for Login
+ * Update Profile English lexicon for Login
  *
  * @package login
  * @subpackage lexicon
@@ -36,10 +36,10 @@ $_lang['login.fullname'] = 'Vor- und Nachname';
 $_lang['login.mobilephone'] = 'Mobiltelefon';
 $_lang['login.phone'] = 'Telefon';
 $_lang['login.profile_err_nf'] = 'Profil nicht gefunden!';
-$_lang['login.profile_err_save'] = 'Es trat ein unbekannter Fehler bei der Aktualisierung des Profils auf.';
+$_lang['login.profile_err_save'] = 'Es ist ein unbekannter Fehler bei der Aktualisierung des Profils aufgetreten.';
 $_lang['login.profile_updated'] = 'Profil aktualisiert.';
-$_lang['login.state'] = 'Staat/Bundesland';
+$_lang['login.state'] = 'Bundesstaat/-land';
 $_lang['login.update_profile'] = 'Profil aktualisieren';
 $_lang['login.username_err_ae'] = 'Dieser Benutzername ist bereits vergeben. Bitte verwenden Sie einen anderen.';
-$_lang['login.website'] = 'Webseite';
+$_lang['login.website'] = 'Website';
 $_lang['login.zip'] = 'PLZ';

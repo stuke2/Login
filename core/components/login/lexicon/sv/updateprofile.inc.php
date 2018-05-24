@@ -21,11 +21,10 @@
  * @package login
  */
 /**
- * Update Profile Swedish lexicon for Login
+ * Update Profile English lexicon for Login
  *
  * @package login
  * @subpackage lexicon
- * @author Joakim Nyman <joakim@edgefive.com>
  */
 $_lang['login.address'] = 'Adress';
 $_lang['login.city'] = 'Ort';

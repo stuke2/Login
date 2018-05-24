@@ -25,9 +25,6 @@
  *
  * @package login
  * @subpackage lexicon
- *
- * @author modxcms.cz
- * @updated 2011-01-07
  */
 $_lang['login.address'] = 'Adresa';
 $_lang['login.city'] = 'Město';

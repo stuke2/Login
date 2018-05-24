@@ -21,7 +21,7 @@
  * @package login
  */
 /**
- * Update Profile Russian lexicon for Login
+ * Update Profile English lexicon for Login
  *
  * @package login
  * @subpackage lexicon
@@ -30,6 +30,7 @@ $_lang['login.address'] = 'Адрес';
 $_lang['login.city'] = 'Город';
 $_lang['login.country'] = 'Страна';
 $_lang['login.email'] = 'Электронная почта';
+$_lang['login.email_taken'] = 'The email "[[+email]]" is already in use. Make sure you are not already registered, and if not, please specify another email address.';
 $_lang['login.fax'] = 'Факс';
 $_lang['login.fullname'] = 'Полное имя';
 $_lang['login.mobilephone'] = 'Мобильный телефон';
@@ -39,5 +40,6 @@ $_lang['login.profile_err_save'] = 'Произошла неизвестная о
 $_lang['login.profile_updated'] = 'Профиль обновлён.';
 $_lang['login.state'] = 'Область';
 $_lang['login.update_profile'] = 'Редактировать профиль';
+$_lang['login.username_err_ae'] = 'That username is already taken. Please specify another.';
 $_lang['login.website'] = 'Сайт';
 $_lang['login.zip'] = 'Почтовый индекс';

@@ -21,7 +21,7 @@
  * @package login
  */
 /**
- * Forgot Password Russian lexicon for Login
+ * Forgot Password English lexicon for Login
  *
  * @package login
  * @subpackage lexicon
@@ -29,6 +29,14 @@
 $_lang['login.email'] = 'Адрес электронной почты';
 $_lang['login.forgot_password'] = 'Забыли пароль?';
 $_lang['login.forgot_password_email_subject'] = 'Адрес электронной почты для восстановления пароля';
+$_lang['login.forgot_password_email_text'] = '<p>Hello [[+username]],</p>
+<p>to activate your new password, please click on the following link:</p>
+<p><a href="[[+confirmUrl]]">[[+confirmUrl]]</a></p>
+<p>If successful, you can use the following password to login:</p>
+<p><strong>Password:</strong> [[+password]]</p>
+<p>If you did not request this message, please ignore it.</p>
+<p>Thanks,<br />
+<em>[[++site_name]] Site Administration</em></p>';
 $_lang['login.or_forgot_username'] = 'Или забыли свое имя пользователя?';
 $_lang['login.reset_password'] = 'Сбросить пароль';
 $_lang['login.username'] = 'Имя пользователя';

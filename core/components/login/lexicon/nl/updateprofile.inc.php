@@ -21,16 +21,16 @@
  * @package login
  */
 /**
- * Update Profile Dutch lexicon for Login
+ * Update Profile English lexicon for Login
  *
  * @package login
  * @subpackage lexicon
- * @author Bert Oost, bertoost85@gmail.com
  */
 $_lang['login.address'] = 'Adres';
 $_lang['login.city'] = 'Plaats';
 $_lang['login.country'] = 'Land';
 $_lang['login.email'] = 'E-mail';
+$_lang['login.email_taken'] = 'The email "[[+email]]" is already in use. Make sure you are not already registered, and if not, please specify another email address.';
 $_lang['login.fax'] = 'Fax';
 $_lang['login.fullname'] = 'Volledige naam';
 $_lang['login.mobilephone'] = 'Mobiel';

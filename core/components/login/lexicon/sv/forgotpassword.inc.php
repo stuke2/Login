@@ -21,15 +21,22 @@
  * @package login
  */
 /**
- * Forgot Password Swedish lexicon for Login
+ * Forgot Password English lexicon for Login
  *
  * @package login
  * @subpackage lexicon
- * @author Joakim Nyman <joakim@edgefive.com>
  */
 $_lang['login.email'] = 'E-post';
 $_lang['login.forgot_password'] = 'Glömt lösenord';
 $_lang['login.forgot_password_email_subject'] = 'Förfrågan om nollställande av lösenord';
+$_lang['login.forgot_password_email_text'] = '<p>Hello [[+username]],</p>
+<p>to activate your new password, please click on the following link:</p>
+<p><a href="[[+confirmUrl]]">[[+confirmUrl]]</a></p>
+<p>If successful, you can use the following password to login:</p>
+<p><strong>Password:</strong> [[+password]]</p>
+<p>If you did not request this message, please ignore it.</p>
+<p>Thanks,<br />
+<em>[[++site_name]] Site Administration</em></p>';
 $_lang['login.or_forgot_username'] = 'Eller, glömt användarnamnet?';
 $_lang['login.reset_password'] = 'Nollställ lösenord';
 $_lang['login.username'] = 'Användarnamn';

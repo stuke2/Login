@@ -21,7 +21,7 @@
  * @package login
  */
 /**
- * Danish language strings for Login
+ * Default English language strings for Login
  * @package login
  * @subpackage lexicon
  */

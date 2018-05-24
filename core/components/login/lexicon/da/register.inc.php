@@ -21,7 +21,7 @@
  * @package login
  */
 /**
- * Register Danish lexicon for Login
+ * Register English lexicon for Login
  *
  * @package login
  * @subpackage lexicon
@@ -59,3 +59,4 @@ $_lang['register.use_stronger_password'] = 'Din adgangskode er ikke sikker nok. 
 $_lang['register.user_err_save'] = 'Der skete en fejl under forsøget på at gemme brugeren.';
 $_lang['register.username'] = 'Brugernavn';
 $_lang['register.username_taken'] = 'Brugernavnet er optaget. Vælg venligst et andet.';
+$_lang['register.validation_error_message'] = 'A form validation error occurred. Please check the values you have entered.';

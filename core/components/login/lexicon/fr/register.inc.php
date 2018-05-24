@@ -21,7 +21,7 @@
  * @package login
  */
 /**
- * Register French lexicon for Login
+ * Register English lexicon for Login
  *
  * @package login
  * @subpackage lexicon
@@ -44,6 +44,7 @@ $_lang['register.min_length'] = 'Ce champ doit contenir au minimum [[+length]] c
 $_lang['register.min_value'] = 'Ce champ ne peut être plus petit que [[+value]].';
 $_lang['register.not_date'] = 'Ce champ doit être une date valide.';
 $_lang['register.not_number'] = 'Ce champ doit être un nombre valide.';
+$_lang['register.not_regexp'] = 'This field has an invalid value.';
 $_lang['register.password'] = 'Mot de passe';
 $_lang['register.password_confirm'] = 'Confirmez le mot de passe';
 $_lang['register.password_dont_match'] = 'les mots de passe ne correspondent pas.';
@@ -54,16 +55,8 @@ $_lang['register.recaptcha_err_load'] = 'Impossible de charger la classe de serv
 $_lang['register.register'] = 'Inscription';
 $_lang['register.spam_blocked'] = 'Votre envoi a été bloqué par un filtre anti-spam: ';
 $_lang['register.spam_marked'] = ' - marqué comme spam.';
+$_lang['register.use_stronger_password'] = 'Your password is not strong enough. Perhaps you should strengthen it, by replacing letters with numbers or adding more words to the password (try multiple word passwords). Suggestions: [[+suggestions]]';
 $_lang['register.user_err_save'] = 'Une erreur est survenue lors de l\'enregistrement de l\'utilisateur.';
 $_lang['register.username'] = 'Identifiant';
 $_lang['register.username_taken'] = 'Identifiant déjà utilisé. Veuillez en choisir un autre.';
-
-
-
-
-
-
-
-
-
-
+$_lang['register.validation_error_message'] = 'A form validation error occurred. Please check the values you have entered.';

@@ -1,10 +1,9 @@
 <?php
 /**
- * Dutch reCaptcha Lexicon Topic
+ * reCaptcha Lexicon Topic
  *
  * @package login
  * @subpackge lexicon
- * @author Bert Oost, bertoost85@gmail.com
  */
 $_lang['recaptcha.empty_answer'] = 'De captcha is niet goed ingevuld. Probeer het nog eens.';
 $_lang['recaptcha.incorrect'] = 'De reCAPTCHA correct ingevuld. Ga terug en probeer het nog eens. [[+error]]';

@@ -21,13 +21,10 @@
  * @package login
  */
 /**
- * Register Czech lexicon for Login
+ * Register English lexicon for Login
  *
  * @package login
  * @subpackage lexicon
- *
- * @author modxcms.cz
- * @updated 2012-01-20
  */
 $_lang['register.activation_email_subject'] = 'Děkujeme za registraci. Nyní aktivujte svůj účet!';
 $_lang['register.email'] = 'E-mail';
@@ -58,6 +55,8 @@ $_lang['register.recaptcha_err_load'] = 'Nepodařilo se načíst službu třídy
 $_lang['register.register'] = 'Registrovat';
 $_lang['register.spam_blocked'] = 'Odeslání bylo zablokováno spamovým filtrem: ';
 $_lang['register.spam_marked'] = ' - označeno jako spam.';
+$_lang['register.use_stronger_password'] = 'Your password is not strong enough. Perhaps you should strengthen it, by replacing letters with numbers or adding more words to the password (try multiple word passwords). Suggestions: [[+suggestions]]';
 $_lang['register.user_err_save'] = 'Nastala chyba při ukládání uživatele.';
 $_lang['register.username'] = 'Uživatelské jméno';
 $_lang['register.username_taken'] = 'Uživatelské jméno již existuje. Zvolte si jiné.';
+$_lang['register.validation_error_message'] = 'A form validation error occurred. Please check the values you have entered.';

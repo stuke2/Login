@@ -20,12 +20,9 @@
  * @package login
  */
 /**
- * Profile Czech lexicon for Login
+ * Profile English lexicon for Login
  *
  * @package login
  * @subpackage lexicon
- *
- * @author modxcms.cz
- * @updated 2011-01-04
  */
 $_lang['profile'] = 'Profil';

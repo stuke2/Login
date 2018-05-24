@@ -20,7 +20,7 @@
  * @package login
  */
 /**
- * Change Password German lexicon for Login
+ * Change Password English lexicon for Login
  *
  * @package login
  * @subpackage lexicon
@@ -28,10 +28,10 @@
 $_lang['login.change_password'] = 'Passwort ändern';
 $_lang['login.password_changed'] = 'Passwort geändert.';
 $_lang['login.password_err'] = 'Falsches Passwort.';
-$_lang['login.password_err_change'] = 'Es trat ein Fehler beim Ändern des Passwortes auf. Bitte prüfen Sie die Felder.';
-$_lang['login.password_invalid_old'] = 'Falsches altes Passwort.';
-$_lang['login.password_new_confirm'] = 'neues Passwort bestätigen';
+$_lang['login.password_err_change'] = 'Es ist ein Fehler beim Ändern des Passwortes aufgetreten. Bitte überprüfen Sie Ihre Felder.';
+$_lang['login.password_invalid_old'] = 'Ungültiges altes Passwort.';
+$_lang['login.password_new_confirm'] = 'Neues Passwort bestätigen';
 $_lang['login.password_new'] = 'Neues Passwort';
-$_lang['login.password_no_match'] = 'Passwörter stimmen nicht überein.';
+$_lang['login.password_no_match'] = 'Die Passwörter stimmen nicht überein.';
 $_lang['login.password_old'] = 'Altes Passwort';
-$_lang['login.password_too_short'] = 'Das Passwort ist zu kurz! Bitte benutzen Sie ein Passwort mit mindestens [[+length]] Zeichen.';
+$_lang['login.password_too_short'] = 'Das Passwort ist zu kurz! Bitte geben Sie ein Passwort mit mindestens [[+length]] Zeichen ein.';

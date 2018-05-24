@@ -24,6 +24,5 @@
  *
  * @package login
  * @subpackage lexicon
- * @author Bert Oost, bertoost85@gmail.com
  */
 $_lang['profile'] = 'Profiel';

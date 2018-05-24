@@ -11,3 +11,4 @@ $_lang['recaptcha.mailhide_no_mcrypt'] = 'Para utilizar reCAPTCHA Mailhide, nece
 $_lang['recaptcha.mailhide_no_api_key'] = 'Para utilizar reCAPTCHA Mailhide, necesita registrarse por una clave publica y privada, lo puede hacer en esta pagina <a href="http://mailhide.recaptcha.net/apikey">http://mailhide.recaptcha.net/apikey</a>';
 $_lang['recaptcha.no_api_key'] = 'Para utilizar reCAPTCHA necesita obtener una clave de API de <a href="http://recaptcha.net/api/getkey">http://recaptcha.net/api/getkey</a>';
 $_lang['recaptcha.no_remote_ip'] = 'Por razones de seguridad, tiene que pasar el IP remoto a reCAPTCHA';
+

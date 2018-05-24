@@ -21,7 +21,7 @@
  * @package login
  */
 /**
- * Register German lexicon for Login
+ * Register English lexicon for Login
  *
  * @package login
  * @subpackage lexicon
@@ -44,6 +44,7 @@ $_lang['register.min_length'] = 'Dieses Feld darf nicht weniger als [[+length]] 
 $_lang['register.min_value'] = 'Dieses Feld darf nicht kleiner als [[+value]] sein.';
 $_lang['register.not_date'] = 'Dieses Feld muss ein gültiges Datum sein.';
 $_lang['register.not_number'] = 'Dieses Feld muss eine gültige Zahl sein.';
+$_lang['register.not_regexp'] = 'Das Feld hat einen ungültigen Wert.';
 $_lang['register.password'] = 'Passwort';
 $_lang['register.password_confirm'] = 'Passwort bestätigen';
 $_lang['register.password_dont_match'] = 'Die Passwörter stimmen nicht überein.';
@@ -54,6 +55,7 @@ $_lang['register.recaptcha_err_load'] = 'Konnte reCaptcha Service Klasse nicht l
 $_lang['register.register'] = 'Registrieren';
 $_lang['register.spam_blocked'] = 'Ihre Registrierung wurde von einem Spamfilter blockiert: ';
 $_lang['register.spam_marked'] = ' - als Spam markiert.';
+$_lang['register.use_stronger_password'] = 'Ihr Passwort ist nicht stark genug. Vielleicht sollten Sie es verbessern, indem Sie Buchstaben durch Zahlen ersetzen oder dem Passwort zusätzliche Wörter hinzufügen (versuchen Sie Passwörter aus mehreren Worten). Vorschläge: [[+suggestions]]';
 $_lang['register.user_err_save'] = 'Es trat ein Fehler beim Speichern des Benutzers auf.';
 $_lang['register.username'] = 'Benutzername';
 $_lang['register.username_taken'] = 'Dieser Benutzername ist bereits vergeben. Bitte verwenden Sie einen anderen.';

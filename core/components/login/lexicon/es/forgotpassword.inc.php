@@ -29,6 +29,14 @@
 $_lang['login.email'] = 'Email';
 $_lang['login.forgot_password'] = 'Olvidó su contraseña';
 $_lang['login.forgot_password_email_subject'] = 'Recupere su contraseña';
+$_lang['login.forgot_password_email_text'] = '<p>Hello [[+username]],</p>
+<p>to activate your new password, please click on the following link:</p>
+<p><a href="[[+confirmUrl]]">[[+confirmUrl]]</a></p>
+<p>If successful, you can use the following password to login:</p>
+<p><strong>Password:</strong> [[+password]]</p>
+<p>If you did not request this message, please ignore it.</p>
+<p>Thanks,<br />
+<em>[[++site_name]] Site Administration</em></p>';
 $_lang['login.or_forgot_username'] = '¿O, olvidó su nombre de usuario?';
 $_lang['login.reset_password'] = 'Restablecer contraseña';
 $_lang['login.username'] = 'Nombre de Usuario';

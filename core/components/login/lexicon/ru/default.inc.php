@@ -21,7 +21,7 @@
  * @package login
  */
 /**
- * Default Russian language strings for Login
+ * Default English language strings for Login
  * @package login
  * @subpackage lexicon
  */
@@ -31,7 +31,9 @@ $_lang['login.login_err'] = 'Неизвестная ошибка при авто
 $_lang['login.logout'] = 'Выход';
 $_lang['login.logout_err'] = 'Неизвестная ошибка при выходе!';
 $_lang['login.password'] = 'Пароль';
+$_lang['login.recaptcha_err_load'] = 'Could not load reCaptcha service class.';
 $_lang['login.username'] = 'Имя пользователя';
+
 
 $_lang['setting_login.forgot_password_confirm_resource'] = 'Идентификатор ресурса для подтверждения смены пароля';
 $_lang['setting_login.forgot_password_confirm_resource_desc'] = 'Введите идентификатор ресурса на котором будет происходить подтверждение смены пароля.';

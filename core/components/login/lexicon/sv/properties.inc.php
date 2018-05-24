@@ -1,10 +1,7 @@
 <?php
 /**
- * Properties Swedish lexion entries
- *
  * @package login
  * @subpackage lexicon
- * @author Joakim Nyman <joakim@edgefive.com>
  */
 /* ForgotPassword snippet */
 $_lang['prop_forgotpassword.emailtpl_desc'] = 'Bekräftelsemeddelandets e-post mall.';
@@ -23,6 +20,7 @@ $_lang['prop_forgotpassword.resetresourceid_desc'] = 'Resursen att hänvisa anv�
 $_lang['prop_login.actionkey_desc'] = 'REQUEST variabeln som indikerar vilken åtgärd som ska vidtas.';
 $_lang['prop_login.loginkey_desc'] = 'Åtgärdsnyckel för inloggning.';
 $_lang['prop_login.logoutkey_desc'] = 'Åtgärdsnyckel för utloggning.';
+$_lang['prop_login.loginviaemail_desc'] = 'Enable login via username or email address.';
 $_lang['prop_login.tpltype_desc'] = 'Typ av mallar som förses till in- och utloggningsformulären.';
 $_lang['prop_login.logintpl_desc'] = 'Mall för inloggningsformuläret.';
 $_lang['prop_login.logouttpl_desc'] = 'Mall för utloggningsformuläret.';
@@ -83,8 +81,14 @@ $_lang['prop_register.mathoperatorfield_desc'] = 'Om `math` är satt som en preH
 $_lang['prop_register.validatepassword_desc'] = 'Om de skickade lösenorden skall valideras vid registrering eller inte. Rekommenderas att lämna detta till Ja om du inte skapar egna lösenord i en hook.';
 $_lang['prop_register.generatepassword_desc'] = 'Om satt till Ja, kommer Register att skapa ett slumpat lösenord till användaren vilket skriver över eventuella försedda lösenord. Användbart för automatiskt skapande av lösenord.';
 $_lang['prop_register.trimpassword_desc'] = 'Om satt till Ja, kommer Register att putsa bort onödiga blanktecken från det försedda lösenordet.';
+$_lang['prop_register.ensurePasswordStrength_desc'] = 'If set to Yes, Register will ensure the user enters a strong enough password. Strong passwords are passwords with multiple words or non-alphabetic characters in them.';
+$_lang['prop_register.passwordWordSeparator_desc'] = 'If ensurePasswordStrength is set to Yes, this will be the separator between words when determining how many words are in a supplied password.';
+$_lang['prop_register.minimumStrongPasswordWordCount_desc'] = 'If ensurePasswordStrength is set to Yes, if a supplied password has this many words, then it will be consider a strong password.';
+$_lang['prop_register.maximumPossibleStrongerPasswords_desc'] = 'If ensurePasswordStrength is set to Yes, then this is the maximum amount of suggestions that Register can find to consider the supplied password "strong". Making this number higher makes the check more lenient; lower makes it tougher.';
+$_lang['prop_register.ensurePasswordStrengthSuggestions'] = 'If ensurePasswordStrength is set to Yes, and the password fails the strength test, Register will supply this many number of suggestions to the user for their password.';
 $_lang['prop_register.allowedfields_desc'] = 'Om angivet, kommer detta att begränsa fälten som kan lagras i den nya användaren till denna komma-separerade lista. Begränsar även extended fält.';
 $_lang['prop_register.removeexpiredregistrations_desc'] = 'Om sant, kommer registrerade användare som har gått ut, har oanvända aktiveringsförfrågningar och aldrig har blivit aktiverade att raderas. Det rekommenderas att låta detta vara på för att förhindra spam.';
+$_lang['prop_register.preservefieldsafterregister_desc'] = 'If true, data of registration fields will be saved after successfull registration. To reset fields data, set to false';
 $_lang['opt_register.chunk'] = 'Chunk';
 $_lang['opt_register.file'] = 'Fil';
 $_lang['opt_register.inline'] = 'Infogad';
@@ -102,6 +106,7 @@ $_lang['prop_confirmregister.redirectparams_desc'] = 'Valfritt. Ett JSON objekt 
 $_lang['prop_confirmregister.authenticate_desc'] = 'Autentisera och logga in användaren till den aktuella kontexten efter bekräftad registrering. Standard är true.';
 $_lang['prop_confirmregister.authenticatecontexts_desc'] = 'Valfritt. En komma-separerad lista på kontexter att autentisera till. Standard är den aktuella kontexten.';
 $_lang['prop_confirmregister.errorpage_desc'] = 'Valfritt. Om angivet, omdirigeras användaren till en anpassad felmeddelandesida om de försöker komma åt denna sida efter att ha aktiverat sitt konto.';
+$_lang['prop_confirmregister.activepage_desc'] = 'Optional. If set, will redirect user to a active error page if they try to access this the confirm register page with an already activated account.';
 
 /* ResetPassword snippet */
 $_lang['prop_resetpassword.tpl_desc'] = 'Mall för meddelandet nollställ lösenord.';

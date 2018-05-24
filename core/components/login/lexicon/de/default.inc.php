@@ -21,21 +21,21 @@
  * @package login
  */
 /**
- * Default German language strings for Login
+ * Default English language strings for Login
  * @package login
  * @subpackage lexicon
  */
 $_lang['login'] = 'Login';
-$_lang['login.invalid_post'] = 'ungültige WebLogin POST Aktion: [[+action]]';
-$_lang['login.login_err'] = 'Unbekannter Fehler beim einloggen!';
+$_lang['login.invalid_post'] = 'Ungültige WebLogin POST Aktion: [[+action]]';
+$_lang['login.login_err'] = 'Unbekannter Fehler anmelden!';
 $_lang['login.logout'] = 'Logout';
-$_lang['login.logout_err'] = 'Unbekannter Fehler beim ausloggen!';
+$_lang['login.logout_err'] = 'Unbekannter Fehler beim Ausloggen!';
 $_lang['login.password'] = 'Passwort';
 $_lang['login.recaptcha_err_load'] = 'Konnte die reCaptcha Service Klasse nicht laden.';
 $_lang['login.username'] = 'Benutzername';
 
 
 $_lang['setting_login.forgot_password_confirm_resource'] = 'Passwort-vergessen Bestätigungs-Ressourcen-ID';
-$_lang['setting_login.forgot_password_confirm_resource_desc'] = 'Geben Sie die ID der Ressource ein, um dem Nutzer das Ändern eines vergessenen Passworts zu ermöglichen.';
-$_lang['setting_login.forgot_password_email_subject'] = 'Passwort vergessen E-Mail Betreff';
-$_lang['setting_login.forgot_password_email_subject_desc'] = 'Die Betreffzeile der Passwort-vergessen E-Mail.';
+$_lang['setting_login.forgot_password_confirm_resource_desc'] = 'Bitte geben Sie die ID der Ressource ein, die die Bestätigungs-Seite für ein verlorenes Passwort befindet.';
+$_lang['setting_login.forgot_password_email_subject'] = 'Passwort-vergessen E-Mail Betreff';
+$_lang['setting_login.forgot_password_email_subject_desc'] = 'Der Betreff für die Passwort-vergessen E-Mail.';

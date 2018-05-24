@@ -21,17 +21,22 @@
  * @package login
  */
 /**
- * Forgot Password Czech lexicon for Login
+ * Forgot Password English lexicon for Login
  *
  * @package login
  * @subpackage lexicon
- *
- * @author modxcms.cz
- * @updated 2011-01-04
  */
 $_lang['login.email'] = 'E-mail';
 $_lang['login.forgot_password'] = 'Zapomněli jste heslo?';
 $_lang['login.forgot_password_email_subject'] = 'E-mail se zapomenutým heslem';
+$_lang['login.forgot_password_email_text'] = '<p>Hello [[+username]],</p>
+<p>to activate your new password, please click on the following link:</p>
+<p><a href="[[+confirmUrl]]">[[+confirmUrl]]</a></p>
+<p>If successful, you can use the following password to login:</p>
+<p><strong>Password:</strong> [[+password]]</p>
+<p>If you did not request this message, please ignore it.</p>
+<p>Thanks,<br />
+<em>[[++site_name]] Site Administration</em></p>';
 $_lang['login.or_forgot_username'] = 'Nebo jste zapomněli uživatelské jméno?';
 $_lang['login.reset_password'] = 'Resetovat heslo';
 $_lang['login.username'] = 'Uživatelské jméno';

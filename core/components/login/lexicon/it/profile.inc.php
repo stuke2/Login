@@ -20,7 +20,7 @@
  * @package login
  */
 /**
- * Profile Italian lexicon for Login
+ * Profile English lexicon for Login
  *
  * @package login
  * @subpackage lexicon
