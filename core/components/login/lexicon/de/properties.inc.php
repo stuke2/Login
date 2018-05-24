@@ -89,6 +89,7 @@ $_lang['prop_register.ensurePasswordStrengthSuggestions'] = 'Wenn ensurePassword
 $_lang['prop_register.allowedfields_desc'] = 'Wenn diese Einstellung aktiv ist, wird die Speicherung der Benutzerfelder auf die Feldnamen in der kommaseparierten Liste eingeschränkt. Gilt ebenso für erweiterte Benutzerfelder.';
 $_lang['prop_register.removeexpiredregistrations_desc'] = 'Wenn diese Einstellung aktiv ist, werden registrierte Benutzer entfernt, die sich bis zum Ablauf der Aktivierungszeit nicht aktiviert haben. Es wird empfohlen, diese Einstellung aktiv zu lassen.';
 $_lang['prop_register.preservefieldsafterregister_desc'] = 'Wenn diese Einstellung aktiv ist, werden Daten der Registrierung nach erfolgreicher Registrierung gespeichert. Deaktivieren Sie diese Einstellung um die Daten zurückzusetzen.';
+$_lang['prop_register.redirectUnsetDefaultParam_desc'] = 'If true, default parameters will be removed from redirected urls.';
 $_lang['opt_register.chunk'] = 'Chunk';
 $_lang['opt_register.file'] = 'Datei';
 $_lang['opt_register.inline'] = 'Inline';
@@ -103,6 +104,7 @@ $_lang['opt_register.desc'] = 'Absteigend';
 /* ConfirmRegister snippet */
 $_lang['prop_confirmregister.redirectto_desc'] = '(Optional) Nach einer erfolgreichen Aktivierung wird auf auf die angegebene Ressourcen-Id weitergeleitet.';
 $_lang['prop_confirmregister.redirectparams_desc'] = '(Optional) Ein JSON Objekt mit Parametern, die bei der Weiterleitung mittels redirectTo übergeben werden.';
+$_lang['prop_confirmregister.redirectUnsetDefaultParam_desc'] = 'If true, default parameters will be removed from redirected urls.';
 $_lang['prop_confirmregister.authenticate_desc'] = 'Authentifiziere und logge den Benutzer automatisch nach der Registrierung in den aktuellen Kontext ein. Standard ist aktiv.';
 $_lang['prop_confirmregister.authenticatecontexts_desc'] = '(Optional) Eine kommaseparierte Liste von Kontexten, für die der Benutzer authentifiziert werden soll. Standard ist der aktuelle Kontext.';
 $_lang['prop_confirmregister.errorpage_desc'] = '(Optional) Wenn diese Einstellung aktiv ist, wird der Benutzer zu dieser benutzerdefinierten Fehlerseite weitergeleitet, falls er versucht, die Bestätigungsseite mit einem Validierungsfehler aufzurufen.';
