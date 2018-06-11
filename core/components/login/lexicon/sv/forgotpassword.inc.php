@@ -29,14 +29,14 @@
 $_lang['login.email'] = 'E-post';
 $_lang['login.forgot_password'] = 'Glömt lösenord';
 $_lang['login.forgot_password_email_subject'] = 'Förfrågan om nollställande av lösenord';
-$_lang['login.forgot_password_email_text'] = '<p>Hello [[+username]],</p>
-<p>to activate your new password, please click on the following link:</p>
+$_lang['login.forgot_password_email_text'] = '<p>Hej [[+username]],</p>
+<p>klicka på den här länken för att aktivera ditt nya lösenord:</p>
 <p><a href="[[+confirmUrl]]">[[+confirmUrl]]</a></p>
-<p>If successful, you can use the following password to login:</p>
-<p><strong>Password:</strong> [[+password]]</p>
-<p>If you did not request this message, please ignore it.</p>
-<p>Thanks,<br />
-<em>[[++site_name]] Site Administration</em></p>';
+<p>Om det lyckas, kan du sen använda det här lösenordet för att logga in:</p>
+<p><strong>Lösenord:</strong> [[+password]]</p>
+<p>Om du inte förväntade dig det här meddelandet, vänligen ignorera det.</p>
+<p>Tack,<br />
+<em>[[++site_name]] Sajtadministratör</em></p>';
 $_lang['login.or_forgot_username'] = 'Eller, glömt användarnamnet?';
 $_lang['login.reset_password'] = 'Nollställ lösenord';
 $_lang['login.username'] = 'Användarnamn';
