@@ -88,8 +88,8 @@ $_lang['prop_register.maximumPossibleStrongerPasswords_desc'] = 'Om ensurePasswo
 $_lang['prop_register.ensurePasswordStrengthSuggestions'] = 'Om ensurePasswordStrength är satt till Ja, och lösenordet inte anses tillräckligt starkt, kommer Register att ge så här många förslag till användaren för att göra lösenordet starkare.';
 $_lang['prop_register.allowedfields_desc'] = 'Om angivet, kommer detta att begränsa fälten som kan lagras i den nya användaren till denna komma-separerade lista. Begränsar även extended fält.';
 $_lang['prop_register.removeexpiredregistrations_desc'] = 'Om sant, kommer registrerade användare som har gått ut, har oanvända aktiveringsförfrågningar och aldrig har blivit aktiverade att raderas. Det rekommenderas att låta detta vara på för att förhindra spam.';
-$_lang['prop_register.preservefieldsafterregister_desc'] = 'If true, data of registration fields will be saved after successfull registration. To reset fields data, set to false';
-$_lang['prop_register.redirectUnsetDefaultParam_desc'] = 'If true, default parameters will be removed from redirected urls.';
+$_lang['prop_register.preservefieldsafterregister_desc'] = 'Om inställningen är aktiv, kommer data från den genomförda registreringen att sparas. Om inställningen är inaktiv kommer fälten att återställas efter registreringen.';
+$_lang['prop_register.redirectUnsetDefaultParam_desc'] = 'Om inställningen är aktiv, kommer standardparametrarna att tas bort från den URL som används för omdirigering.';
 $_lang['opt_register.chunk'] = 'Chunk';
 $_lang['opt_register.file'] = 'Fil';
 $_lang['opt_register.inline'] = 'Infogad';
@@ -104,11 +104,11 @@ $_lang['opt_register.desc'] = 'Fallande';
 /* ConfirmRegister snippet */
 $_lang['prop_confirmregister.redirectto_desc'] = 'Valfritt. Efter lyckad bekräftelse, omdirigera till denna resurs.';
 $_lang['prop_confirmregister.redirectparams_desc'] = 'Valfritt. Ett JSON objekt med parametrar att förmedla vid omdirigering genom redirectTo.';
-$_lang['prop_confirmregister.redirectUnsetDefaultParam_desc'] = 'If true, default parameters will be removed from redirected urls.';
+$_lang['prop_confirmregister.redirectUnsetDefaultParam_desc'] = 'Om inställningen är aktiv, kommer standardparametrarna att tas bort från den URL som används för omdirigering.';
 $_lang['prop_confirmregister.authenticate_desc'] = 'Autentisera och logga in användaren till den aktuella kontexten efter bekräftad registrering. Standard är true.';
 $_lang['prop_confirmregister.authenticatecontexts_desc'] = 'Valfritt. En komma-separerad lista på kontexter att autentisera till. Standard är den aktuella kontexten.';
 $_lang['prop_confirmregister.errorpage_desc'] = 'Valfritt. Om angivet, omdirigeras användaren till en anpassad felmeddelandesida om de försöker komma åt denna sida efter att ha aktiverat sitt konto.';
-$_lang['prop_confirmregister.activepage_desc'] = 'Optional. If set, will redirect user to a active error page if they try to access this the confirm register page with an already activated account.';
+$_lang['prop_confirmregister.activepage_desc'] = 'Valfritt. Om angivet, omdirigeras användaren till en aktiv felmeddelandesida om de försöker komma åt sidan för att bekräfta registreringen med ett konto som redan är aktiverat.';
 
 /* ResetPassword snippet */
 $_lang['prop_resetpassword.tpl_desc'] = 'Mall för meddelandet nollställ lösenord.';
