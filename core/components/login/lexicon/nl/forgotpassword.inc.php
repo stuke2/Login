@@ -29,16 +29,16 @@
 $_lang['login.email'] = 'E-mail';
 $_lang['login.forgot_password'] = 'Wachtwoord vergeten';
 $_lang['login.forgot_password_email_subject'] = 'Nieuw wachtwoord e-mail';
-$_lang['login.forgot_password_email_text'] = '<p>Hello [[+username]],</p>
-<p>to activate your new password, please click on the following link:</p>
-<p><a href="[[+confirmUrl]]">[[+confirmUrl]]</a></p>
-<p>If successful, you can use the following password to login:</p>
-<p><strong>Password:</strong> [[+password]]</p>
-<p>If you did not request this message, please ignore it.</p>
-<p>Thanks,<br />
-<em>[[++site_name]] Site Administration</em></p>';
+$_lang['login.forgot_password_email_text'] = '<p>Hallo [[+ gebruikersnaam]],</p>
+<p>Om uw nieuwe wachtwoord te activeren, klikt u op de volgende link:</p>
+<p><a href="[[+confirmUrl]]">[[+ confirmUrl]]</a></p>
+<p>Zodra dit gelukt is kunt u het volgende wachtwoord gebruiken om in te loggen:</p>
+<p><strong>Wachtwoord:</strong> [[+ wachtwoord]]</p>
+<p>Als u niet gevraagd heeft om dit bericht, kunt u dit negeren.</p>
+<p>Bedankt,<br />
+<em>[[++ site_name]] - Sitebeheerder</em></p>';
 $_lang['login.or_forgot_username'] = 'Of bent u uw gebruikersnaam vergeten?';
 $_lang['login.reset_password'] = 'Wachtwoord herstellen';
 $_lang['login.username'] = 'Gebruikersnaam';
-$_lang['login.user_err_nf_email'] = 'Als de gebruiker of e-mail bestaat, ontvangt u binnenkort een e-mail.';
-$_lang['login.user_err_nf_username'] = 'Als de gebruiker of e-mail bestaat, ontvangt u binnenkort een e-mail.';
+$_lang['login.user_err_nf_email'] = 'Als de gebruiker of het e-mailadres bestaat, ontvangt u spoedig een e-mail.';
+$_lang['login.user_err_nf_username'] = 'Als de gebruiker of het e-mailadres bestaat, ontvangt u spoedig een e-mail.';
