@@ -25,8 +25,8 @@
  * @package login
  * @subpackage lexicon
  */
-$_lang['login'] = 'Login';
-$_lang['login.invalid_post'] = 'WebLogin invalid POST action: [[+action]]';
+$_lang['login'] = 'Logga in';
+$_lang['login.invalid_post'] = 'Ogiltig WebLogin POST-händelse: [[+action]]';
 $_lang['login.login_err'] = 'Okänt fel vid inloggning!';
 $_lang['login.logout'] = 'Logga ut';
 $_lang['login.logout_err'] = 'Okänt fel vid utloggning!';
