@@ -8,6 +8,7 @@ Login 1.9.6
 - Use Crowdin for translations: https://crowdin.com/project/modx-login
 - Update Translations [#132]
 - Use $modx->user->generatePassword for generating passwords [#131]
+- Escape MODX tags after htmlspecialchars because of the ampersand sign
 
 Login 1.9.5
 ------------------------------------
