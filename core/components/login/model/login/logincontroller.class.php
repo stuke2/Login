@@ -139,6 +139,15 @@ abstract class LoginController {
         return $this->placeholders;
     }
 
+    public function escapePlaceholders($val) {
+        if (is_array($val)) {
+            $val = array_map(array($this, 'escapePlaceholders'), $val);
+        } else {
+            $val = htmlspecialchars($val, ENT_QUOTES, $this->modx->getOption('modx_charset', null, 'UTF-8'));
+            $val = str_replace(array('[', ']'), array('&#91;', '&#93;'), $val);
+        }
+        return $val;
+    }
 
     /**
      * Load the Dictionary class
@@ -241,7 +250,7 @@ abstract class LoginProcessor {
     public $dictionary;
     /** @var array $config */
     public $config = array();
-    
+
     /**
      * @param Login &$login A reference to the Login instance
      * @param LoginController &$controller

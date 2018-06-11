@@ -218,9 +218,7 @@ class LoginResetPasswordController extends LoginController {
             $this->modx->toPlaceholders($this->errors, $errorPrefix);
 
             $fields = $this->dictionary->toArray();
-            foreach ($fields as $k => $v) {
-                $fields[$k] = htmlspecialchars($v);
-            }
+            $fields = $this->escapePlaceholders($fields);
 
             $this->modx->toPlaceholders($fields, $placeholderPrefix);
 
