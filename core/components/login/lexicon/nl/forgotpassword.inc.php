@@ -29,14 +29,14 @@
 $_lang['login.email'] = 'E-mail';
 $_lang['login.forgot_password'] = 'Wachtwoord vergeten';
 $_lang['login.forgot_password_email_subject'] = 'Nieuw wachtwoord e-mail';
-$_lang['login.forgot_password_email_text'] = '<p>Hallo [[+ gebruikersnaam]],</p>
+$_lang['login.forgot_password_email_text'] = '<p>Hallo [[+username]],</p>
 <p>Om uw nieuwe wachtwoord te activeren, klikt u op de volgende link:</p>
 <p><a href="[[+confirmUrl]]">[[+ confirmUrl]]</a></p>
 <p>Zodra dit gelukt is kunt u het volgende wachtwoord gebruiken om in te loggen:</p>
-<p><strong>Wachtwoord:</strong> [[+ wachtwoord]]</p>
+<p><strong>Wachtwoord:</strong> [[+password]]</p>
 <p>Als u niet gevraagd heeft om dit bericht, kunt u dit negeren.</p>
 <p>Bedankt,<br />
-<em>[[++ site_name]] - Sitebeheerder</em></p>';
+<em>[[++site_name]] - Sitebeheerder</em></p>';
 $_lang['login.or_forgot_username'] = 'Of bent u uw gebruikersnaam vergeten?';
 $_lang['login.reset_password'] = 'Wachtwoord herstellen';
 $_lang['login.username'] = 'Gebruikersnaam';
