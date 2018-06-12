@@ -29,14 +29,14 @@
 $_lang['login.email'] = 'Adresse email';
 $_lang['login.forgot_password'] = 'Mot de passe oublié';
 $_lang['login.forgot_password_email_subject'] = 'Email de récupération de mot de passe';
-$_lang['login.forgot_password_email_text'] = '<p>Hello [[+username]],</p>
-<p>to activate your new password, please click on the following link:</p>
+$_lang['login.forgot_password_email_text'] = 'Bonjour [[+username]] <p>,</p>
+<p>pour activer votre nouveau mot de passe, veuillez cliquer sur le lien suivant :</p>
 <p><a href="[[+confirmUrl]]">[[+confirmUrl]]</a></p>
-<p>If successful, you can use the following password to login:</p>
-<p><strong>Password:</strong> [[+password]]</p>
-<p>If you did not request this message, please ignore it.</p>
-<p>Thanks,<br />
-<em>[[++site_name]] Site Administration</em></p>';
+<p>si l’opération réussit, vous pouvez utiliser ce mot de passe pour vous connecter :</p>
+<p><strong>mot de passe :</strong> [[+password]]</p>
+<p>si vous n’a pas demandé ce message, veuillez l’ignorer. </p>
+<p>Merci,<br />
+<em>[[++site_name]] l\'Administration du Site</em></p>';
 $_lang['login.or_forgot_username'] = 'Oublié votre identifiant ?';
 $_lang['login.reset_password'] = 'Réinitialiser le mot de passe';
 $_lang['login.username'] = 'Identifiant';

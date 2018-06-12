@@ -26,10 +26,10 @@
  * @subpackage lexicon
  */
 $_lang['login.change_password'] = 'Wachtwoord wijzigen';
-$_lang['login.password_changed'] = 'Password changed.';
-$_lang['login.password_err'] = 'Foutief wachtwoord.';
+$_lang['login.password_changed'] = 'Wachtwoord gewijzigd.';
+$_lang['login.password_err'] = 'Wachtwoord onjuist.';
 $_lang['login.password_err_change'] = 'Een fout is opgetreden tijdens wijzigen van het wachtwoord. Gelieve uw invulvelden na te kijken.';
-$_lang['login.password_invalid_old'] = 'Ongeldige oud wachtwoord.';
+$_lang['login.password_invalid_old'] = 'Onjuist oud wachtwoord.';
 $_lang['login.password_new_confirm'] = 'Bevestig het nieuwe wachtwoord';
 $_lang['login.password_new'] = 'Nieuw wachtwoord';
 $_lang['login.password_no_match'] = 'Wachtwoorden komen niet overeen.';
