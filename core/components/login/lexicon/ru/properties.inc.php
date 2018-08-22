@@ -4,9 +4,9 @@
  * @subpackage lexicon
  */
 /* ForgotPassword snippet */
-$_lang['prop_forgotpassword.emailtpl_desc'] = 'The confirmation email message tpl.';
-$_lang['prop_forgotpassword.emailtpltype_desc'] = 'The type of tpl being provided for the emailTpl property. Defaults to a Chunk.';
-$_lang['prop_forgotpassword.senttpl_desc'] = 'The message tpl to show when an email was successfully sent.';
+$_lang['prop_forgotpassword.emailtpl_desc'] = 'Шаблон подтверждающего email-сообщения.';
+$_lang['prop_forgotpassword.emailtpltype_desc'] = 'Тип шаблона (tpl) для свойства emailTpl. По умолчанию - Чанк.';
+$_lang['prop_forgotpassword.senttpl_desc'] = 'Шаблон сообщения, показывающегося, когда email был успешно отправлен.';
 $_lang['prop_forgotpassword.senttpltype_desc'] = 'The type of tpl being provided for the sentTpl property. Defaults to a Chunk.';
 $_lang['prop_forgotpassword.tpl_desc'] = 'The forgot password form tpl.';
 $_lang['prop_forgotpassword.tpltype_desc'] = 'The type of tpl being provided for the tpl property. Defaults to a Chunk.';
