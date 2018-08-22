@@ -26,12 +26,12 @@
  * @package login
  * @subpackage lexicon
  */
-$_lang['register.activation_email_subject'] = 'Thanks for Registering. Please Activate!';
+$_lang['register.activation_email_subject'] = 'Спасибо за регистрацию! Пожалуйста, активируйте свой аккаунт.';
 $_lang['register.email'] = 'Адрес электронной почты';
 $_lang['register.email_invalid'] = 'Пожалуйста, введите адрес электронной почты.';
 $_lang['register.email_invalid_domain'] = 'У вашего адреса электронной почты нет правильного доменного имени.';
-$_lang['register.email_no_recipient'] = 'No recipient specified for the email.';
-$_lang['register.email_not_sent'] = 'An error occurred while trying to send the email.';
+$_lang['register.email_no_recipient'] = 'Не указаны получатели.';
+$_lang['register.email_not_sent'] = 'Произошла ошибка при отправке email.';
 $_lang['register.email_taken'] = 'Почтовый ящик "[[+email]]" уже используется. Вы можете либо войти под этой почтой, либо восстановить пароль (если вы его забыли), либо выбрать другой почтовый ящик для регистрации.';
 $_lang['register.field_not_empty'] = 'Это поле должно быть пустым.';
 $_lang['register.field_required'] = 'Это поле требуется.';
@@ -44,19 +44,19 @@ $_lang['register.min_length'] = 'Это поле должно быть по кр
 $_lang['register.min_value'] = 'Это поле не может быть меньше чем [[+value]].';
 $_lang['register.not_date'] = 'В это поле надо вводить дату.';
 $_lang['register.not_number'] = 'Значение этого поля должно быть допустимым числом.';
-$_lang['register.not_regexp'] = 'This field has an invalid value.';
+$_lang['register.not_regexp'] = 'Это поле содержит недопустимое значение.';
 $_lang['register.password'] = 'Пароль';
 $_lang['register.password_confirm'] = 'Подтвердите пароль';
 $_lang['register.password_dont_match'] = 'Пароли не совпадают.';
 $_lang['register.password_not_confirmed'] = 'Пожалуйста, подтвердите пароль.';
 $_lang['register.range_invalid'] = 'Указан неправильный диапазон.';
 $_lang['register.range'] = 'Значение должно быть между [[+min]] и [[+max]].';
-$_lang['register.recaptcha_err_load'] = 'Could not load reCaptcha service class.';
+$_lang['register.recaptcha_err_load'] = 'Невозможно загрузить класс reCaptcha.';
 $_lang['register.register'] = 'Зарегистрироваться';
-$_lang['register.spam_blocked'] = 'Your submission was blocked by a spam filter: ';
-$_lang['register.spam_marked'] = ' - marked as spam.';
-$_lang['register.use_stronger_password'] = 'Your password is not strong enough. Perhaps you should strengthen it, by replacing letters with numbers or adding more words to the password (try multiple word passwords). Suggestions: [[+suggestions]]';
+$_lang['register.spam_blocked'] = 'Ваше сообщение было заблокировано спам-фильтром: ';
+$_lang['register.spam_marked'] = ' - отмечено как спам.';
+$_lang['register.use_stronger_password'] = 'Ваш пароль недостаточно надежен. Возможно вам следует сделать его более сложным, добавив числа, буквы разного регистра и спецсимволы. Например: [[+suggestions]]';
 $_lang['register.user_err_save'] = ' Произошла ошибка, при попытке сохранить пользователя.';
 $_lang['register.username'] = 'Имя пользователя';
 $_lang['register.username_taken'] = 'Имя пользователя уже занято. Выберите другое имя.';
-$_lang['register.validation_error_message'] = 'A form validation error occurred. Please check the values you have entered.';
+$_lang['register.validation_error_message'] = 'Ошибка проверки данных. Пожалуйста, убедитесь, что вы заполнили форму верно.';
