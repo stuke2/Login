@@ -25,4 +25,4 @@
  * @package login
  * @subpackage lexicon
  */
-$_lang['profile'] = 'Profile';
+$_lang['profile'] = 'Профиль';
