@@ -31,7 +31,7 @@ $_lang['login.login_err'] = 'Неизвестная ошибка при авто
 $_lang['login.logout'] = 'Выход';
 $_lang['login.logout_err'] = 'Неизвестная ошибка при выходе!';
 $_lang['login.password'] = 'Пароль';
-$_lang['login.recaptcha_err_load'] = 'Could not load reCaptcha service class.';
+$_lang['login.recaptcha_err_load'] = 'Невозможно загрузить класс reCaptcha.';
 $_lang['login.username'] = 'Имя пользователя';
 
 
