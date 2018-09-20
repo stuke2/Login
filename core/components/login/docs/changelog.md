@@ -3,8 +3,7 @@ Changelog for Login
 
 Login 1.9.7
 ------------------------------------
-- Generate the password directly with modx->user->generatePassword() in the register processor
-
+- Generate the password directly with modx->user->generatePassword()
 
 Login 1.9.6
 ------------------------------------

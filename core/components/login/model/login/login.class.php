@@ -179,17 +179,6 @@ class Login {
     }
 
     /**
-     * Generates a random password.
-     *
-     * @access public
-     * @param integer $length The length of the generated password.
-     * @return string The newly-generated password.
-     */
-    public function generatePassword($length=null) {
-        $this->modx->user->generatePassword($length);
-    }
-
-    /**
      * Helper function to get a chunk or tpl by different methods.
      *
      * @access public

@@ -208,7 +208,7 @@ class LoginForgotPasswordController extends LoginController {
         $fields = $this->dictionary->toArray();
         
         /* generate a password and encode it and the username into the url */
-        $password = $this->login->generatePassword();
+        $password = $this->modx->user->generatePassword();
         $confirmParams = array(
             'lp' => $this->login->base64url_encode($password),
             'lu' => $this->login->base64url_encode($fields['username'])
