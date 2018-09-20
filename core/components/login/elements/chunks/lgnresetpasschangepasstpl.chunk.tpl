@@ -1,6 +1,6 @@
 [[!+logcp.error_message:notempty=`<p style="color: red;">[[+logcp.error_message]]</p>`]]
 
-<form class="form inline" action="" method="post">
+<form class="form inline" action="[[~[[*id]]]]" method="post">
     <input type="hidden" name="nospam:blank" value="" />
     <input type="hidden" name="lp" value="[[!+logcp.lp]]"/>
     <input type="hidden" name="lu" value="[[!+logcp.lu]]"/>
