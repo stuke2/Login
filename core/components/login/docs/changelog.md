@@ -5,8 +5,8 @@ Login 1.9.7
 ------------------------------------
 - Generate the password directly with modx->user->generatePassword()
 - Make it possible to set the usergroup rank when register a new user [#135]
-- Set an action in the default password reset form
-
+- Set an action in the default password reset form [#134]
+- Update Translations
 
 Login 1.9.6
 ------------------------------------
