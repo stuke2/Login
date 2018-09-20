@@ -268,7 +268,7 @@ class LoginRegisterProcessor extends LoginProcessor {
      */
     public function gatherActivationEmailProperties() {
         /* generate a password and encode it and the username into the url */
-        $pword = $this->login->generatePassword();
+        $pword = $this->modx->user->generatePassword();
         $confirmParams['lp'] = $this->login->base64url_encode($pword);
         $confirmParams['lu'] = $this->login->base64url_encode($this->user->get('username'));
         $confirmParams = array_merge($this->persistParams,$confirmParams);
