@@ -26,7 +26,7 @@
  * @subpackage lexicon
  */
 $_lang['login.change_password'] = 'Changer de mot de passe';
-$_lang['login.password_changed'] = 'Password changed.';
+$_lang['login.password_changed'] = 'Mot de passe modifié.';
 $_lang['login.password_err'] = 'Mot de passe incorrecte.';
 $_lang['login.password_err_change'] = 'Une erreur est survenue lors du changement de mot de passe. Veuillez vérifier vos champs.';
 $_lang['login.password_invalid_old'] = 'Ancien mot de passe invalide.';

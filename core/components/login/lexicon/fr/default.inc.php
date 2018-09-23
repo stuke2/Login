@@ -25,7 +25,7 @@
  * @package login
  * @subpackage lexicon
  */
-$_lang['login'] = 'Login';
+$_lang['login'] = 'Connexion';
 $_lang['login.invalid_post'] = 'Login invalid POST action: [[+action]]';
 $_lang['login.login_err'] = 'Erreur inconnue lors de la connexion!';
 $_lang['login.logout'] = 'Déconnexion';
