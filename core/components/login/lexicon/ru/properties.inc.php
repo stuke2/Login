@@ -7,17 +7,17 @@
 $_lang['prop_forgotpassword.emailtpl_desc'] = 'Шаблон подтверждающего email-сообщения.';
 $_lang['prop_forgotpassword.emailtpltype_desc'] = 'Тип шаблона (tpl) для свойства emailTpl. По умолчанию - Чанк.';
 $_lang['prop_forgotpassword.senttpl_desc'] = 'Шаблон сообщения, показывающегося, когда email был успешно отправлен.';
-$_lang['prop_forgotpassword.senttpltype_desc'] = 'The type of tpl being provided for the sentTpl property. Defaults to a Chunk.';
-$_lang['prop_forgotpassword.tpl_desc'] = 'The forgot password form tpl.';
-$_lang['prop_forgotpassword.tpltype_desc'] = 'The type of tpl being provided for the tpl property. Defaults to a Chunk.';
-$_lang['prop_forgotpassword.errtpl_desc'] = 'The tpl to wrap error messages in.';
-$_lang['prop_forgotpassword.errtpltype_desc'] = 'The type of tpl to use for errTpl.';
-$_lang['prop_forgotpassword.emailsubject_desc'] = 'The subject of the forgot password email.';
-$_lang['prop_forgotpassword.emailtplalt_desc'] = '(Optional) Plain-text alternative for the confirmation email message tpl.';
-$_lang['prop_forgotpassword.resetresourceid_desc'] = 'The resource to direct users to in the confirmation email, where the ResetPassword snippet call is.';
+$_lang['prop_forgotpassword.senttpltype_desc'] = 'Шаблон для свойства sentTpl. По умолчанию это чанк.';
+$_lang['prop_forgotpassword.tpl_desc'] = 'Шаблон формы забытого пароля.';
+$_lang['prop_forgotpassword.tpltype_desc'] = 'Шаблон для свойства tpl. По умолчанию это чанк.';
+$_lang['prop_forgotpassword.errtpl_desc'] = 'Шаблон для обертки сообщения об ошибках.';
+$_lang['prop_forgotpassword.errtpltype_desc'] = 'Шаблон, используемый для errTpl.';
+$_lang['prop_forgotpassword.emailsubject_desc'] = 'Тема для забытого пароля электронной почты.';
+$_lang['prop_forgotpassword.emailtplalt_desc'] = '(Необязательно) Шаблон с альтернативой в виде простого текста для подтверждения электронного письма.';
+$_lang['prop_forgotpassword.resetresourceid_desc'] = 'Ресурс с направлением пользователей для подтверждения в электронном письме, где находится фрагмент кода ResetPassword.';
 
 /* Login snippet */
-$_lang['prop_login.actionkey_desc'] = 'The REQUEST variable that indicates what action to take.';
+$_lang['prop_login.actionkey_desc'] = 'Переменная REQUEST, которая указывает, какое действие предпринять.';
 $_lang['prop_login.loginkey_desc'] = 'The login action key.';
 $_lang['prop_login.logoutkey_desc'] = 'The logout action key.';
 $_lang['prop_login.loginviaemail_desc'] = 'Enable login via username or email address.';
